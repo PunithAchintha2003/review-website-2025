@@ -3,9 +3,9 @@ import bookModel from "../models/book.model.js";
 // Create Book
 export async function createBookController(request, response) {
     try {
-        const { title, author, description, coverImage, genre, releaseDate, language, pages } = request.body;
+        const { title, description, image, rating, author, genre, publisher, publicationDate, ISBN, pageCount, language } = request.body;
 
-        if (!title || !author || !description || !coverImage || !genre || !releaseDate || !language || !pages) {
+        if (!title || !description || !image || !rating || !author || !genre || !publisher || !publicationDate || !ISBN || !pageCount || !language) {
             return response.status(400).json({
                 message: "Provide all required fields",
                 error: true,

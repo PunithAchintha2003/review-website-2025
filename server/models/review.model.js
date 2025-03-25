@@ -21,9 +21,9 @@ const reviewSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    reviewHeading: {
+    reviewLink: {
         type: String,
-        required: true
+        required: false
     }
 }, {
     timestamps: true

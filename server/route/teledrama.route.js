@@ -5,7 +5,7 @@ import auth from '../middleware/auth.js';
 const teledramaRouter = Router();
 
 teledramaRouter.post('/create', auth, createTeledramaController);
-teledramaRouter.get('/:id', viewTeledramaController);
+teledramaRouter.get('/view/:id', viewTeledramaController);
 teledramaRouter.put('/update/:id', auth, updateTeledramaController);
 teledramaRouter.delete('/delete/:id', auth, deleteTeledramaController);
 

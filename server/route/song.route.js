@@ -5,8 +5,8 @@ import auth from '../middleware/auth.js';
 const songRouter = Router()
 
 songRouter.post('/create', auth, createSongController)
-songRouter.put('/update/:id', auth, updateSongController)
-songRouter.delete('/delete/:id', auth, deleteSongController)
-songRouter.get('/view/:id', viewSongController)
+songRouter.put('/update/:songId', auth, updateSongController)
+songRouter.delete('/delete/:songId', auth, deleteSongController)
+songRouter.get('/view/:songId', viewSongController)
 
 export default songRouter

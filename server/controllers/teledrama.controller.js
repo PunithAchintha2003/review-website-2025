@@ -13,23 +13,7 @@ export async function createTeledramaController(request, response) {
             });
         }
 
-        const newTeledrama = new teledramaModel({
-            title,
-            description,
-            poster,
-            headerImage,
-            synopsis,
-            rating,
-            genre,
-            releaseDate,
-            director,
-            producer,
-            writer,
-            cast,
-            language,
-            aspectRatio
-        });
-
+        const newTeledrama = new teledramaModel(request.body);
         const save = await newTeledrama.save();
 
         return response.json({
@@ -54,7 +38,7 @@ export async function updateTeledramaController(request, response) {
         const { id } = request.params;
         const updateData = request.body;
 
-        const updatedTeledrama = await TeledramaModel.findByIdAndUpdate(id, updateData, { new: true });
+        const updatedTeledrama = await teledramaModel.findByIdAndUpdate(id, updateData, { new: true });
 
         if (!updatedTeledrama) {
             return response.status(404).json({
@@ -85,7 +69,7 @@ export async function deleteTeledramaController(request, response) {
     try {
         const { id } = request.params;
 
-        const deletedTeledrama = await TeledramaModel.findByIdAndDelete(id);
+        const deletedTeledrama = await teledramaModel.findByIdAndDelete(id);
 
         if (!deletedTeledrama) {
             return response.status(404).json({
@@ -115,7 +99,7 @@ export async function viewTeledramaController(request, response) {
     try {
         const { id } = request.params;
 
-        const teledrama = await TeledramaModel.findById(id);
+        const teledrama = await teledramaModel.findById(id);
 
         if (!teledrama) {
             return response.status(404).json({

@@ -3,9 +3,9 @@ import songModel from "../models/songs.model.js";
 // Create Song
 export async function createSongController(request, response) {
     try {
-        const { title, artist, album, genre, releaseDate, duration } = request.body;
+        const { title, description, headerImage, posterImage, rating, artist, album, genre, releaseDate, duration, producer, composer, language } = request.body;
 
-        if (!title || !artist || !album || !genre || !releaseDate || !duration) {
+        if (!title || !description || !headerImage || !posterImage || !rating || !artist || !album || !genre || !releaseDate || !duration || !producer || !composer || !language) {
             return response.status(400).json({
                 message: "Provide all required fields",
                 error: true,

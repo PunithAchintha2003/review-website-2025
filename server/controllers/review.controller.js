@@ -3,9 +3,9 @@ import reviewModel from "../models/review.model.js";
 // Create a new review
 export async function createReviewController(request, response) {
     try {
-        const { user, media, rating, reviewText, reviewHeading } = request.body;
+        const { user, media, rating, reviewText, reviewLink } = request.body;
 
-        if (!user || !media || !rating || !reviewText || !reviewHeading) {
+        if (!user || !media || !rating || !reviewText) {
             return response.status(400).json({
                 message: "Provide all required fields",
                 error: true,
@@ -13,7 +13,7 @@ export async function createReviewController(request, response) {
             });
         }
 
-        const newReview = new ReviewModel({ user, media, rating, reviewText, reviewHeading });
+        const newReview = new reviewModel(request.body);
         const savedReview = await newReview.save();
 
         return response.json({
@@ -34,21 +34,19 @@ export async function createReviewController(request, response) {
 // Update an existing review
 export async function updateReviewController(request, response) {
     try {
-        const { reviewId, rating, reviewText, reviewHeading } = request.body;
 
-        if (!reviewId || (!rating && !reviewText && !reviewHeading)) {
-            return response.status(400).json({
-                message: "Provide review ID and at least one field to update",
+        const { reviewId } = request.params;
+        const updateData = request.body;
+
+        const updatedReview = await reviewModel.findByIdAndUpdate(reviewId, updateData, { new: true });
+
+        if (!updatedReview) {
+            return response.status(404).json({
+                message: "Review not found",
                 error: true,
                 success: false
             });
         }
-
-        const updatedReview = await ReviewModel.findByIdAndUpdate(reviewId, {
-            ...(rating && { rating }),
-            ...(reviewText && { reviewText }),
-            ...(reviewHeading && { reviewHeading })
-        }, { new: true });
 
         return response.json({
             message: "Review updated successfully",
@@ -68,7 +66,7 @@ export async function updateReviewController(request, response) {
 // Delete a review
 export async function deleteReviewController(request, response) {
     try {
-        const { reviewId } = request.body;
+        const { reviewId } = request.params;
 
         if (!reviewId) {
             return response.status(400).json({
@@ -78,7 +76,7 @@ export async function deleteReviewController(request, response) {
             });
         }
 
-        await ReviewModel.findByIdAndDelete(reviewId);
+        await reviewModel.findByIdAndDelete(reviewId);
 
         return response.json({
             message: "Review deleted successfully",
@@ -107,7 +105,7 @@ export async function viewReviewController(request, response) {
             });
         }
 
-        const review = await ReviewModel.findById(reviewId).populate('user').populate('media');
+        const review = await reviewModel.findById(reviewId);
 
         return response.json({
             message: "Review fetched successfully",
@@ -137,7 +135,7 @@ export async function viewAllReviewsByUserController(request, response) {
             });
         }
 
-        const reviews = await ReviewModel.find({ user: userId }).populate('media');
+        const reviews = await reviewModel.find({ user: userId });
 
         return response.json({
             message: "Reviews fetched successfully",
@@ -167,7 +165,7 @@ export async function viewAllReviewsByMovieController(request, response) {
             });
         }
 
-        const reviews = await ReviewModel.find({ media: mediaId }).populate('user');
+        const reviews = await reviewModel.find({ media: mediaId });
 
         return response.json({
             message: "Reviews fetched successfully",

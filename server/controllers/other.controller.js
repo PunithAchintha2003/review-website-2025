@@ -35,19 +35,9 @@ export async function createOtherController(request, response) {
 export async function updateOtherController(request, response) {
     try {
         const { id } = request.params
-        const { title, description, headerImage, posterImage, rating, author, genre, releaseDate, language } = request.body
+        const updateData = request.body
 
-        const updateOther = await OtherModel.findByIdAndUpdate(id, {
-            ...(title && { title }),
-            ...(description && { description }),
-            ...(headerImage && { headerImage }),
-            ...(posterImage && { posterImage }),
-            ...(rating && { rating }),
-            ...(author && { author }),
-            ...(genre && { genre }),
-            ...(releaseDate && { releaseDate }),
-            ...(language && { language })
-        }, { new: true })
+        const updateOther = await OtherModel.findByIdAndUpdate(id, updateData, { new: true })
 
         if (!updateOther) {
             return response.status(404).json({

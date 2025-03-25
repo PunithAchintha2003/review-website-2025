@@ -5,8 +5,8 @@ import auth from '../middleware/auth.js';
 const bookRouter = Router()
 
 bookRouter.post('/create', auth, createBookController)
-bookRouter.put('/update/:id', auth, updateBookController)
-bookRouter.delete('/delete/:id', auth, deleteBookController)
-bookRouter.get('/view/:id', viewBookController)
+bookRouter.put('/update/:bookId', auth, updateBookController)
+bookRouter.delete('/delete/:bookId', auth, deleteBookController)
+bookRouter.get('/view/:bookId', viewBookController)
 
 export default bookRouter

@@ -120,3 +120,23 @@ export async function viewMovieController(request, response) {
         });
     }
 }
+
+//View all movies
+export async function getAllMoviesController(request, response) {
+    try {
+        const movies = await movieModel.find();
+
+        return response.json({
+            message: "Movies retrieved successfully",
+            error: false,
+            success: true,
+            data: movies
+        });
+    } catch (error) {
+        return response.status(500).json({
+            message: error.message || error,
+            error: true,
+            success: false
+        });
+    }
+}

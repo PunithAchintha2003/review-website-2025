@@ -120,3 +120,24 @@ export async function viewSongController(request, response) {
         });
     }
 }
+
+//View all songs
+export async function getAllSongsController(request, response) {
+    try {
+        const songs = await songModel.find();
+
+        return response.json({
+            message: "Songs retrieved successfully",
+            error: false,
+            success: true,
+            data: songs
+        });
+    } catch (error) {
+        return response.status(500).json({
+            message: error.message || error,
+            error: true,
+            success: false
+        });
+    }
+}
+

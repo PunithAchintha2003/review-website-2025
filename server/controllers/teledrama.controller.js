@@ -124,3 +124,23 @@ export async function viewTeledramaController(request, response) {
         });
     }
 }
+
+//View all Teledramas
+export async function getAllTeledramasController(request, response) {
+    try {
+        const teledramas = await teledramaModel.find();
+
+        return response.json({
+            message: "Teledramas retrieved successfully",
+            error: false,
+            success: true,
+            data: teledramas
+        });
+    } catch (error) {
+        return response.status(500).json({
+            message: error.message || error,
+            error: true,
+            success: false
+        });
+    }
+}

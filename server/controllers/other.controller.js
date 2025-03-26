@@ -120,3 +120,23 @@ export async function viewOtherController(request, response) {
         })
     }
 }
+
+//View all others
+export async function getAllOthersController(request, response) {
+    try {
+        const others = await OtherModel.find();
+
+        return response.json({
+            message: "Others retrieved successfully",
+            error: false,
+            success: true,
+            data: others
+        });
+    } catch (error) {
+        return response.status(500).json({
+            message: error.message || error,
+            error: true,
+            success: false
+        });
+    }
+}

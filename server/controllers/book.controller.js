@@ -120,3 +120,23 @@ export async function viewBookController(request, response) {
         });
     }
 }
+
+//View all books
+export async function getAllBooksController(request, response) {
+    try {
+        const books = await bookModel.find();
+
+        return response.json({
+            message: "Books retrieved successfully",
+            error: false,
+            success: true,
+            data: books
+        });
+    } catch (error) {
+        return response.status(500).json({
+            message: error.message || error,
+            error: true,
+            success: false
+        });
+    }
+}

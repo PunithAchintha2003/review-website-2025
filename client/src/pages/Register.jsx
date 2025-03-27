@@ -1,6 +1,11 @@
 import { useState } from "react"
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
+import toast from "react-hot-toast";
+import Axios from '../utils/Axios';
+import SummaryApi from "../common/SummaryApi";
+import AxiosToastError from "../utils/AxiosToastError";
+import { Link, useNavigate } from "react-router";
 
 const Register = () => {
 
@@ -13,6 +18,7 @@ const Register = () => {
 
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -27,8 +33,40 @@ const Register = () => {
 
   const valideValue = Object.values(data).every(el => el)
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = async(e)=>{
     e.preventDefault()
+
+    if(data.password !== data.confirmPassword){
+      toast.error(
+        "Password and Confirm Password must be same"
+      )
+      return
+    }
+
+    try {
+      const response = await Axios({
+        ...SummaryApi.register,
+        data : data
+      })
+
+      if(response.data.error){
+        toast.error(response.data.message)
+      }
+
+      if(response.data.success){
+        toast.success(response.data.message)
+        setData({
+          name: "",
+          email: "",
+          password: "",
+          confirmPassword: ""
+        })
+        navigate("/login")
+      }
+
+    } catch (error) {
+      AxiosToastError(error)
+    }
   }
 
   return (
@@ -112,9 +150,16 @@ const Register = () => {
             </div>
           </div>
 
-          <button className={`${valideValue ? "bg-green-600" : "bg-gray-500"} text-white py-2 rounded 
-          font-semibold my-3 tracking-wide cursor-pointer`}>Register</button>
+          <button disabled={!valideValue} className={`${valideValue ? "bg-green-700 hover:bg-green-600" :
+          "bg-gray-500"} text-white py-2 rounded font-semibold 
+          my-3 tracking-wide cursor-pointer`}>Register
+          </button>
         </form>
+
+        <p>
+          Already have account ? <Link to={"/login"}
+          className="font-semibold text-blue-600 hover:text-blue-800">Login</Link>
+        </p>
       </div>
     </section>
   )

@@ -1,20 +1,16 @@
 import { useState } from "react"
-import { FaRegEyeSlash } from "react-icons/fa";
-import { FaRegEye } from "react-icons/fa";
 import toast from "react-hot-toast";
 import Axios from '../utils/Axios';
 import SummaryApi from "../common/SummaryApi";
 import AxiosToastError from "../utils/AxiosToastError";
 import { Link, useNavigate } from "react-router";
 
-const Login = () => {
+const ForgotPassword = () => {
 
   const [data, setData] = useState({
     email: "",
-    password: "",
   })
 
-  const [showPassword, setShowPassword] = useState(false)
   const navigate = useNavigate()
 
   const handleChange = (e) => {
@@ -78,27 +74,6 @@ const Login = () => {
           </div>
 
           <div className="grid gap-1">
-            <label htmlFor="password">Password :</label>
-            <div className="bg-green-100 p-2 border rounded flex items-center focus-within:border">
-              <input
-                type={showPassword ? "text" : "password"}
-                id='password'
-                className="w-full outline-none"
-                name='password'
-                value={data.password}
-                onChange={handleChange}
-                placeholder="Enter your password"
-              />
-              <div onClick={() => setShowPassword(preve => !preve)} className="cursor-pointer">
-                {
-                  showPassword ? (
-                    <FaRegEyeSlash />
-                  ) : (
-                    <FaRegEye />
-                  )
-                }
-              </div>
-            </div>
             <Link to={"/forgot-password"} className="block ml-auto hover:text-blue-600">
               Forgot Password ?</Link>
           </div>
@@ -117,4 +92,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default ForgotPassword

@@ -1,12 +1,6 @@
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
-
-  const navigate = useNavigate
-
-  const redirectToLoginPage = () => {
-    navigate("/login")
-  }
 
   return (
     <div>
@@ -21,7 +15,7 @@ const Header = () => {
 
               {/* Login */}
               <div className="hidden lg:flex items-center">
-                <button onClick={redirectToLoginPage} className='text-lg px-2 cursor-pointer'>Login</button>
+                <Link to={"/login"}>Login</Link>
               </div>
             </div>
         </header>

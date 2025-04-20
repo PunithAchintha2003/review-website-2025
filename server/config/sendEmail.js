@@ -10,19 +10,20 @@ const resend = new Resend(process.env.RESEND_API);
 
                 // Send Email
 
-const sendEmail = async({ sentTo, subject, html })=>{
+const sendEmail = async({ sendTo, subject, html })=>{
     try {
         const { data, error } = await resend.emails.send({
             from: 'GreenGrass <onboarding@resend.dev>',
-            to: sentTo,
+            to: sendTo,
             subject: subject,
             html: html,
           });
 
           if (error) {
-            return console.error({ error });
+            console.error("Resend error:", error);
+            throw new Error(error.message || "Failed to send email");
           }
-
+          
           return data
 
     } catch (error) {

@@ -336,6 +336,9 @@ export async function verifyForgotPasswordOtp(request,response){
             })
         }
 
+        // if otp is not expired
+        // otp === user.forgot_password_otp
+
         return response.json({
             message : "Verify OTP successfully",
             error : false,
@@ -358,7 +361,7 @@ export async function resetpassword(request,response){
 
         if(!email || !newPassword || !confirmPassword){
             return response.status(400).json({
-                message : "Provide required fields",
+                message : "Provide required fields Email, New Password, Confirm Password",
                 error : true,
                 success : false
             })

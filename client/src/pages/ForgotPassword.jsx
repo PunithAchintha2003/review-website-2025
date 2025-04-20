@@ -31,7 +31,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await Axios({
-        ...SummaryApi.login,
+        ...SummaryApi.forgot_password,
         data : data
       })
 
@@ -43,7 +43,6 @@ const ForgotPassword = () => {
         toast.success(response.data.message)
         setData({
           email: "",
-          password: "",
         })
         navigate("/")
       }

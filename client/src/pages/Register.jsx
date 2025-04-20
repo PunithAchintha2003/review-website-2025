@@ -6,6 +6,7 @@ import Axios from '../utils/Axios';
 import SummaryApi from "../common/SummaryApi";
 import AxiosToastError from "../utils/AxiosToastError";
 import { Link, useNavigate } from "react-router";
+import logo from '../assets/logo.jpeg'
 
 const Register = () => {
 
@@ -71,7 +72,15 @@ const Register = () => {
 
   return (
     <section className="w-full container mx-auto px-2">
-      <div className="bg-green-300 my-4 w-full max-w-lg mx-auto rounded p-7">
+      <div className="my-4 mx-auto w-fit"> 
+        <img
+            src={logo}
+            width={120}
+            height={60}
+            alt="logo"
+        />
+      </div>
+      <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
         <p>Welcome to Green Grass</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>
@@ -81,7 +90,7 @@ const Register = () => {
               type="text"
               id='name'
               autoFocus
-              className="bg-green-100 p-2 border rounded"
+              className="border-white p-2 border rounded"
               name='name'
               value={data.name}
               onChange={handleChange}
@@ -94,7 +103,7 @@ const Register = () => {
             <input
               type="email"
               id='email'
-              className="bg-green-100 p-2 border rounded"
+              className="border-white p-2 border rounded"
               name='email'
               value={data.email}
               onChange={handleChange}
@@ -104,7 +113,7 @@ const Register = () => {
 
           <div className="grid gap-1">
             <label htmlFor="password">Password :</label>
-            <div className="bg-green-100 p-2 border rounded flex items-center focus-within:border">
+            <div className="border-white p-2 border rounded flex items-center focus-within:border">
               <input
                 type={showPassword ? "text" : "password"}
                 id='password'
@@ -128,7 +137,7 @@ const Register = () => {
 
           <div className="grid gap-1">
             <label htmlFor="confirmPassword">Confirm Password :</label>
-            <div className="bg-green-100 p-2 border rounded flex items-center focus-within:border">
+            <div className="border-white p-2 border rounded flex items-center focus-within:border">
               <input
                 type={showConfirmPassword ? "text" : "password"}
                 id='confirmPassword'
@@ -150,15 +159,15 @@ const Register = () => {
             </div>
           </div>
 
-          <button disabled={!valideValue} className={`${valideValue ? "bg-green-700 hover:bg-green-600" :
-          "bg-gray-500"} text-white py-2 rounded font-semibold 
+          <button disabled={!valideValue} className={`${valideValue ? "bg-green-700 hover:bg-green-400 border border-white" :
+          "border-white border"} text-white py-2 rounded font-semibold 
           my-3 tracking-wide cursor-pointer`}>Register
           </button>
         </form>
 
         <p>
           Already have account ? <Link to={"/login"}
-          className="font-semibold text-blue-600 hover:text-blue-800">Login</Link>
+          className="font-semibold text-white hover:text-blue-800">Login</Link>
         </p>
       </div>
     </section>

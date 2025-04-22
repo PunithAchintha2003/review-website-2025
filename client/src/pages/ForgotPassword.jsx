@@ -41,10 +41,12 @@ const ForgotPassword = () => {
 
       if(response.data.success){
         toast.success(response.data.message)
+        navigate("/verification-otp",{
+          state : data
+        })
         setData({
           email: "",
         })
-        navigate("/")
       }
 
     } catch (error) {
@@ -55,7 +57,7 @@ const ForgotPassword = () => {
   return (
     <section className="w-full container mx-auto px-2">
       <div className="bg-green-300 my-4 w-full max-w-lg mx-auto rounded p-7">
-        <p>Login to Green Grass</p>
+        <p className="font-semibold text-lg">Forgot Password</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>
 
@@ -72,19 +74,14 @@ const ForgotPassword = () => {
             />
           </div>
 
-          <div className="grid gap-1">
-            <Link to={"/forgot-password"} className="block ml-auto hover:text-blue-600">
-              Forgot Password ?</Link>
-          </div>
-
           <button disabled={!valideValue} className={`${valideValue ? "bg-green-700 hover:bg-green-600" :
           "bg-gray-500"} text-white py-2 rounded font-semibold 
-          my-3 tracking-wide cursor-pointer`}>Login</button>
+          my-3 tracking-wide cursor-pointer`}>Send OTP</button>
         </form>
 
         <p>
-          Don`t have account ? <Link to={"/register"}
-          className="font-semibold text-blue-600 hover:text-blue-800">Register</Link>
+          Already have account ? <Link to={"/login"}
+          className="font-semibold text-blue-600 hover:text-blue-800">Login</Link>
         </p>
       </div>
     </section>

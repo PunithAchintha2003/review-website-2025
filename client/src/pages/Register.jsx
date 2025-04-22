@@ -6,7 +6,7 @@ import Axios from '../utils/Axios';
 import SummaryApi from "../common/SummaryApi";
 import AxiosToastError from "../utils/AxiosToastError";
 import { Link, useNavigate } from "react-router";
-import logo from '../assets/logo.jpeg'
+import logo from '../assets/logo.png'
 
 const Register = () => {
 

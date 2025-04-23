@@ -1,19 +1,42 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import './App.css'
 import Header from './component/Header'
 import Footer from './component/Footer'
 import { Toaster } from 'react-hot-toast';
+import { useEffect } from 'react';
+import fetchUserDetails from './utils/fetchUserDetails';
+import { setUserDetails } from './store/userSlice';
+import { useDispatch } from 'react-redux';
 
 function App() {
 
+  const dispatch = useDispatch()
+  const location = useLocation()
+
+  const fetchUser = async()=>{
+    const userData = await fetchUserDetails()
+    dispatch(setUserDetails(userData.data))
+  }
+
+  useEffect(()=>{
+    fetchUser()
+  },[])
+
+  const hideLayout = location.pathname === '/login' || 
+  location.pathname === '/register' ||
+  location.pathname === '/forgot-password' || location.pathname === '/verification-otp' ||
+  location.pathname === '/reset-password'
+
   return (
     <>
-      <Header/>
-        <main className='min-h-[83vh]'>
-          <Outlet/>
-        </main>
-      <Footer/>
-      <Toaster/>
+      <div className='text-white'>
+        {!hideLayout && <Header />}
+          <main className='min-h-[83vh]'>
+            <Outlet/>
+          </main>
+        {!hideLayout && <Footer />}
+        <Toaster/>
+      </div>
     </>
   )
 }

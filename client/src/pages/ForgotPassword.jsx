@@ -4,6 +4,7 @@ import Axios from '../utils/Axios';
 import SummaryApi from "../common/SummaryApi";
 import AxiosToastError from "../utils/AxiosToastError";
 import { Link, useNavigate } from "react-router";
+import logo from '../assets/logo.png'
 
 const ForgotPassword = () => {
 
@@ -56,7 +57,15 @@ const ForgotPassword = () => {
 
   return (
     <section className="w-full container mx-auto px-2">
-      <div className="bg-green-300 my-4 w-full max-w-lg mx-auto rounded p-7">
+        <div className="mt-16 mb-8 mx-auto w-fit"> 
+          <img
+              src={logo}
+              width={120}
+              height={60}
+              alt="logo"
+          />
+      </div>
+      <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
         <p className="font-semibold text-lg">Forgot Password</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>
@@ -66,7 +75,7 @@ const ForgotPassword = () => {
             <input
               type="email"
               id='email'
-              className="bg-green-100 p-2 border rounded"
+              className="border-white p-2 border rounded"
               name='email'
               value={data.email}
               onChange={handleChange}
@@ -74,14 +83,14 @@ const ForgotPassword = () => {
             />
           </div>
 
-          <button disabled={!valideValue} className={`${valideValue ? "bg-green-700 hover:bg-green-600" :
-          "bg-gray-500"} text-white py-2 rounded font-semibold 
+          <button disabled={!valideValue} className={`${valideValue ? "bg-green-600 hover:bg-green-700 border border-white" :
+          "border-white border"} text-white py-2 rounded font-semibold 
           my-3 tracking-wide cursor-pointer`}>Send OTP</button>
         </form>
 
         <p>
           Already have account ? <Link to={"/login"}
-          className="font-semibold text-blue-600 hover:text-blue-800">Login</Link>
+          className="font-semibold text-white hover:text-green-100">Login</Link>
         </p>
       </div>
     </section>

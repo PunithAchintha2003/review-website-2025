@@ -6,6 +6,7 @@ import Axios from '../utils/Axios';
 import SummaryApi from "../common/SummaryApi";
 import AxiosToastError from "../utils/AxiosToastError";
 import { Link, useNavigate } from "react-router";
+import logo from '../assets/logo.png'
 
 const Login = () => {
 
@@ -61,7 +62,15 @@ const Login = () => {
 
   return (
     <section className="w-full container mx-auto px-2">
-      <div className="bg-green-300 my-4 w-full max-w-lg mx-auto rounded p-7">
+        <div className="mt-16 mb-8 mx-auto w-fit"> 
+          <img
+              src={logo}
+              width={120}
+              height={60}
+              alt="logo"
+          />
+        </div>
+      <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
         <p>Login to Green Grass</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>
@@ -71,7 +80,7 @@ const Login = () => {
             <input
               type="email"
               id='email'
-              className="bg-green-100 p-2 border rounded"
+              className="border-white p-2 border rounded"
               name='email'
               value={data.email}
               onChange={handleChange}
@@ -81,7 +90,7 @@ const Login = () => {
 
           <div className="grid gap-1">
             <label htmlFor="password">Password :</label>
-            <div className="bg-green-100 p-2 border rounded flex items-center focus-within:border">
+            <div className="border-white p-2 border rounded flex items-center focus-within:border">
               <input
                 type={showPassword ? "text" : "password"}
                 id='password'
@@ -101,18 +110,18 @@ const Login = () => {
                 }
               </div>
             </div>
-            <Link to={"/forgot-password"} className="block ml-auto hover:text-blue-600">
+            <Link to={"/forgot-password"} className="block ml-auto hover:text-green-100">
               Forgot Password ?</Link>
           </div>
 
-          <button disabled={!valideValue} className={`${valideValue ? "bg-green-700 hover:bg-green-600" :
-          "bg-gray-500"} text-white py-2 rounded font-semibold 
+          <button disabled={!valideValue} className={`${valideValue ? "bg-green-600 hover:bg-green-700 border border-white" :
+          "border-white border"} text-white py-2 rounded font-semibold 
           my-3 tracking-wide cursor-pointer`}>Login</button>
         </form>
 
         <p>
           Don`t have account ? <Link to={"/register"}
-          className="font-semibold text-blue-600 hover:text-blue-800">Register</Link>
+          className="font-semibold text-white hover:text-green-100">Register</Link>
         </p>
       </div>
     </section>

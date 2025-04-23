@@ -4,6 +4,7 @@ import Axios from '../utils/Axios';
 import SummaryApi from "../common/SummaryApi";
 import AxiosToastError from "../utils/AxiosToastError";
 import { Link, useLocation, useNavigate } from "react-router";
+import logo from '../assets/logo.png'
 
 const OtpVerification = () => {
 
@@ -56,7 +57,15 @@ const OtpVerification = () => {
 
   return (
     <section className="w-full container mx-auto px-2">
-      <div className="bg-green-300 my-4 w-full max-w-lg mx-auto rounded p-7">
+        <div className="mt-16 mb-8 mx-auto w-fit"> 
+          <img
+              src={logo}
+              width={120}
+              height={60}
+              alt="logo"
+          />
+        </div>
+      <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
         <p className="font-semibold text-lg">Enter OTP</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>
@@ -89,7 +98,7 @@ const OtpVerification = () => {
                               }
                           }}
                           maxLength={1}
-                          className="bg-green-100 w-full max-w-16 p-2 border rounded text-center font-semibold"
+                          className="bg-green-700 w-full max-w-16 p-2 border rounded text-center font-semibold"
                         />
                     )
                 })
@@ -98,14 +107,14 @@ const OtpVerification = () => {
 
           </div>
 
-          <button disabled={!valideValue} className={`${valideValue ? "bg-green-700 hover:bg-green-600" :
-          "bg-gray-500"} text-white py-2 rounded font-semibold 
+          <button disabled={!valideValue} className={`${valideValue ? "bg-green-600 hover:bg-green-700 border border-white" :
+          "border-white border"} text-white py-2 rounded font-semibold 
           my-3 tracking-wide cursor-pointer`}>Verify OTP</button>
         </form>
 
         <p>
           Already have account ? <Link to={"/login"}
-          className="font-semibold text-blue-600 hover:text-blue-800">Login</Link>
+          className="font-semibold text-white hover:text-green-100">Login</Link>
         </p>
       </div>
     </section>

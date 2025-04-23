@@ -72,7 +72,7 @@ const Register = () => {
 
   return (
     <section className="w-full container mx-auto px-2">
-      <div className="my-4 mx-auto w-fit"> 
+      <div className="mt-16 mb-8 mx-auto w-fit"> 
         <img
             src={logo}
             width={120}
@@ -159,7 +159,7 @@ const Register = () => {
             </div>
           </div>
 
-          <button disabled={!valideValue} className={`${valideValue ? "bg-green-700 hover:bg-green-400 border border-white" :
+          <button disabled={!valideValue} className={`${valideValue ? "bg-green-600 hover:bg-green-700 border border-white" :
           "border-white border"} text-white py-2 rounded font-semibold 
           my-3 tracking-wide cursor-pointer`}>Register
           </button>
@@ -167,7 +167,7 @@ const Register = () => {
 
         <p>
           Already have account ? <Link to={"/login"}
-          className="font-semibold text-white hover:text-blue-800">Login</Link>
+          className="font-semibold text-white hover:text-green-100">Login</Link>
         </p>
       </div>
     </section>

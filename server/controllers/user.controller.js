@@ -336,6 +336,11 @@ export async function verifyForgotPasswordOtp(request,response){
             })
         }
 
+        const updateUser = await UserModel.findByIdAndUpdate(user?._id,{
+            forgot_password_otp : "",
+            forgot_password_expiry : ""
+        })
+
         // if otp is not expired
         // otp === user.forgot_password_otp
 
@@ -456,6 +461,30 @@ export async function refreshToken(request,response){
     } catch (error) {
         return response.status(500).json({
             message : error.message || error,
+            error : true,
+            success : false
+        })
+    }
+}
+
+// Get login user details
+export async function userDetails(request,response) {
+    try {
+        const userId = request.userId
+
+        console.log(userId)
+
+        const user = await UserModel.findById(userId).select('-password -refresh_token')
+
+        return response.json({
+            message : 'user details',
+            data : user,
+            error : false,
+            success : true
+        })
+    } catch (error) {
+        return response.status(500)({
+            message : "Something is wrong",
             error : true,
             success : false
         })

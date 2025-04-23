@@ -61,7 +61,7 @@ const Login = () => {
   }
 
   return (
-    <section className="w-full container mx-auto px-2">
+    <section className="w-full container mx-auto px-2 ">
         <div className="mt-16 mb-8 mx-auto w-fit"> 
           <img
               src={logo}

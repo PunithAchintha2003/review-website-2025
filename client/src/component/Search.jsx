@@ -17,8 +17,6 @@ const Search = () => {
         navigate("/search")
     }
 
-    console.log("search",isSearchPage)
-
   return (
     <div className="border min-w-[120px] lg:max-w-[300px] h-8
     rounded-full overflow-hidden flex items-center pl-4 w-full group

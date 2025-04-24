@@ -15,8 +15,6 @@ const Header = () => {
   const navigate = useNavigate()
   const [openUserMenu, setOpenUserMenu] = useState(false)
 
-  console.log('user from store', user)
-
   const redirectToLoginPage = ()=>{
     navigate("/login")
   }
@@ -94,7 +92,7 @@ const Header = () => {
                   <FaRegCircleUser size={30}/>
                 </button>
 
-              {/* Login + Signup */}
+              {/* Login + Signup + Account */}
                 <div className='lg:flex items-center hidden space-x-5'>
                   {
                     user?._id ? (
@@ -121,20 +119,21 @@ const Header = () => {
                         }
                       </div>
                     ) : (
+                    <>
                       <div className='border p-2 hover:bg-green-600 h-8 rounded-full w-full px-4'>
                         <button onClick={redirectToLoginPage}
                           className="text-sm h-full lg:text-base flex items-center justify-center">
                           Login</button>
                       </div>
+                      
+                      <div className='border p-2 hover:bg-green-600 h-8 rounded-full w-full  px-4'>
+                        <button onClick={redirectToRegisterPage} 
+                          className="text-sm h-full lg:text-base flex items-center justify-center">
+                          Signup</button>
+                      </div>
+                  </>
                     )
                   }
-                  
-                {/* Signup */}
-                <div className='border p-2 hover:bg-green-600 h-8 rounded-full w-full  px-4'>
-                    <button onClick={redirectToRegisterPage} 
-                      className="text-sm h-full lg:text-base flex items-center justify-center">
-                      Signup</button>
-                  </div>
                 </div>
             </div>
         </header>

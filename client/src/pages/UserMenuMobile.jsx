@@ -11,7 +11,7 @@ const UserMenuMobile = () => {
   }
 
   return (
-    <section className="bg-green-600 py-2">
+    <section className="bg-slate-100 lg:min-h-[83vh] min-h-[77vh] text-black py-2">
       <button 
         onClick={redirectToHomePage}
         className="block w-fit ml-auto mr-2 cursor-pointer">

@@ -415,7 +415,7 @@ export async function resetpassword(request,response){
 // Refresh token controller
 export async function refreshToken(request,response){
     try {
-        const refreshToken = request.cookies.refreshToken || request?.header.
+        const refreshToken = request.cookies.refreshToken || request?.headers?.
         authorization?.split(" ")[1]
 
         if(!refreshToken){

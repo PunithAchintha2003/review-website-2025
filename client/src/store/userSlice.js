@@ -20,10 +20,18 @@ const initialValue = {
           state.verify_email = action.payload?.verify_email
           state.status = action.payload?.status
           state.role = action.payload?.role
+        },
+        logout : (state,action)=>{
+          state._id = ""
+          state.name = ""
+          state.email = ""
+          state.verify_email = ""
+          state.status = ""
+          state.role = ""
         }
     }
   })
 
-  export const { setUserDetails } = userSlice.actions
+  export const { setUserDetails,logout } = userSlice.actions
 
   export default userSlice.reducer

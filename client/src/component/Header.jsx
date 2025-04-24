@@ -5,11 +5,15 @@ import Search from './Search'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { FaRegCircleUser } from "react-icons/fa6"; // Menu = hamburger, X = close
+import { GoTriangleDown } from "react-icons/go";
+import { GoTriangleUp } from "react-icons/go";
+import UserMenu from './UserMenu'
 
 const Header = () => {
   const user = useSelector((state)=> state?.user)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const navigate = useNavigate()
+  const [openUserMenu, setOpenUserMenu] = useState(false)
 
   const redirectToLoginPage = ()=>{
     navigate("/login")
@@ -79,12 +83,39 @@ const Header = () => {
                 </button>
 
                 <div className='lg:flex items-center hidden space-x-5'>
-                  <div className='border p-2 hover:bg-green-600 h-8 rounded-full w-full px-4'>
-                    <button onClick={redirectToLoginPage}
-                      className="text-sm h-full lg:text-base flex items-center justify-center">
-                      Login</button>
-                  </div>
-
+                  {
+                    user?._id ? (
+                      <div className='relative'>
+                        <div onClick={()=>setOpenUserMenu(preve => !preve)}
+                         className='flex items-center gap-1 cursor-pointer select-none'>
+                          <p>Account</p>
+                          {
+                            openUserMenu ? (
+                              <GoTriangleUp size={25}/>
+                            ) : ( 
+                              <GoTriangleDown size={25}/>
+                            )
+                          }
+                        </div>
+                        {
+                          openUserMenu && (
+                            <div className='absolute top-12 whitespace-nowrap right-1'>
+                              <div className='bg-green-600 rounded p-4 min-w-38'>
+                                <UserMenu/>
+                              </div>                          
+                            </div>
+                          )
+                        }
+                      </div>
+                    ) : (
+                      <div className='border p-2 hover:bg-green-600 h-8 rounded-full w-full px-4'>
+                        <button onClick={redirectToLoginPage}
+                          className="text-sm h-full lg:text-base flex items-center justify-center">
+                          Login</button>
+                      </div>
+                    )
+                  }
+                  
                 {/* Signup */}
                 <div className='border p-2 hover:bg-green-600 h-8 rounded-full w-full  px-4'>
                     <button onClick={redirectToRegisterPage} 

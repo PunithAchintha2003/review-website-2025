@@ -31,7 +31,7 @@ function App() {
     <>
       <div className='text-white'>
         {!hideLayout && <Header />}
-          <main className='min-h-[83vh]'>
+          <main className='lg:min-h-[83vh] min-h-[77vh]'>
             <Outlet/>
           </main>
         {!hideLayout && <Footer />}

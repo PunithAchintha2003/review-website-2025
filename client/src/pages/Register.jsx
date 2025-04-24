@@ -72,13 +72,19 @@ const Register = () => {
 
   return (
     <section className="w-full container mx-auto px-2">
-      <div className="mt-16 mb-8 mx-auto w-fit"> 
+      <div className="lg:mt-16 lg:mb-8 mx-auto w-fit"> 
         <img
             src={logo}
             width={120}
             height={60}
             alt="logo"
+            className="hidden lg:block"
         />
+        <img
+            src={logo}
+            alt="logo"
+            className="lg:hidden w-21 mt-3 h-auto"
+          />
       </div>
       <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
         <p>Welcome to Green Grass</p>

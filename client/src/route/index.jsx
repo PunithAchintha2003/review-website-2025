@@ -7,6 +7,7 @@ import ForgotPassword from "../pages/ForgotPassword"
 import OtpVerification from "../pages/OtpVerification"
 import ResetPassword from "../pages/ResetPassword"
 import SearchPage from "../pages/SearchPage"
+import UserMenuMobile from "../pages/UserMenuMobile"
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path : "search",
                 element : <SearchPage/>
+            },
+            {
+                path : "user",
+                element : <UserMenuMobile/>
             },
         ]
     }

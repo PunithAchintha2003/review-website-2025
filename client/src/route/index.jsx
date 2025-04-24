@@ -8,6 +8,9 @@ import OtpVerification from "../pages/OtpVerification"
 import ResetPassword from "../pages/ResetPassword"
 import SearchPage from "../pages/SearchPage"
 import UserMenuMobile from "../pages/UserMenuMobile"
+import Dashboard from "../layouts/Dashboard"
+import Profile from "../pages/Profile"
+import MyReviews from "../pages/MyReviews"
 
 const router = createBrowserRouter([
     {
@@ -45,6 +48,20 @@ const router = createBrowserRouter([
             {
                 path : "user",
                 element : <UserMenuMobile/>
+            },
+            {
+                path : "dashboard",
+                element : <Dashboard/>,
+                children : [
+                    {
+                        path : "profile",
+                        element : <Profile/>
+                    },
+                    {
+                        path : "myreviews",
+                        element : <MyReviews/>
+                    }
+                ]
             },
         ]
     }

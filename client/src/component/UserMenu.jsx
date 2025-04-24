@@ -6,6 +6,7 @@ import SummaryApi from "../common/SummaryApi"
 import { logout } from "../store/userSlice"
 import toast from 'react-hot-toast'
 import AxiosToastError from "../utils/AxiosToastError";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const UserMenu = ({close}) => {
 
@@ -32,17 +33,32 @@ const UserMenu = ({close}) => {
         AxiosToastError(error)
       }
     }
+    
+    const handleClose = ()=>{
+      if(close){
+        close()
+      }
+    }
 
   return (
     <div className="">
         <div className="font-semibold">My Account</div>
-        <div className="text-sm my-2">{user.name || user.email}</div>
+        <div className="text-sm my-2 flex items-center gap-2">
+          <span className="max-w-52 text-ellipsis line-clamp-1">{user.name || user.email}</span>
+          <Link onClick={handleClose} to={"/dashboard/profile"}>
+            <HiOutlineExternalLink size={17} 
+            className="hover:bg-green-500 rounded"/>
+          </Link>
+        </div>
 
         <Divider/>
 
         <div className="text-sm grid gap-2">
-            <Link to={""} className=" p-2 rounded-md hover:bg-green-500">My Reviews</Link>
-            <button onClick={handleLogout} className="p-2 text-left rounded-md hover:bg-green-500 ">Logout</button>
+            <Link onClick={handleClose} to={"/dashboard/myreviews"} className="p-2 
+            rounded-md hover:bg-green-500">My Reviews</Link>
+
+            <button onClick={handleLogout} className="p-2 text-left 
+            rounded-md hover:bg-green-500">Logout</button>
         </div>
     </div>
   )

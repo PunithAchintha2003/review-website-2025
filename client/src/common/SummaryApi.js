@@ -33,6 +33,11 @@ const SummaryApi = {
         url : '/api/user/logout',
         method : 'get'
     },
+    updateUserDetails : {
+        url : '/api/user/update-user',
+        method : 'put'
+    },
 }
 
 export default SummaryApi
+

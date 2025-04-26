@@ -35,7 +35,7 @@ const Header = () => {
   }
 
   return (
-    <div className='relative'>
+    <div className='relative text-white'>
         <header className="h-15 shadow-md sticky top-0 z-50">
             <div className="container mx-auto flex items-center h-full px-2 justify-between">
 
@@ -111,7 +111,7 @@ const Header = () => {
                         {
                           openUserMenu && (
                             <div className='absolute top-12 whitespace-nowrap right-1'>
-                              <div className='bg-green-600 rounded p-4 min-w-38'>
+                              <div className='bg-green-100 border border-green-600 text-neutral-800 rounded p-4 min-w-38'>
                                 <UserMenu close={handleCloseUserMenu}/>
                               </div>                          
                             </div>

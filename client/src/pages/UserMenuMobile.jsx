@@ -11,10 +11,10 @@ const UserMenuMobile = () => {
   }
 
   return (
-    <section className="bg-slate-100 lg:min-h-[83vh] min-h-[77vh] text-black py-2">
+    <section className="bg-white h-full w-full py-2">
       <button 
         onClick={redirectToHomePage}
-        className="block w-fit ml-auto mr-2 cursor-pointer">
+        className="block w-fit text-neutral-800 ml-auto mr-2 cursor-pointer">
         <IoClose size={25}/>
       </button>
       <div className="p-3 pb-8 mx-auto container">

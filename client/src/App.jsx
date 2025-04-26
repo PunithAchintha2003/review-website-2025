@@ -7,6 +7,9 @@ import { useEffect } from 'react';
 import fetchUserDetails from './utils/fetchUserDetails';
 import { setUserDetails } from './store/userSlice';
 import { useDispatch } from 'react-redux';
+import Axios from './utils/Axios';
+import SummaryApi from './common/SummaryApi';
+import { setAllCategory } from './store/productSlice';
 
 function App() {
 
@@ -18,8 +21,26 @@ function App() {
     dispatch(setUserDetails(userData.data))
   }
 
+    const fetchCategory = async()=>{
+      try {
+          const response = await Axios({
+              ...SummaryApi.getCategory
+          })
+          const { data : responseData } = response
+
+          if(responseData.success){
+            dispatch(setAllCategory(responseData.data))
+          }
+      } catch (error) {
+          
+      }finally{
+        
+      }
+    }
+
   useEffect(()=>{
     fetchUser()
+    fetchCategory()
   },[])
 
   const hideLayout = location.pathname === '/login' || 
@@ -29,8 +50,8 @@ function App() {
 
   return (
     <>
-      <div className='text-white'>
-        {!hideLayout && <Header />}
+      <div className=''>
+        {!hideLayout && <Header/>}
           <main className='lg:min-h-[83vh] min-h-[77vh]'>
             <Outlet/>
           </main>

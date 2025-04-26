@@ -11,6 +11,10 @@ import UserMenuMobile from "../pages/UserMenuMobile"
 import Dashboard from "../layouts/Dashboard"
 import Profile from "../pages/Profile"
 import MyReviews from "../pages/MyReviews"
+import UploadProduct from "../pages/UploadProduct"
+import ProductAdmin from "../pages/ProductAdmin"
+import AdminPermission from "../layouts/AdminPermission"
+import CategoryPage from "../pages/CategoryPage"
 
 const router = createBrowserRouter([
     {
@@ -60,7 +64,19 @@ const router = createBrowserRouter([
                     {
                         path : "myreviews",
                         element : <MyReviews/>
-                    }
+                    },
+                    {
+                        path : "upload-product",
+                        element : <AdminPermission><UploadProduct/></AdminPermission>
+                    },
+                    {
+                        path : "product",
+                        element : <AdminPermission><ProductAdmin/></AdminPermission>
+                    },
+                    {
+                        path : 'category',
+                        element : <AdminPermission><CategoryPage/></AdminPermission>
+                    },
                 ]
             },
         ]

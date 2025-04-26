@@ -14,6 +14,8 @@ import router from './route/other.route.js'
 import reviewRouter from './route/review.route.js'
 import songRouter from './route/song.route.js'
 import teledramaRouter from './route/teledrama.route.js'
+import uploadRouter from './route/upload.router.js'
+import categoryRouter from './route/category.route.js'
 
 const app = express()
 app.use(cors({
@@ -37,6 +39,8 @@ app.get("/",(request,response)=>{
 })
 
 app.use('/api/user',userRouter)
+app.use("/api/category",categoryRouter)
+app.use("/api/file",uploadRouter)
 
 app.use('/api/book',bookRouter)
 app.use('/api/movie',movieRouter)

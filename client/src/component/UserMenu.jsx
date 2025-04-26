@@ -7,6 +7,7 @@ import { logout } from "../store/userSlice"
 import toast from 'react-hot-toast'
 import AxiosToastError from "../utils/AxiosToastError";
 import { HiOutlineExternalLink } from "react-icons/hi";
+import isAdmin from "../utils/isAdmin"
 
 const UserMenu = ({close}) => {
 
@@ -44,7 +45,10 @@ const UserMenu = ({close}) => {
     <div className="">
         <div className="font-semibold">My Account</div>
         <div className="text-sm my-2 flex items-center gap-2">
-          <span className="max-w-52 text-ellipsis line-clamp-1">{user.name || user.email}</span>
+          <span className="max-w-52 text-ellipsis line-clamp-1">
+            {user.name || user.email} 
+            <span className="ml-2 text-medium text-green-600">{user.role === "ADMIN" ? "( Admin )" : ""}</span>
+          </span>
           <Link onClick={handleClose} to={"/dashboard/profile"}>
             <HiOutlineExternalLink size={17} 
             className="hover:bg-green-500 rounded"/>
@@ -54,11 +58,33 @@ const UserMenu = ({close}) => {
         <Divider/>
 
         <div className="text-sm grid gap-2">
+
+            {
+              isAdmin(user.role) && (
+                <Link onClick={handleClose} to={"/dashboard/category"} className="p-2 
+                rounded-md hover:bg-green-500 mr-2">Category</Link>
+              )
+            }
+
+            {
+              isAdmin(user.role) && (
+                <Link onClick={handleClose} to={"/dashboard/upload-product"} className="p-2 
+                rounded-md hover:bg-green-500 mr-2">Upload Product</Link>
+              )
+            }
+
+            {
+              isAdmin(user.role) && (
+                <Link onClick={handleClose} to={"/dashboard/product"} className="p-2 
+                rounded-md hover:bg-green-500 mr-2">Product</Link>
+              )
+            }
+
             <Link onClick={handleClose} to={"/dashboard/myreviews"} className="p-2 
-            rounded-md hover:bg-green-500">My Reviews</Link>
+            rounded-md hover:bg-green-500 mr-2">My Reviews</Link>
 
             <button onClick={handleLogout} className="p-2 text-left 
-            rounded-md hover:bg-green-500">Logout</button>
+            rounded-md hover:bg-green-500 mr-2">Logout</button>
         </div>
     </div>
   )

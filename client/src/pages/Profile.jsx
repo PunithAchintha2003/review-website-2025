@@ -62,13 +62,18 @@ const Profile = () => {
     }
 
   return (
-    <form className="my-4 grid gap-4 ml-2 mr-2" onSubmit={handleSubmit}>
+
+    <div>
+        <div className="p-2 bg-green-200 shadow-md flex items-center justify-between">
+            <h2 className="font-semibold py-1">Profile</h2>
+        </div>
+    <form className="grid gap-3 mx-auto p-4" onSubmit={handleSubmit}>
         <div className="grid">
             <label>Name</label>
             <input
                 type="text"
                 placeholder="Enter your name"
-                className="p-2 border outline-none mt-1 rounded-sm"
+                className="p-1 border bg-green-200 outline-none mt-1 rounded-sm"
                 value={userData.name}
                 name='name'
                 onChange={handleOnChange}
@@ -82,7 +87,7 @@ const Profile = () => {
                 type="email"
                 id="email"
                 placeholder="Enter your email"
-                className="p-2 border outline-none mt-1 rounded-sm"
+                className="p-1 border bg-green-200 outline-none mt-1 rounded-sm"
                 value={userData.email}
                 name='email'
                 onChange={handleOnChange}
@@ -90,15 +95,14 @@ const Profile = () => {
             />
         </div>
 
-        <div className="mx-auto">
-        <button className="border px-4 py-2 font-semibold
-        hover:bg-green-600 rounded-sm w-100">
+        <button className="border bg-green-300 px-4 py-2 mt-5 font-semibold
+        hover:bg-green-400 rounded-sm">
             {
                 loading ? "Loading..." : "Submit"
             }
         </button>
-        </div>
     </form>
+    </div>
   )
 }
 

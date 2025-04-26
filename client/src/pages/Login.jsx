@@ -69,7 +69,7 @@ const Login = () => {
   }
 
   return (
-    <section className="w-full container mx-auto px-2 ">
+    <section className="w-screen h-screen text-white flex flex-col bg-green-600 px-2">
         <div className="lg:mt-16 lg:mb-8 mx-auto w-fit"> 
           <img
               src={logo}
@@ -128,7 +128,7 @@ const Login = () => {
               Forgot Password ?</Link>
           </div>
 
-          <button disabled={!valideValue} className={`${valideValue ? "bg-green-600 hover:bg-green-700 border border-white" :
+          <button disabled={!valideValue} className={`${valideValue ? "bg-green-500 hover:bg-green-700 border border-white" :
           "border-white border"} text-white py-2 rounded font-semibold 
           my-3 tracking-wide cursor-pointer`}>Login</button>
         </form>

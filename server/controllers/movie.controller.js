@@ -5,7 +5,7 @@ export async function createMovieController(request, response) {
     try {
         const { title, description, poster, headerImage, rating, synopsis, genre, releaseDate, director, producer, writer, cast, language, duration, aspectRatio } = request.body;
 
-        if (!title || !description || !poster || !headerImage || !rating || !synopsis || !genre || !releaseDate || !director || !producer || !writer || !cast || !language || !duration || !aspectRatio) {
+        if (!title || !headerImage || !director) {
             return response.status(400).json({
                 message: "Provide all required fields",
                 error: true,

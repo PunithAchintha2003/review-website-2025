@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
 const bookSchema = mongoose.Schema({
-    name: {
+    title: {
         type: String,
         required: [true, "Provide Title"]
     },
     description: {
         type: String,
-        required: [true, "Provide Description"]
+        required: [false, "Provide Description"]
     },
     image: {
         type: String,
@@ -15,7 +15,7 @@ const bookSchema = mongoose.Schema({
     },
     rating: {
         type: Number,
-        required: [true, "Provide Rating"]
+        required: [false, "Provide Rating"]
     },
     author: {
         type: String,
@@ -23,27 +23,27 @@ const bookSchema = mongoose.Schema({
     },
     genre: {
         type: String,
-        required: [true, "Provide Genre"]
+        required: [false, "Provide Genre"]
     },
     publisher: {
         type: String,
-        required: [true, "Provide Publisher"]
+        required: [false, "Provide Publisher"]
     },
     publicationDate: {
         type: Date,
-        required: [true, "Provide Publication Date"]
+        required: [false, "Provide Publication Date"]
     },
     ISBN: {
         type: String,
-        required: [true, "Provide ISBN"]
+        required: [false, "Provide ISBN"]
     },
     pageCount: {
         type: Number,
-        required: [true, "Provide Page Count"]
+        required: [false, "Provide Page Count"]
     },
     language: {
         type: String,
-        required: [true, "Provide Language"]
+        required: [false, "Provide Language"]
     }
 }, {
     timestamps: true

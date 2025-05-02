@@ -17,41 +17,53 @@ import teledramaRouter from './route/teledrama.route.js'
 import uploadRouter from './route/upload.router.js'
 import categoryRouter from './route/category.route.js'
 
-const app = express()
+const app = express();
+
+const allowedOrigins = [
+    'http://localhost:5173',
+    'http://127.0.0.1:5500'
+];
+
 app.use(cors({
-    credentials : true,
-    origin : process.env.FRONTEND_URL
-}))
+    credentials: true,
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS: ' + origin));
+        }
+    }
+}));
 app.use(express.json())
 app.use(cookieParser())
 app.use(morgan())
 app.use(helmet({
-    crossOriginResourcePolicy : false // Frontend & Backend domain difference error solve
+    crossOriginResourcePolicy: false // Frontend & Backend domain difference error solve
 }))
 
 const PORT = 8080 || process.env.PORT
 
-app.get("/",(request,response)=>{
+app.get("/", (request, response) => {
     // Server to Client
     response.json({
-        message : "Server is running " + PORT
+        message: "Server is running " + PORT
     })
 })
 
-app.use('/api/user',userRouter)
-app.use("/api/category",categoryRouter)
-app.use("/api/file",uploadRouter)
+app.use('/api/user', userRouter)
+app.use("/api/category", categoryRouter)
+app.use("/api/file", uploadRouter)
 
-app.use('/api/book',bookRouter)
-app.use('/api/movie',movieRouter)
-app.use('/api/other',router)
-app.use('/api/review',reviewRouter)
-app.use('/api/song',songRouter)
-app.use('/api/teledrama',teledramaRouter)
+app.use('/api/book', bookRouter)
+app.use('/api/movie', movieRouter)
+app.use('/api/other', router)
+app.use('/api/review', reviewRouter)
+app.use('/api/song', songRouter)
+app.use('/api/teledrama', teledramaRouter)
 
-connectDB().then(()=>{
-    app.listen(PORT,()=>{
-        console.log("Server is running",PORT)
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("Server is running", PORT)
     })
 })
 

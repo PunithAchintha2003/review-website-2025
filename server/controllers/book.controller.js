@@ -5,7 +5,7 @@ export async function createBookController(request, response) {
     try {
         const { title, description, image, rating, author, genre, publisher, publicationDate, ISBN, pageCount, language } = request.body;
 
-        if (!title || !description || !image || !rating || !author || !genre || !publisher || !publicationDate || !ISBN || !pageCount || !language) {
+        if (!title || !image || !author) {
             return response.status(400).json({
                 message: "Provide all required fields",
                 error: true,

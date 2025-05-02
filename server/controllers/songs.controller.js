@@ -5,7 +5,7 @@ export async function createSongController(request, response) {
     try {
         const { title, description, headerImage, posterImage, rating, artist, album, genre, releaseDate, duration, producer, composer, language } = request.body;
 
-        if (!title || !description || !headerImage || !posterImage || !rating || !artist || !album || !genre || !releaseDate || !duration || !producer || !composer || !language) {
+        if (!title || !headerImage || !artist) {
             return response.status(400).json({
                 message: "Provide all required fields",
                 error: true,

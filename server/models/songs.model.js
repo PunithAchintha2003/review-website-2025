@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
 const songsSchema = new mongoose.Schema({
-    name : {
+    title : {
         type: String,
         required: [true, "Provide Title"]
     },
     description: {
         type: String,
-        required: [true, "Provide Description"]
+        required: [false, "Provide Description"]
     },
     headerImage: {
         type: String,
@@ -15,11 +15,11 @@ const songsSchema = new mongoose.Schema({
     },
     posterImage: {
         type: String,
-        required: [true, "Provide Poster Image"]
+        required: [false, "Provide Poster Image"]
     },
     rating: {
         type: Number,
-        required: [true, "Provide Rating"]
+        required: [false, "Provide Rating"]
     },
     artist: {
         type: String,
@@ -27,31 +27,31 @@ const songsSchema = new mongoose.Schema({
     },
     album: {
         type: String,
-        required: [true, "Provide Album"]
+        required: [false, "Provide Album"]
     },
     genre: {
         type: String,
-        required: [true, "Provide Genre"]
+        required: [false, "Provide Genre"]
     },
     releaseDate: {
         type: Date,
-        required: [true, "Provide Release Date"]
+        required: [false, "Provide Release Date"]
     },
     duration: {
         type: String,
-        required: [true, "Provide Duration"]
+        required: [false, "Provide Duration"]
     },
     producer: {
         type: String,
-        required: [true, "Provide Producer"]
+        required: [false, "Provide Producer"]
     },
     composer: {
         type: String,
-        required: [true, "Provide Composer"]
+        required: [false, "Provide Composer"]
     },
     language: {
         type: String,
-        required: [true, "Provide Language"]
+        required: [false, "Provide Language"]
     }
 }, { timestamps: true });
 

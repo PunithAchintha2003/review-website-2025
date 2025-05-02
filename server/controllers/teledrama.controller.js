@@ -5,7 +5,7 @@ export async function createTeledramaController(request, response) {
     try {
         const { title, description, poster, headerImage, synopsis, rating, genre, releaseDate, director, producer, writer, cast, language, aspectRatio } = request.body;
 
-        if (!title || !description || !poster || !headerImage || !synopsis || !rating || !genre || !releaseDate || !director || !producer || !writer || !cast || !language || !aspectRatio) {
+        if (!title || !headerImage || !director) {
             return response.status(400).json({
                 message: "Provide all required fields",
                 error: true,

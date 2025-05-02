@@ -1,37 +1,37 @@
 import mongoose from "mongoose";
 
 const movieSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
         required: [true, "Provide Title"]
     },
     description: {
         type: String,
-        required: [true, "Provide Description"]
+        required: [false, "Provide Description"]
     },
     poster: {
         type: String,
-        required: [true, "Provide Poster"]
+        required: [false, "Provide Poster"]
     },
     headerImage: {
         type: String,
-        required: [true, "Provide Header Image"]
+        required: [false, "Provide Header Image"]
     },
     rating: {
         type: Number,
-        required: [true, "Provide Rating"]
+        required: [false, "Provide Rating"]
     },
     synopsis: {
         type: String,
-        required: [true, "Provide Synopsis"]
+        required: [false, "Provide Synopsis"]
     },
     genre: {
         type: String,
-        required: [true, "Provide Genre"]
+        required: [false, "Provide Genre"]
     },
     releaseDate: {
         type: Date,
-        required: [true, "Provide Release Date"]
+        required: [false, "Provide Release Date"]
     },
     director: {
         type: String,
@@ -39,27 +39,27 @@ const movieSchema = new mongoose.Schema({
     },
     producer: {
         type: String,
-        required: [true, "Provide Producer"]
+        required: [false, "Provide Producer"]
     },
     writer: {
         type: String,
-        required: [true, "Provide Writer"]
+        required: [false, "Provide Writer"]
     },
     cast: {
         type: [String],
-        required: [true, "Provide Cast"]
+        required: [false, "Provide Cast"]
     },
     language: {
         type: String,
-        required: [true, "Provide Language"]
+        required: [false, "Provide Language"]
     },
     duration: {
         type: String,
-        required: [true, "Provide Duration"]
+        required: [false, "Provide Duration"]
     },
     aspectRatio: {
         type: String,
-        required: [true, "Provide Aspect Ratio"]
+        required: [false, "Provide Aspect Ratio"]
     }
 }, {
     timestamps: true

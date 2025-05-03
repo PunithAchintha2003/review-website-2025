@@ -30,7 +30,7 @@ const CategoryPage = () => {
          setCategoryData(allCategory)
      },[allCategory])
 
-   /* const fetchCategory = async()=>{
+    const fetchCategory = async()=>{
         try {
             setLoading(true)
             const response = await Axios({
@@ -51,7 +51,6 @@ const CategoryPage = () => {
     useEffect(()=>{
         fetchCategory()
     },[])
-    */
 
     const handleDeleteCategory = async()=>{
         try {

@@ -71,7 +71,7 @@ const Register = () => {
   }
 
   return (
-    <section className="w-screen h-screen text-white flex flex-col bg-green-600 px-2">
+    <section className="w-screen h-screen text-white flex flex-col bg-[#0a730a] px-2">
       <div className="lg:mt-16 lg:mb-8 mx-auto w-fit"> 
         <img
             src={logo}

@@ -73,8 +73,8 @@ const Login = () => {
         <div className="lg:mt-16 lg:mb-8 mx-auto w-fit"> 
           <img
               src={logo}
-              width={120}
-              height={60}
+              width={80}
+              height={40}
               alt="logo"
               className="hidden lg:block"
           />

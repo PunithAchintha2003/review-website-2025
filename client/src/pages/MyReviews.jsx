@@ -1,8 +1,7 @@
-
 const MyReviews = () => {
   return (
     <div className="">
-        MyReviews
+        My Reviews
     </div>
   )
 }

@@ -6,7 +6,7 @@ import SummaryApi from "../common/SummaryApi"
 import { logout } from "../store/userSlice"
 import toast from 'react-hot-toast'
 import AxiosToastError from "../utils/AxiosToastError";
-import { HiOutlineExternalLink } from "react-icons/hi";
+import { HiCog } from "react-icons/hi";
 import isAdmin from "../utils/isAdmin"
 
 const UserMenu = ({close}) => {
@@ -50,7 +50,7 @@ const UserMenu = ({close}) => {
             <span className="ml-2 text-medium text-green-600">{user.role === "ADMIN" ? "( Admin )" : ""}</span>
           </span>
           <Link onClick={handleClose} to={"/dashboard/profile"}>
-            <HiOutlineExternalLink size={17} 
+            <HiCog size={17} 
             className="hover:bg-green-500 rounded"/>
           </Link>
         </div>
@@ -82,6 +82,9 @@ const UserMenu = ({close}) => {
 
             <Link onClick={handleClose} to={"/dashboard/myreviews"} className="p-2 
             rounded-md hover:bg-green-500 mr-2">My Reviews</Link>
+
+            <Link onClick={handleClose} to={"/dashboard/mycomments"} className="p-2 
+            rounded-md hover:bg-green-500 mr-2">My Comments</Link>
 
             <button onClick={handleLogout} className="p-2 text-left 
             rounded-md hover:bg-green-500 mr-2">Logout</button>

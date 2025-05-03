@@ -11,6 +11,7 @@ import UserMenuMobile from "../pages/UserMenuMobile"
 import Dashboard from "../layouts/Dashboard"
 import Profile from "../pages/Profile"
 import MyReviews from "../pages/MyReviews"
+import MyComments from "../pages/MyComments"
 import UploadProduct from "../pages/UploadProduct"
 import ProductAdmin from "../pages/ProductAdmin"
 import AdminPermission from "../layouts/AdminPermission"
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
                     {
                         path : "myreviews",
                         element : <MyReviews/>
+                    },
+                    {
+                        path : "mycomments",
+                        element : <MyComments/>
                     },
                     {
                         path : "upload-product",

@@ -44,7 +44,7 @@ const Header = () => {
 
                   {/* Logo + Mobile Icon */}
                     <div className="flex items-center space-x-2">
-                      <Link to="/" className="flex items-center">
+                      <Link to="http://127.0.0.1:5500/" className="flex items-center">
                         <img
                           src={logo}
                           width={40} // lg screen
@@ -68,7 +68,7 @@ const Header = () => {
                     </div>
 
                   {/* Desktop Nav Buttons */}
-                    <div className='hidden lg:flex space-x-4 ml-4'>
+                    {/* <div className='hidden lg:flex space-x-4 ml-4'>
                       {['Films', 'Songs', 'Teledramas', 'Books', 'Other'].map((label) => (
                         <button
                           key={label}
@@ -77,13 +77,13 @@ const Header = () => {
                           {label}
                         </button>
                       ))}
-                    </div>
+                    </div> */}
                 </div>
 
               {/* Search */}
-                <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-md xl:max-w-lg px-2">
+                {/* <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-md xl:max-w-lg px-2">
                   <Search />
-                </div>
+                </div> */}
               
               {/* Login Mobile */}
                 <button 

@@ -60,7 +60,7 @@ const Login = () => {
           email: "",
           password: "",
         })
-        navigate("/")
+        navigate("/dashboard")
       }
 
     } catch (error) {

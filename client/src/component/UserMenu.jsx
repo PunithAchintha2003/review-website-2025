@@ -66,17 +66,35 @@ const UserMenu = ({close}) => {
               )
             } */}
 
-            {
+            {/* {
               isAdmin(user.role) && (
                 <Link onClick={handleClose} to={"/dashboard/upload-product"} className="p-2 
                 rounded-md hover:bg-green-500 mr-2">Upload Product</Link>
               )
-            }
+            } */}
 
             {
               isAdmin(user.role) && (
-                <Link onClick={handleClose} to={"/dashboard/product"} className="p-2 
-                rounded-md hover:bg-green-500 mr-2">Product</Link>
+                <Link onClick={handleClose} to={"/dashboard/film-management"} className="p-2 
+                rounded-md hover:bg-green-500 mr-2">Films</Link>
+              )
+            }
+            {
+              isAdmin(user.role) && (
+                <Link onClick={handleClose} to={"/dashboard/song-management"} className="p-2 
+                rounded-md hover:bg-green-500 mr-2">Songs</Link>
+              )
+            }
+            {
+              isAdmin(user.role) && (
+                <Link onClick={handleClose} to={"/dashboard/teledrama-management"} className="p-2 
+                rounded-md hover:bg-green-500 mr-2">Teledramas</Link>
+              )
+            }
+            {
+              isAdmin(user.role) && (
+                <Link onClick={handleClose} to={"/dashboard/book-management"} className="p-2 
+                rounded-md hover:bg-green-500 mr-2">Books</Link>
               )
             }
 

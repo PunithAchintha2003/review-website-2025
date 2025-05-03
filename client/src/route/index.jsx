@@ -12,8 +12,10 @@ import Dashboard from "../layouts/Dashboard"
 import Profile from "../pages/Profile"
 import MyReviews from "../pages/MyReviews"
 import MyComments from "../pages/MyComments"
-import UploadProduct from "../pages/UploadProduct"
-import ProductAdmin from "../pages/ProductAdmin"
+import FilmAdmin from "../pages/filmManagement"
+import SongAdmin from "../pages/songManagement"
+import TeledramaAdmin from "../pages/teledramaManagement"
+import BookAdmin from "../pages/bookManagement"
 import AdminPermission from "../layouts/AdminPermission"
 import CategoryPage from "../pages/CategoryPage"
 
@@ -71,12 +73,20 @@ const router = createBrowserRouter([
                         element : <MyComments/>
                     },
                     {
-                        path : "upload-product",
-                        element : <AdminPermission><UploadProduct/></AdminPermission>
+                        path : "film-management",
+                        element : <AdminPermission><FilmAdmin/></AdminPermission>
                     },
                     {
-                        path : "product",
-                        element : <AdminPermission><ProductAdmin/></AdminPermission>
+                        path : "song-management",
+                        element : <AdminPermission><SongAdmin/></AdminPermission>
+                    },
+                    {
+                        path : "teledrama-management",
+                        element : <AdminPermission><TeledramaAdmin/></AdminPermission>
+                    },
+                    {
+                        path : "book-management",
+                        element : <AdminPermission><BookAdmin/></AdminPermission>
                     },
                     {
                         path : 'category',

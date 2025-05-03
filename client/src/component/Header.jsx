@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <div className='relative text-white'>
-        <header className="h-15 shadow-md sticky top-0 z-50">
+        <header className="h-15 shadow-md sticky top-0 z-50" style={{ backgroundColor: '#0a730a' }}>
             <div className="container mx-auto flex items-center h-full px-2 justify-between">
 
               {/* Logo + Buttons */}
@@ -143,7 +143,7 @@ const Header = () => {
             <div className="lg:hidden absolute top-16 left-0 bg-green-600 ml-10 shadow-md z-40">
               <div className="flex flex-col items-start space-y-2 p-4">
 
-                {['Films', 'Songs', 'Teledramas', 'Books', 'Other'].map((label) => (
+                {/* {['Films', 'Songs', 'Teledramas', 'Books', 'Other'].map((label) => (
                   <button
                     key={label}
                     className="w-full text-left hover:underline"
@@ -151,7 +151,7 @@ const Header = () => {
                   >
                     {label}
                   </button>
-                ))}
+                ))} */}
               </div>
             </div>
           )}

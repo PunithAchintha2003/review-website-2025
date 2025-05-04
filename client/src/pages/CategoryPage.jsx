@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react"
-import UploadCategoryModel from "../component/UploadCategoryModel"
+import toast from "react-hot-toast"
+import AxiosToastError from "../utils/AxiosToastError"
+import { useSelector } from "react-redux"
+import CofirmBox from "../component/CofirmBox"
 import SummaryApi from "../common/SummaryApi"
 import Axios from "../utils/Axios"
 import Loading from "../component/Loading"
 import NoData from "../component/NoData"
+
+import UploadCategoryModel from "../component/UploadCategoryModel"
 import EditCategory from "../component/EditCategory"
-import CofirmBox from "../component/CofirmBox"
-import toast from "react-hot-toast"
-import AxiosToastError from "../utils/AxiosToastError"
-import { useSelector } from "react-redux"
+
+
 
 const CategoryPage = () => {
 
@@ -140,7 +143,7 @@ const CategoryPage = () => {
             )
         }
 
-{
+        {
            openConfimBoxDelete && (
             <CofirmBox close={()=>setOpenConfirmBoxDelete(false)} cancel={()=>setOpenConfirmBoxDelete(false)} confirm={handleDeleteCategory}/>
            ) 

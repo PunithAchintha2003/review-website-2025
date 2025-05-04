@@ -7,15 +7,27 @@ cloudinary.config({
 })
 
 const uploadImageClodinary = async(image)=>{
-    const buffer = image?.buffer || Buffer.from(await image.arrayBuffer())
+    const buffer = image?.buffer || Buffer.from(await image.arrayBuffer());
 
-    const uploadImage = await new Promise((resolve,reject)=>{
-        cloudinary.uploader.upload_stream({ folder : "green-grass"},(error,uploadResult)=>{
-            return resolve(uploadResult)
-        }).end(buffer)
-    })
+    try {
+        const uploadImage = await new Promise((resolve, reject) => {
+            cloudinary.uploader.upload_stream({ folder: "green-grass" }, (error, uploadResult) => {
+                if (error) {
+                    console.error("Cloudinary upload error:", error); // Log Cloudinary errors
+                    return reject(error);
+                }
+                resolve(uploadResult);
+            }).end(buffer);
+        });
 
-    return uploadImage
-}
+        return {
+            url: uploadImage.secure_url, // Explicitly return the URL
+            ...uploadImage
+        };
+    } catch (error) {
+        console.error("Error in uploadImageClodinary:", error); // Log any unexpected errors
+        throw error;
+    }
+};
 
 export default uploadImageClodinary

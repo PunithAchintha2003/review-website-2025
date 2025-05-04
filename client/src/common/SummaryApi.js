@@ -57,6 +57,38 @@ const SummaryApi = {
         url : '/api/category/delete',
         method : 'delete'
     },
+    addFilm : {
+        url : '/api/movie/create',
+        method : 'post'
+    },
+    getFilm : {
+        url : '/api/movie/',
+        method : 'get'
+    },
+    updateFilm : {
+        url : '/api/movie/update',
+        method : 'put'
+    },
+    deleteFilm : {
+        url : '/api/movie/delete/',
+        method : 'delete'
+    },
+    addSong : {
+        url : '/api/song/create',
+        method : 'post'
+    },
+    getSong : {
+        url : '/api/song/',
+        method : 'get'
+    },
+    updateSong : {
+        url : '/api/song/update',
+        method : 'put'
+    },
+    deleteSong : {
+        url : '/api/song/delete/',
+        method : 'delete'
+    }
 }
 
 export default SummaryApi

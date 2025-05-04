@@ -80,7 +80,7 @@ const ResetPassword = () => {
       }
 
   return (
-    <section className="w-screen h-screen text-white flex flex-col bg-green-600 px-2">
+    <section className="w-screen h-screen text-white flex flex-col bg-[#0a730a] px-2">
       <div className="lg:mt-16 lg:mb-8 mx-auto w-fit"> 
         <img
             src={logo}
@@ -95,7 +95,7 @@ const ResetPassword = () => {
             className="lg:hidden w-21 mt-3 h-auto"
           />
       </div>
-      <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
+      <div className="border border-white my-4 w-full bg-green-600 max-w-lg mx-auto rounded p-7">
         <p className="font-semibold text-lg">Enter Your Password</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>

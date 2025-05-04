@@ -56,7 +56,7 @@ const ForgotPassword = () => {
   }
 
   return (
-    <section className="w-screen h-screen text-white flex flex-col bg-green-600 px-2">
+    <section className="w-screen h-screen text-white flex flex-col bg-[#0a730a] px-2">
         <div className="lg:mt-16 lg:mb-8 mx-auto w-fit"> 
           <img
               src={logo}
@@ -71,7 +71,7 @@ const ForgotPassword = () => {
               className="lg:hidden w-21 mt-3 h-auto"
             />
         </div>
-      <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
+      <div className="border border-white my-4 w-full bg-green-600 max-w-lg mx-auto rounded p-7">
         <p className="font-semibold text-lg">Forgot Password</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>
@@ -91,7 +91,7 @@ const ForgotPassword = () => {
 
           <button disabled={!valideValue} className={`${valideValue ? "bg-green-500 hover:bg-green-700 border border-white" :
           "border-white border"} text-white py-2 rounded font-semibold 
-          my-3 tracking-wide cursor-pointer`}>Send OTP</button>
+          my-3 tracking-wide cursor-pointer`}>Submit</button>
         </form>
 
         <p>

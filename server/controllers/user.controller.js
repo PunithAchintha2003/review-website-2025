@@ -20,6 +20,25 @@ export async function registerUserController(request,response){
                 success : false
             }) 
         }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+        return response.status(400).json({
+            message: "Invalid email format",
+            error: true,
+            success: false,
+        })
+        }
+
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+        if (!passwordRegex.test(password)) {
+            return response.status(400).json({
+                message: "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character",
+                error: true,
+                success: false
+            })
+        }
+
         // Checking Email is already in DB
 
         const user = await UserModel.findOne({ email })

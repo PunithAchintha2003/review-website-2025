@@ -8,6 +8,8 @@ import toast from 'react-hot-toast'
 import AxiosToastError from "../utils/AxiosToastError";
 import { HiCog } from "react-icons/hi";
 import isAdmin from "../utils/isAdmin"
+import { MdWorkspacePremium } from "react-icons/md";
+import PropTypes from 'prop-types';
 
 const UserMenu = ({close}) => {
 
@@ -48,10 +50,16 @@ const UserMenu = ({close}) => {
           <span className="max-w-52 text-ellipsis line-clamp-1">
             {user.name || user.email} 
             <span className="ml-2 text-medium text-green-600">{user.role === "ADMIN" ? "( Admin )" : ""}</span>
+            <span className="ml-2 text-medium text-green-600">{user.role === "PREMIUM" ? "( PREMIUM )" : ""}</span>
           </span>
           <Link onClick={handleClose} to={"/dashboard/profile"}>
             <HiCog size={17} 
             className="hover:bg-green-500 rounded"/>
+          </Link>
+
+          <Link onClick={handleClose} to={"/dashboard/premium"}>
+            <MdWorkspacePremium size={17} 
+            className="hover:bg-green-500 hover:animate-bounce rounded"/>
           </Link>
         </div>
 
@@ -110,5 +118,10 @@ const UserMenu = ({close}) => {
     </div>
   )
 }
+
+UserMenu.propTypes = {
+  close: PropTypes.func,
+};
+
 
 export default UserMenu

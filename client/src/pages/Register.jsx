@@ -34,37 +34,54 @@ const Register = () => {
 
   const valideValue = Object.values(data).every(el => el)
 
-  const handleSubmit = async(e)=>{
-    e.preventDefault()
+  const isStrongPassword = (password) => {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    return regex.test(password)
+  }  
 
-    if(data.password !== data.confirmPassword){
-      toast.error(
-        "Password and Confirm Password must be same"
-      )
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      toast.error("Enter a valid email address")
       return
     }
-
+  
+    // Confirm password check
+    if (data.password !== data.confirmPassword) {
+      toast.error("Password and Confirm Password must be same")
+      return
+    }
+  
+    // Strong password validation
+    if (!isStrongPassword(data.password)) {
+      toast.error("Password must be at least 8 characters long and include uppercase, lowercase, number, and special character")
+      return
+    }
+  
     try {
       const response = await Axios({
         ...SummaryApi.register,
-        data : data
+        data: data,
       })
-
-      if(response.data.error){
+  
+      if (response.data.error) {
         toast.error(response.data.message)
       }
-
-      if(response.data.success){
+  
+      if (response.data.success) {
         toast.success(response.data.message)
         setData({
           name: "",
           email: "",
           password: "",
-          confirmPassword: ""
+          confirmPassword: "",
         })
         navigate("/login")
       }
-
+  
     } catch (error) {
       AxiosToastError(error)
     }
@@ -86,7 +103,7 @@ const Register = () => {
             className="lg:hidden w-21 mt-3 h-auto"
           />
       </div>
-      <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
+      <div className="border border-white bg-green-600 my-4 w-full max-w-lg mx-auto rounded p-7">
         <p>Welcome to Green Grass</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>

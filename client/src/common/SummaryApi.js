@@ -120,7 +120,8 @@ const SummaryApi = {
     deleteBook : {
         url : '/api/book/delete/',
         method : 'delete'
-    }
+    },
 }
 
 export default SummaryApi
+

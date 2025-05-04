@@ -121,7 +121,10 @@ const SummaryApi = {
         url : '/api/book/delete/',
         method : 'delete'
     },
+    payment_url : {
+        url : '/api/order/checkout',
+        method : 'post'
+    }
 }
-
 export default SummaryApi
 

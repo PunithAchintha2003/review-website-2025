@@ -11,7 +11,6 @@ const Premium = () => {
 
   const handlePremiumPayment = async () => {
     try {
-      toast.loading("Redirecting to Stripe...");
 
       const stripePublicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
       const stripePromise = await loadStripe(stripePublicKey);

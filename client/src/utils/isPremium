@@ -1,0 +1,8 @@
+const isPremium = (s)=>{
+    if(s === 'PREMIUM'){
+        return true
+    }
+    return false
+}
+
+export default isPremium

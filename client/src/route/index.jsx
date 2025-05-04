@@ -18,6 +18,9 @@ import TeledramaAdmin from "../pages/teledramaManagement"
 import BookAdmin from "../pages/bookManagement"
 import AdminPermission from "../layouts/AdminPermission"
 import CategoryPage from "../pages/CategoryPage"
+import Success from "../pages/Success"
+import Cancel from "../pages/Cancel"
+import Premium from "../pages/Premium"
 
 const router = createBrowserRouter([
     {
@@ -57,12 +60,24 @@ const router = createBrowserRouter([
                 element : <UserMenuMobile/>
             },
             {
+                path : "success",
+                element : <Success/>
+            },
+            {
+                path : "cancel",
+                element : <Cancel/>
+            },
+            {
                 path : "dashboard",
                 element : <Dashboard/>,
                 children : [
                     {
                         path : "profile",
                         element : <Profile/>
+                    },
+                    {
+                        path : "premium",
+                        element : <Premium/>
                     },
                     {
                         path : "myreviews",

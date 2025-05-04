@@ -84,7 +84,7 @@ const Login = () => {
               className="lg:hidden w-21 mt-3 h-auto"
             />
         </div>
-      <div className="border border-white my-4 w-full max-w-lg mx-auto rounded p-7">
+      <div className="border border-white bg-green-600 my-4 w-full max-w-lg mx-auto rounded p-7">
         <p>Login to Green Grass</p>
 
         <form className="grid gap-4 mt-6" onSubmit={handleSubmit}>

@@ -44,7 +44,7 @@ const Header = () => {
 
                   {/* Logo + Mobile Icon */}
                     <div className="flex items-center space-x-2">
-                      <Link to="http://127.0.0.1:5500/" className="flex items-center">
+                      <Link to={`http://127.0.0.1:5500/?userId=${user?._id}&userName=${encodeURIComponent(user?.name || '')}`} className="flex items-center">
                         <img
                           src={logo}
                           width={40} // lg screen

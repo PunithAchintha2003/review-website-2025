@@ -88,8 +88,23 @@ const SummaryApi = {
     deleteSong : {
         url : '/api/song/delete/',
         method : 'delete'
+    },
+    addTeledrama : {
+        url : '/api/teledrama/create',
+        method : 'post'
+    },
+    getTeledrama : {
+        url : '/api/teledrama/',
+        method : 'get'
+    },
+    updateTeledrama : {
+        url : '/api/teledrama/update',
+        method : 'put'
+    },
+    deleteTeledrama : {
+        url : '/api/teledrama/delete/',
+        method : 'delete'
     }
 }
 
 export default SummaryApi
-

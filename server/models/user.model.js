@@ -39,7 +39,12 @@ const userSchema = new mongoose.Schema({
         type : String,
         enum : ['ADMIN',"USER","PREMIUM"],
         default : "USER"
-    }
+    },
+    isPremium: {
+        type: Boolean,
+        default: false,
+      },
+      
 },{
     timestamps : true
 })

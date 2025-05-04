@@ -16,6 +16,7 @@ import songRouter from './route/song.route.js'
 import teledramaRouter from './route/teledrama.route.js'
 import uploadRouter from './route/upload.router.js'
 import categoryRouter from './route/category.route.js'
+import orderRouter from './route/order.route.js'
 
 const app = express();
 
@@ -53,6 +54,7 @@ app.get("/", (request, response) => {
 app.use('/api/user', userRouter)
 app.use("/api/category", categoryRouter)
 app.use("/api/file", uploadRouter)
+app.use('/api/order', orderRouter)
 
 app.use('/api/book', bookRouter)
 app.use('/api/movie', movieRouter)

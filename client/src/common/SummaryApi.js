@@ -104,6 +104,22 @@ const SummaryApi = {
     deleteTeledrama : {
         url : '/api/teledrama/delete/',
         method : 'delete'
+    },
+    addBook : {
+        url : '/api/book/create',
+        method : 'post'
+    },
+    getBook : {
+        url : '/api/book/',
+        method : 'get'
+    },
+    updateBook : {
+        url : '/api/book/update',
+        method : 'put'
+    },
+    deleteBook : {
+        url : '/api/book/delete/',
+        method : 'delete'
     }
 }
 

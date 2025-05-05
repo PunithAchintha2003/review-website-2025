@@ -21,6 +21,7 @@ import CategoryPage from "../pages/CategoryPage"
 import Success from "../pages/Success"
 import Cancel from "../pages/Cancel"
 import Premium from "../pages/Premium"
+import AllUsers from "../pages/AllUsers"
 
 const router = createBrowserRouter([
     {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
                     {
                         path : "premium",
                         element : <Premium/>
+                    },
+                    {
+                        path : "all-users",
+                        element : <AllUsers/>
                     },
                     {
                         path : "myreviews",

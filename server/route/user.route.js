@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { forgotPasswordController, loginController, logoutController, refreshToken, registerUserController, resetpassword, updateUserDetails, userDetails, verifyEmailController, verifyForgotPasswordOtp } from "../controllers/user.controller.js";
+import { allUsers, forgotPasswordController, loginController, logoutController, refreshToken, registerUserController, resetpassword, updateUserDetails, userDetails, verifyEmailController, verifyForgotPasswordOtp } from "../controllers/user.controller.js";
 import auth from '../middleware/auth.js';
 
 const userRouter = Router()
@@ -14,5 +14,8 @@ userRouter.put('/verify-forgot-password-otp',verifyForgotPasswordOtp)
 userRouter.put('/reset-password',resetpassword)
 userRouter.post('/refresh-token',refreshToken)
 userRouter.get('/user-details',auth,userDetails)
+
+// Admin Panel
+userRouter.get("/all-users",auth,allUsers)
 
 export default userRouter

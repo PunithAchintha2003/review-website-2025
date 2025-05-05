@@ -112,6 +112,9 @@ const UserMenu = ({close}) => {
             <Link onClick={handleClose} to={"/dashboard/mycomments"} className="p-2 
             rounded-md hover:bg-green-500 mr-2">My Comments</Link>
 
+            <Link onClick={handleClose} to={"/dashboard/all-users"} className="p-2 
+            rounded-md hover:bg-green-500 mr-2">All Users</Link>
+
             <button onClick={handleLogout} className="p-2 text-left 
             rounded-md hover:bg-green-500 mr-2">Logout</button>
         </div>

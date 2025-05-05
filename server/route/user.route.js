@@ -15,6 +15,18 @@ userRouter.put('/reset-password',resetpassword)
 userRouter.post('/refresh-token',refreshToken)
 userRouter.get('/user-details',auth,userDetails)
 
+// Endpoint to retrieve the accessToken from HttpOnly cookie
+userRouter.get('/get-access-token', (req, res) => {
+    const accessToken = req.session?.accessToken;
+    const refreshToken = req.session?.refreshToken;
+
+    if (!accessToken || !refreshToken) {
+        return res.status(401).json({ message: 'Tokens not found in session storage' });
+    }
+
+    res.status(200).json({ accessToken, refreshToken });
+});
+
 // Admin Panel
 userRouter.get("/all-users",auth,allUsers)
 

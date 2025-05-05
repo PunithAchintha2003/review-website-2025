@@ -182,7 +182,8 @@ export async function loginController(request,response){
         response.cookie('accessToken',accesstoken,cookiesOption)
         response.cookie('refreshToken',refreshToken,cookiesOption)
 
-        return response.json({
+        // Save tokens to session storage
+        response.json({
             message : "Login successfully",
             error : false,
             success : true,
@@ -191,7 +192,6 @@ export async function loginController(request,response){
                 refreshToken
             }
         })
-
     } catch (error) {
         return response.status(500).json({
             message : error.message || error,

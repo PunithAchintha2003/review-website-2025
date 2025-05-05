@@ -50,8 +50,10 @@ const Login = () => {
 
       if(response.data.success){
         toast.success(response.data.message)
-          localStorage.setItem('accesstoken',response.data.data.accesstoken)
-          localStorage.setItem('refreshToken',response.data.data.refreshToken)
+          localStorage.setItem('accesstoken',response.data.data.accesstoken);
+          localStorage.setItem('refreshToken',response.data.data.refreshToken);
+          sessionStorage.setItem('accessToken', response.data.data.accesstoken);
+          sessionStorage.setItem('refreshToken', response.data.data.refreshToken);
 
           const userDetails = await fetchUserDetails()
           dispatch(setUserDetails(userDetails.data))
@@ -67,6 +69,8 @@ const Login = () => {
       AxiosToastError(error)
     }
   }
+
+  
 
   return (
     <section className="w-screen h-screen text-white flex flex-col bg-[#0a730a] px-2">

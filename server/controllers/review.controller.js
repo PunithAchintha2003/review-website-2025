@@ -3,9 +3,9 @@ import reviewModel from "../models/review.model.js";
 // Create a new review
 export async function createReviewController(request, response) {
     try {
-        const { user, media, rating, reviewText, reviewLink } = request.body;
+        const { user, media, rating, reviewText, reviewHeading, reviewLink } = request.body;
 
-        if (!user || !media || !rating || !reviewText) {
+        if (!user || !media || !reviewText || !reviewHeading) {
             return response.status(400).json({
                 message: "Provide all required fields",
                 error: true,

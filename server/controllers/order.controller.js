@@ -52,7 +52,22 @@ export async function paymentController(request,response){
         })
     }
 }
-/*
+
+const getOrderProductItems = async ({
+    userId,
+    paymentId,
+    payment_status,
+  }) => {
+    const orderItem = {
+      userId: userId,
+      orderId: `ORD-${new mongoose.Types.ObjectId()}`,
+      paymentId: paymentId,
+      payment_status: payment_status,
+    };
+  
+    return [orderItem]; // return as array for compatibility with insertMany if needed
+  };
+
 //http://localhost:8080/api/order/webhook
 export async function webhookStripe(request,response){
     const event = request.body;
@@ -68,6 +83,15 @@ export async function webhookStripe(request,response){
     if (session.metadata?.isPremium === 'true') {
         const userId = session.metadata.userId;
 
+        // Create premium membership order
+        const orderItems = getOrderProductItems({
+            userId,
+            paymentId: session.payment_intent,
+            payment_status: session.payment_status,
+          });
+
+          await OrderModel.insertMany(orderItems);
+
         // Save the premium order
         await OrderModel.create({
         userId,
@@ -78,7 +102,7 @@ export async function webhookStripe(request,response){
         // Update user to premium
         await UserModel.findByIdAndUpdate(userId, { isPremium: true });
 
-        console.log("✅ Premium Membership activated for user:", userId);
+        console.log(" Premium Membership activated for user:", userId);
     }
 
     break;
@@ -90,5 +114,3 @@ export async function webhookStripe(request,response){
   // Return a response to acknowledge receipt of the event
   response.json({received: true});
 }
-
-*/

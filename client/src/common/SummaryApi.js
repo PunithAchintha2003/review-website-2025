@@ -124,6 +124,10 @@ const SummaryApi = {
     payment_url : {
         url : '/api/order/checkout',
         method : 'post'
+    },
+    all_users : {
+        url : '/api/user/all-users',
+        method : 'get'
     }
 }
 export default SummaryApi

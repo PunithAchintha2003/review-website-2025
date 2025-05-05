@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     },
     password : {
         type : String,
-        required : [true,"Provide PAssword"]
+        required : [true,"Provide Password"]
     },
     refresh_token : {
         type : String,

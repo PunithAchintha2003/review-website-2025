@@ -509,3 +509,23 @@ export async function userDetails(request,response) {
         })
     }
 }
+
+// // All user details
+export async function allUsers(request,response) {
+    try {
+      const allUsers = await UserModel.find();
+  
+      return response.json({
+        message: "All Users",
+        data: allUsers,
+        success: true,
+        error: false,
+      });
+    } catch (err) {
+      return response.status(400).json({
+        message: err.message || err,
+        error: true,
+        success: false,
+      });
+    }
+  }

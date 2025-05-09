@@ -125,7 +125,7 @@ const SummaryApi = {
         url : '/api/order/checkout',
         method : 'post'
     },
-    all_users : {
+    allUser : {
         url : '/api/user/all-users',
         method : 'get'
     }

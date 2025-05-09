@@ -81,8 +81,8 @@ const router = createBrowserRouter([
                         element : <Premium/>
                     },
                     {
-                        path : "all-users",
-                        element : <AllUsers/>
+                        path: "/all-users",
+                        element: <AllUsers />
                     },
                     {
                         path : "myreviews",

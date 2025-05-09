@@ -81,7 +81,7 @@ const router = createBrowserRouter([
                         element : <Premium/>
                     },
                     {
-                        path: "/all-users",
+                        path: "all-users",
                         element: <AllUsers />
                     },
                     {

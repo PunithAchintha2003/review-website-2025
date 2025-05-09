@@ -513,6 +513,8 @@ export async function userDetails(request,response) {
 // // All user details
 export async function allUsers(request,response) {
     try {
+      console.log("userid all Users",request.userId)
+      
       const allUsers = await UserModel.find();
   
       return response.json({

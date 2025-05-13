@@ -128,6 +128,10 @@ const SummaryApi = {
     allUser : {
         url : '/api/user/all-users',
         method : 'get'
+    },
+    premiumUsers: {
+        url: '/api/admin/premium-users',
+        method: 'get'
     }
 }
 export default SummaryApi

@@ -35,14 +35,15 @@ export async function paymentController(request,response){
               ],
             metadata : {
                 userId : userId,
+                isPremium: "true", 
             },
-            success_url : `${process.env.FRONTEND_URL}/success`,
+            success_url : `${process.env.FRONTEND_URL}/success?text=Premium`,
             cancel_url : `${process.env.FRONTEND_URL}/cancel`
         }
 
         const session = await Stripe.checkout.sessions.create(params)
 
-        return response.status(200).json(session)
+        return response.status(200).json({ id: session.id });
 
     } catch (error) {
         return response.status(500).json({
@@ -89,8 +90,6 @@ export async function webhookStripe(request,response){
             paymentId: session.payment_intent,
             payment_status: session.payment_status,
           });
-
-          await OrderModel.insertMany(orderItems);
 
         // Save the premium order
         await OrderModel.create({

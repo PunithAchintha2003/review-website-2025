@@ -8,6 +8,10 @@ const categorySchema = new mongoose.Schema({
     image : {
         type : String,
         default : ""
+    },
+    author : {
+        type : String,
+        default : ""
     }
 },{
     timestamps : true

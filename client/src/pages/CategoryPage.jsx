@@ -22,6 +22,7 @@ const CategoryPage = () => {
     const [editData,setEditData] = useState({
         name : "",
         image : "",
+        author : ""
     })
     const [openConfimBoxDelete,setOpenConfirmBoxDelete] = useState(false)
     const [deleteCategory,setDeleteCategory] = useState({
@@ -78,8 +79,8 @@ const CategoryPage = () => {
   return (
     <section>
         <div className='p-2 bg-green-200 shadow-md flex items-center justify-between'>
-            <h2 className='font-semibold'>Category</h2>
-            <button onClick={()=>setOpenUploadCategory(true)} className='text-sm border cursor-pointer border-green-600 hover:bg-green-400 bg-green-300 px-3 py-1 rounded-sm'>Add Category</button>
+            <h2 className='font-semibold'>Request to Admin</h2>
+            <button onClick={()=>setOpenUploadCategory(true)} className='text-sm border cursor-pointer border-green-600 hover:bg-green-400 bg-green-300 px-3 py-1 rounded-sm'>Add Media</button>
         </div>
         {
             !categoryData[0] && !loading && (
@@ -100,6 +101,7 @@ const CategoryPage = () => {
                                     className='w-full h-32 object-contain mb-2'
                                 />
                             <p className="text-center font-semibold text-gray-700 mb-3">{category.name}</p>
+                            <p className="text-center font-semibold text-gray-700 mb-3">{category.author}</p>
                             <div className='flex gap-2 w-full'>
                                 <button onClick={() => {
                                     setOpenEdit(true)

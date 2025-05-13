@@ -10,7 +10,8 @@ import AxiosToastError from '../utils/AxiosToastError';
 const UploadCategoryModel = ({close, fetchData}) => {
     const [data,setData] = useState({
         name : "",
-        image : ""
+        image : "",
+        author : ""
     })
     const [loading,setLoading] = useState(false)
     const [uploadingImage, setUploadingImage] = useState(false)
@@ -78,7 +79,7 @@ const UploadCategoryModel = ({close, fetchData}) => {
     <section className='fixed top-0 bottom-0 left-0 right-0 p-4 bg-green-800/60 flex items-center justify-center'>
         <div className='bg-green-100 max-w-4xl w-full p-4 rounded-sm'>
             <div className='flex items-center justify-between'>
-                    <h1 className='font-semibold'>Category</h1>
+                    <h1 className='font-semibold'>Media</h1>
                     <button onClick={close} className='w-fit rounded-sm bg-green-300 hover:bg-green-400 cursor-pointer block ml-auto'>
                         <IoClose size={25}/>
                     </button>
@@ -92,6 +93,17 @@ const UploadCategoryModel = ({close, fetchData}) => {
                             placeholder='Enter Category Name'
                             value={data.name}
                             name='name'
+                            onChange={handleOnChange}
+                            className='p-1 border bg-green-200 outline-none mt-1 rounded-sm'
+                        />
+
+                        <label id='authorName'>Author Name</label>
+                        <input
+                            type='text'
+                            id='authorName'
+                            placeholder='Enter Author Name'
+                            value={data.author}
+                            name='author'
                             onChange={handleOnChange}
                             className='p-1 border bg-green-200 outline-none mt-1 rounded-sm'
                         />

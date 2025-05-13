@@ -1,4 +1,5 @@
 import songModel from "../models/songs.model.js";
+import reviewModel from "../models/review.model.js";
 
 // Create Song
 export async function createSongController(request, response) {
@@ -124,13 +125,28 @@ export async function viewSongController(request, response) {
 //View all songs
 export async function getAllSongsController(request, response) {
     try {
+        // Fetch all songs
         const songs = await songModel.find();
+
+        // Aggregate review counts for each song
+        const reviewCounts = await reviewModel.aggregate([
+            { $group: { _id: "$media", count: { $sum: 1 } } }
+        ]);
+
+        // Map review counts to songs
+        const songsWithReviewCounts = songs.map(song => {
+            const reviewCount = reviewCounts.find(rc => rc._id.toString() === song._id.toString());
+            return {
+                ...song.toObject(),
+                reviewCount: reviewCount ? reviewCount.count : 0
+            };
+        });
 
         return response.json({
             message: "Songs retrieved successfully",
             error: false,
             success: true,
-            data: songs
+            data: songsWithReviewCounts
         });
     } catch (error) {
         return response.status(500).json({

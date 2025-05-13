@@ -1,4 +1,5 @@
 import movieModel from "../models/movie.model.js";
+import reviewModel from "../models/review.model.js";
 
 // Create Movie
 export async function createMovieController(request, response) {
@@ -126,11 +127,29 @@ export async function getAllMoviesController(request, response) {
     try {
         const movies = await movieModel.find();
 
+        // Fetch review counts for each movie
+        const movieIds = movies.map(movie => movie._id);
+        const reviewCounts = await reviewModel.aggregate([
+            { $match: { media: { $in: movieIds } } },
+            { $group: { _id: "$media", count: { $sum: 1 } } }
+        ]);
+
+        // Map review counts to movies
+        const reviewCountMap = reviewCounts.reduce((acc, item) => {
+            acc[item._id] = item.count;
+            return acc;
+        }, {});
+
+        const moviesWithReviewCounts = movies.map(movie => ({
+            ...movie.toObject(),
+            reviewCount: reviewCountMap[movie._id] || 0
+        }));
+
         return response.json({
             message: "Movies retrieved successfully",
             error: false,
             success: true,
-            data: movies
+            data: moviesWithReviewCounts
         });
     } catch (error) {
         return response.status(500).json({

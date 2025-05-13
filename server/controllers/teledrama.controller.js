@@ -1,4 +1,5 @@
 import teledramaModel from "../models/teledrama.model.js";
+import reviewModel from "../models/review.model.js";
 
 // Create Teledrama
 export async function createTeledramaController(request, response) {
@@ -130,11 +131,30 @@ export async function getAllTeledramasController(request, response) {
     try {
         const teledramas = await teledramaModel.find();
 
+        // Aggregate review counts for each teledrama
+        const reviewCounts = await reviewModel.aggregate([
+            {
+                $group: {
+                    _id: "$media",
+                    count: { $sum: 1 }
+                }
+            }
+        ]);
+
+        // Map review counts to teledramas
+        const teledramasWithReviews = teledramas.map(teledrama => {
+            const reviewCount = reviewCounts.find(rc => rc._id.toString() === teledrama._id.toString());
+            return {
+                ...teledrama.toObject(),
+                reviewCount: reviewCount ? reviewCount.count : 0
+            };
+        });
+
         return response.json({
             message: "Teledramas retrieved successfully",
             error: false,
             success: true,
-            data: teledramas
+            data: teledramasWithReviews
         });
     } catch (error) {
         return response.status(500).json({

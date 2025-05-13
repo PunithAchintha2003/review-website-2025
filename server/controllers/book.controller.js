@@ -1,4 +1,5 @@
 import bookModel from "../models/book.model.js";
+import reviewModel from "../models/review.model.js";
 
 // Create Book
 export async function createBookController(request, response) {
@@ -126,11 +127,29 @@ export async function getAllBooksController(request, response) {
     try {
         const books = await bookModel.find();
 
+        // Fetch review counts for each book
+        const bookIds = books.map(book => book._id);
+        const reviewCounts = await reviewModel.aggregate([
+            { $match: { media: { $in: bookIds } } },
+            { $group: { _id: "$media", count: { $sum: 1 } } }
+        ]);
+
+        // Map review counts to books
+        const reviewCountMap = reviewCounts.reduce((acc, item) => {
+            acc[item._id] = item.count;
+            return acc;
+        }, {});
+
+        const booksWithReviewCounts = books.map(book => ({
+            ...book.toObject(),
+            reviewCount: reviewCountMap[book._id] || 0
+        }));
+
         return response.json({
             message: "Books retrieved successfully",
             error: false,
             success: true,
-            data: books
+            data: booksWithReviewCounts
         });
     } catch (error) {
         return response.status(500).json({

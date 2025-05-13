@@ -40,9 +40,9 @@ const MyReviews = () => {
       <ul>
         {reviews.map((review) => (
           review ? (
-            <li key={review._id} className="review-item">
-              <h3>{review.reviewHeading}</h3>
-              <p>{review.reviewText}</p>
+            <li key={review._id} className="review-item" style={{ borderRadius: '10px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', padding: '15px', margin: '10px 0', backgroundColor: '#fff' }}>
+              <div className="review-heading" style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '10px' }}>{review.reviewHeading}</div>
+              <div className="review-text" style={{ fontSize: '1em', color: '#555' }}>{review.reviewText}</div>
             </li>
           ) : null
         ))}

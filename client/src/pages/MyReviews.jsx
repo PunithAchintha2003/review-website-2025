@@ -17,7 +17,7 @@ const MyReviews = () => {
     const fetchReviews = async () => {
       try {
         const response = await Axios.get(`api/review/user/${user._id}`);
-        setReviews(response.data);
+        setReviews(response.data.data); // Extracting the 'data' property
       } catch (error) {
         AxiosToastError(error);
       } finally {
@@ -39,10 +39,12 @@ const MyReviews = () => {
       <h1>My Reviews</h1>
       <ul>
         {reviews.map((review) => (
-          <li key={review.id} className="review-item">
-            <h3>{review.title}</h3>
-            <p>{review.content}</p>
-          </li>
+          review ? (
+            <li key={review._id} className="review-item">
+              <h3>{review.reviewHeading}</h3>
+              <p>{review.reviewText}</p>
+            </li>
+          ) : null
         ))}
       </ul>
     </div>

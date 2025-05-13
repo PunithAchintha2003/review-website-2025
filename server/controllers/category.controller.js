@@ -3,9 +3,9 @@ import ProductModel from "../models/product.model.js";
 
 export const AddCategoryController = async(request,response)=>{
     try {
-        const { name , image } = request.body 
+        const { name , image , author } = request.body 
 
-        if(!name || !image){
+        if(!name || !image || !author){
             return response.status(400).json({
                 message : "Enter required fields",
                 error : true,
@@ -15,7 +15,8 @@ export const AddCategoryController = async(request,response)=>{
 
         const addCategory = new CategoryModel({
             name,
-            image
+            image,
+            author
         })
 
         const saveCategory = await addCategory.save()
@@ -65,13 +66,14 @@ export const getCategoryController = async(request,response)=>{
 
 export const updateCategoryController = async(request,response)=>{
     try {
-        const { _id ,name, image } = request.body 
+        const { _id ,name, image, author } = request.body 
 
         const update = await CategoryModel.updateOne({
             _id : _id
         },{
            name, 
-           image 
+           image,
+           author
         })
 
         return response.json({

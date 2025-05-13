@@ -10,6 +10,7 @@ import { HiCog } from "react-icons/hi";
 import isAdmin from "../utils/isAdmin"
 import { MdWorkspacePremium } from "react-icons/md";
 import PropTypes from 'prop-types';
+import isPremium from "../utils/isPremium"
 
 const UserMenu = ({close}) => {
 
@@ -50,7 +51,7 @@ const UserMenu = ({close}) => {
           <span className="max-w-52 text-ellipsis line-clamp-1">
             {user.name || user.email} 
             <span className="ml-2 text-medium text-green-600">{user.role === "ADMIN" ? "( Admin )" : ""}</span>
-            <span className="ml-2 text-medium text-green-600">{user.role === "PREMIUM" ? "( PREMIUM )" : ""}</span>
+            <span className="ml-2 text-medium text-green-600">{user.role === "PREMIUM" ? "( Premium )" : ""}</span>
           </span>
           <Link onClick={handleClose} to={"/dashboard/profile"}>
             <HiCog size={17} 
@@ -67,12 +68,12 @@ const UserMenu = ({close}) => {
 
         <div className="text-sm grid gap-2">
 
-            {/* {
-              isAdmin(user.role) && (
+            {
+              isPremium(user.role) && (
                 <Link onClick={handleClose} to={"/dashboard/category"} className="p-2 
-                rounded-md hover:bg-green-500 mr-2">Category</Link>
+                rounded-md hover:bg-green-500 mr-2">Media</Link>
               )
-            } */}
+            }
 
             {/* {
               isAdmin(user.role) && (

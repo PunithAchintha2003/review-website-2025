@@ -30,6 +30,16 @@ const MyReviews = () => {
     }
   }, [user]);
 
+  const handleDelete = async (reviewId) => {
+    try {
+      await Axios.delete(`api/review/delete/${reviewId}`);
+      setReviews(reviews.filter(review => review._id !== reviewId));
+      toast.success("Review deleted successfully");
+    } catch (error) {
+      AxiosToastError(error);
+    }
+  };
+
   if (loading) return <Loading />;
 
   if (reviews.length === 0) return <NoData message="No reviews found." />;
@@ -43,6 +53,7 @@ const MyReviews = () => {
             <li key={review._id} className="review-item" style={{ borderRadius: '10px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', padding: '15px', margin: '10px 0', backgroundColor: '#fff' }}>
               <div className="review-heading" style={{ fontWeight: 'bold', fontSize: '1.2em', marginBottom: '10px' }}>{review.reviewHeading}</div>
               <div className="review-text" style={{ fontSize: '1em', color: '#555' }}>{review.reviewText}</div>
+              <button onClick={() => handleDelete(review._id)} style={{ marginTop: '10px', padding: '5px 10px', backgroundColor: '#ff4d4f', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Delete</button>
             </li>
           ) : null
         ))}

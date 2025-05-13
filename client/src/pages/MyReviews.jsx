@@ -11,12 +11,12 @@ import NoData from "../component/NoData";
 const MyReviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
-  const user = useSelector((state) => state.user);
+  const user = useSelector(state => state.user)
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await Axios.get(`/reviews/user/${user.id}`);
+        const response = await Axios.get(`api/review/user/${user._id}`);
         setReviews(response.data);
       } catch (error) {
         AxiosToastError(error);
@@ -25,7 +25,7 @@ const MyReviews = () => {
       }
     };
 
-    if (user?.id) {
+    if (user?._id) {
       fetchReviews();
     }
   }, [user]);
@@ -42,7 +42,6 @@ const MyReviews = () => {
           <li key={review.id} className="review-item">
             <h3>{review.title}</h3>
             <p>{review.content}</p>
-            <small>Rating: {review.rating}</small>
           </li>
         ))}
       </ul>

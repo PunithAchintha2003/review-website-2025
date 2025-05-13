@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import Axios from './utils/Axios';
 import SummaryApi from './common/SummaryApi';
 import { setAllCategory } from './store/productSlice';
-
+ 
 function App() {
 
   const dispatch = useDispatch()

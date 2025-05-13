@@ -165,7 +165,7 @@ export async function viewAllReviewsByMovieController(request, response) {
             });
         }
 
-        const reviews = await reviewModel.find({ media: mediaId });
+        const reviews = await reviewModel.find({ media: mediaId }).populate('user', 'name');
 
         return response.json({
             message: "Reviews fetched successfully",

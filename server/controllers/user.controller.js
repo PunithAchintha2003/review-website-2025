@@ -510,7 +510,7 @@ export async function userDetails(request,response) {
     }
 }
 
-// // All user details
+// All user details
 export async function allUsers(request,response) {
     try {
       console.log("userid all Users",request.userId)
@@ -531,3 +531,23 @@ export async function allUsers(request,response) {
       });
     }
   }
+
+// Get Premium Users
+export const getPremiumUsers = async (request, response) => {
+  try {
+    const premiumUsers = await UserModel.find({ isPremium: true })
+      .select("name email premiumSince createdAt")
+      .sort({ premiumSince: -1 });
+
+    response.json({
+      success: true,
+      data: premiumUsers,
+    });
+  } catch (error) {
+    console.error("Error fetching premium users:", error);
+    response.status(500).json({
+      success: false,
+      message: "Failed to fetch premium users",
+    });
+  }
+};

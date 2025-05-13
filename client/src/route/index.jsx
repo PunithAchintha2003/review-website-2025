@@ -22,6 +22,8 @@ import Success from "../pages/Success"
 import Cancel from "../pages/Cancel"
 import Premium from "../pages/Premium"
 import AllUsers from "../pages/AllUsers"
+import PremiumMembers from "../pages/PremiumMembers"
+import PremiumPermission from "../layouts/PremiumPermission"
 
 const router = createBrowserRouter([
     {
@@ -81,8 +83,8 @@ const router = createBrowserRouter([
                         element : <Premium/>
                     },
                     {
-                        path: "all-users",
-                        element: <AllUsers />
+                        path : 'premium-members',
+                        element : <PremiumMembers/>
                     },
                     {
                         path : "myreviews",
@@ -110,7 +112,11 @@ const router = createBrowserRouter([
                     },
                     {
                         path : 'category',
-                        element : <AdminPermission><CategoryPage/></AdminPermission>
+                        element : <PremiumPermission><CategoryPage/></PremiumPermission>
+                    },
+                    {
+                        path: "all-users",
+                        element: <AdminPermission><AllUsers/></AdminPermission>
                     },
                 ]
             },

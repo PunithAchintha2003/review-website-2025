@@ -1,6 +1,7 @@
 import { Router } from 'express'
-import { allUsers, forgotPasswordController, loginController, logoutController, refreshToken, registerUserController, resetpassword, updateUserDetails, userDetails, verifyEmailController, verifyForgotPasswordOtp } from "../controllers/user.controller.js";
+import { allUsers, forgotPasswordController, getPremiumUsers, loginController, logoutController, refreshToken, registerUserController, resetpassword, updateUserDetails, userDetails, verifyEmailController, verifyForgotPasswordOtp } from "../controllers/user.controller.js";
 import auth from '../middleware/auth.js';
+import { isAdmin } from '../middleware/isAdmin.js';
 
 const userRouter = Router()
 
@@ -29,5 +30,6 @@ userRouter.get('/get-access-token', (req, res) => {
 
 // Admin Panel
 userRouter.get("/all-users",auth,allUsers)
+userRouter.get("/premium-users", auth, isAdmin, getPremiumUsers)
 
 export default userRouter

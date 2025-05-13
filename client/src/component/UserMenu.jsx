@@ -118,6 +118,12 @@ const UserMenu = ({close}) => {
             rounded-md hover:bg-green-500 mr-2">All Users</Link>
               )
             }
+            {
+              isAdmin(user.role) && (
+                <Link onClick={handleClose} to={"/dashboard/premium-members"} className="p-2 
+            rounded-md hover:bg-green-500 mr-2">Premium Members</Link>
+              )
+            }
 
             <button onClick={handleLogout} className="p-2 text-left 
             rounded-md hover:bg-green-500 mr-2">Logout</button>

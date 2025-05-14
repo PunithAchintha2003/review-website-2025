@@ -26,7 +26,7 @@ const PremiumMembers = () => {
           <tr className="bg-green-200">
             <th className="p-2 border">Name</th>
             <th className="p-2 border">Email</th>
-            <th className="p-2 border">Member Since</th>
+            <th className="p-2 border">Requested Media</th>
           </tr>
         </thead>
         <tbody>

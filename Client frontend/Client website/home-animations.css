@@ -1,0 +1,69 @@
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(60px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.slide-up {
+  opacity: 0;
+  animation: slideUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Hover effect for cards */
+.transparent-card,
+.ag-courses_item {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s;
+}
+.transparent-card:hover,
+.ag-courses_item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Button hover effect */
+.btn-outline-light, .btn-success {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.btn-outline-light:hover, .btn-success:hover {
+  background: #198754;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(25,135,84,0.15);
+}
+
+/* Navbar background transition */
+.navbar {
+  transition: background 0.4s;
+}
+.navbar.scrolled {
+  background: rgba(34, 34, 34, 0.95) !important;
+}
+
+/* Carousel image zoom-in */
+.carousel-item img {
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.carousel-item.active img {
+  transform: scale(1.05);
+}
+
+/* Fade-in for silhouettes */
+.silhouettes img {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s, transform 1s;
+}
+.silhouettes img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

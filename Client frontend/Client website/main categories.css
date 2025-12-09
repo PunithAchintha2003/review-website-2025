@@ -1,0 +1,894 @@
+/*==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ==========================================================================
+     NAVBAR
+     ========================================================================== */
+  .navbar {
+    background-color: #0a730a;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    height: 80px;
+  }
+  
+  .navbar-brand img {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    margin-right: auto;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: yellow;
+  }
+  
+  .search-bar {
+    width: 150px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  
+  .btn-group button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  /* ==========================================================================
+     INFO BARS
+     ========================================================================== */
+  .info-bar {
+    padding: 10px 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .trending-bar {
+    background-color: rgb(108, 174, 9);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .trending-bar a {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+    margin-right: 30px;
+  }
+  
+  .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    will-change: transform;
+    animation: scroll-left 18s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    0% { transform: translateX(100%);}
+    100% { transform: translateX(-100%);}
+  }
+  
+  .extra-bar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: smaller;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .extra-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: small;
+  }
+  
+  .extra-bar a:hover,
+  .extra-bar a:active {
+    color: greenyellow;
+  }
+  
+  /* ==========================================================================
+     CAROUSEL
+     ========================================================================== */
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-fade .carousel-item {
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carousel-fade .carousel-item-next,
+  .carousel-fade .carousel-item-prev,
+  .carousel-fade .carousel-item.active {
+    opacity: 1;
+  }
+  
+  .carousel-item img {
+    opacity: 0.3;
+    filter: blur(6px) grayscale(30%);
+    transition: 
+      opacity 1.2s cubic-bezier(0.4,0,0.2,1),
+      filter 1.2s cubic-bezier(0.4,0,0.2,1);
+  }
+  
+  .carousel-item.active img,
+  .carousel-item-next.carousel-item-start img,
+  .carousel-item-prev.carousel-item-end img {
+    opacity: 1;
+    filter: blur(0) grayscale(0%);
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-inner img {
+      height: 250px;
+    }
+  }
+  
+  
+    ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+  }
+  
+  
+  .ag-course.body {
+  background-color: #000;
+  }
+  .ag-courses_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color:black;
+  
+  padding: 50px 0;
+  }
+  .ag-courses_item {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+  
+  margin: 0 15px 30px;
+  
+  overflow: hidden;
+  
+  border-radius: 28px;
+  }
+  
+  .ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #121212;
+  
+  overflow: hidden;
+  
+  position: relative;
+  }
+  .ag-courses-item_link:hover,
+  .ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #FFF;
+  }
+  .ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+  }
+  
+  .ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+  
+  overflow: hidden;
+  
+  font-weight: bold;
+  font-size: 25px;
+  color: #FFF;
+  
+  z-index: 2;
+  position: relative;
+  }
+  .ag-courses-item_by-box {
+  font-size: 15px;
+  color: #FFF;
+  
+  z-index: 2;
+  position: relative;
+  }
+  .ag-courses-item_publisher {
+  font-weight: bold;
+  color:white;
+  
+  -webkit-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease
+  }
+  .ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color:green;
+  
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  
+  border-radius: 50%;
+  
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  }
+  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: green;
+  }
+  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: green;
+  }
+  
+  @media only screen and (max-width: 979px) {
+  .ag-courses_item {
+  -ms-flex-preferred-size: calc(50% - 30px);
+  flex-basis: calc(50% - 30px);
+  }
+  .ag-courses-item_title {
+  font-size: 24px;
+  }
+  }
+  
+  @media only screen and (max-width: 767px) {
+  .ag-format-container {
+  width: 96%;
+  }
+  
+  }
+  @media only screen and (max-width: 639px) {
+  .ag-courses_item {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  }
+  .ag-courses-item_title {
+  min-height: 72px;
+  line-height: 1;
+  
+  font-size: 24px;
+  }
+  .ag-courses-item_link {
+  padding: 22px 40px;
+  }
+  .ag-courses-item_by-box {
+  font-size: 16px;
+  }
+  }
+  
+  .introduction.class {
+  width: 98%;
+  min-height: 130px;
+  padding: 40px;
+  margin: 20px auto;
+  background-color: green; 
+  border-radius: 10px; 
+  }
+  
+  .introduction.class h1 {
+  font-size: 3.5em; 
+  }
+  
+  .introduction.class h6 {
+  font-size: 0.7em; 
+  }
+  
+  .pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+  
+  
+  
+  /* Image Cards Styles */
+  .image-cards-container {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .image-cards-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #0a730a;
+    font-size: 2.2rem;
+  }
+  
+  .image-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 0 40px;
+  }
+  
+  .image-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  
+  .image-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .image-card-body {
+    padding: 15px;
+  }
+  
+  .image-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .image-card-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  
+  .image-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+  
+  .image-card-rating {
+    color:#666;
+    font-weight: 500;
+  }
+  
+  .image-card-date {
+    font-size: 0.75rem;
+    color: #999;
+  }
+  
+  @media (max-width: 768px) {
+    .image-cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .image-cards-grid {
+        grid-template-columns: 1fr;
+    }
+  }
+
+  
+  
+  .logoD{
+  position:absolute;
+  height:18px;
+  width:18px;
+  right:10px;
+  bottom:10px;
+  }
+  
+  .exploremore{
+  text-align:right;
+  text-decoration:none;
+  
+  }
+  
+  .exploremore:hover{
+  color:#0a730a;
+  
+  }
+
+  /* ==========================================================================
+     FOOTER
+     ========================================================================== */
+     footer {
+        background-color: black;
+        color: #e0e0e0;
+        padding: 20px 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: smaller;
+      }
+      
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      
+      .footer-content svg {
+        margin: 5px;
+        color: white;
+        transition: color 0.3s;
+      }
+      
+      .footer-content svg:hover {
+        color: greenyellow;
+      }
+      
+      .footer-section {
+        flex: 1 1 200px;
+        padding: 0 15px;
+        margin: 10px 0;
+      }
+      
+      .footer-section h4 {
+        margin-bottom: 10px;
+      }
+      
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+        color: #f8f9fa;
+      }
+      
+      .footer-section li {
+        margin-bottom: 10px;
+        color: #e0e0e0;
+      }
+      
+      .footer-section a {
+        text-decoration: none;
+        color: white;
+      }
+      
+      .footer-section a:hover {
+        color: greenyellow;
+      }
+      
+      footer .copyright {
+        text-align: center;
+        margin-top: 20px;
+      }
+      
+      .subscribe-form {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .subscribe-form input[type="email"] {
+        padding: 8px;
+        border: none;
+        margin-right: 10px;
+        flex: 1;
+        min-width: 150px;
+        margin-bottom: 10px;
+      }
+
+      /* ==========================================================================
+   CARD FADE-IN ANIMATION (SCROLL-TRIGGERED)
+   ========================================================================== */
+.image-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+}
+
+.image-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* For the ag-courses items (the green cards) */
+.ag-courses_item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+}
+
+.ag-courses_item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Small delay between cards */
+.image-card.visible:nth-child(1) { transition-delay: 0.1s; }
+.image-card.visible:nth-child(2) { transition-delay: 0.2s; }
+.image-card.visible:nth-child(3) { transition-delay: 0.3s; }
+.image-card.visible:nth-child(4) { transition-delay: 0.4s; }
+.image-card.visible:nth-child(5) { transition-delay: 0.5s; }
+.image-card.visible:nth-child(6) { transition-delay: 0.6s; }
+.image-card.visible:nth-child(7) { transition-delay: 0.7s; }
+.image-card.visible:nth-child(8) { transition-delay: 0.8s; }
+
+.ag-courses_item.visible:nth-child(1) { transition-delay: 0.1s; }
+.ag-courses_item.visible:nth-child(2) { transition-delay: 0.2s; }
+.ag-courses_item.visible:nth-child(3) { transition-delay: 0.3s; }
+.ag-courses_item.visible:nth-child(4) { transition-delay: 0.4s; }
+.ag-courses_item.visible:nth-child(5) { transition-delay: 0.5s; }
+.ag-courses_item.visible:nth-child(6) { transition-delay: 0.6s; }
+
+/* ==========================================================================
+   INTRODUCTION ANIMATION (FADE + SLIDE)
+   ========================================================================== */
+   .introduction.class {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
+}
+
+.introduction.class.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: Add a subtle background gradient animation */
+.introduction.class.visible {
+    background: linear-gradient(90deg, #0a730a, #0d8f0d, #0a730a);
+    background-size: 200% auto;
+    animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+/* =========================
+   Back to Top Button
+   ========================= */
+   .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0a730a;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.back-to-top:hover {
+    background-color: #095e09;
+}
+
+/* =========================
+   Explore More Animation
+   ========================= */
+   .exploremore {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(.4,2,.6,1), transform 0.8s cubic-bezier(.4,2,.6,1);
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.exploremore.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+.exploremore a {
+    position: relative;
+    color: black;
+    font-weight: 500;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: color 0.3s cubic-bezier(.4,2,.6,1), transform 0.2s cubic-bezier(.4,2,.6,1);
+}
+.exploremore a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #0a730a;
+    transition: width 0.4s cubic-bezier(.4,2,.6,1);
+}
+.exploremore a:hover {
+    color: #095e09;
+    transform: translateY(-3px) scale(1.05);
+    text-decoration: none;
+}
+.exploremore a:hover::after,
+.exploremore a:focus::after {
+    width: 100%;
+}
+
+/* =========================
+   Page Loader Styles
+   ========================= */
+   #page-loader {
+    position: fixed;
+    z-index: 99999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6); /* transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease;
+}
+#page-loader .spinner {
+    width: 60px;
+    height: 60px;
+    border: 7px solid greenyellow;
+    border-top: 7px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+#page-loader.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+  /* ==========================================================================
+   ENHANCED CAROUSEL ANIMATIONS
+   ========================================================================== */
+
+.carousel {
+    perspective: 1000px;
+    overflow: hidden;
+  }
+  
+  /* Loading animation with optimized performance */
+  .carousel-item {
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+  }
+  
+  /* Enhanced loading skeleton with GPU acceleration */
+  .carousel-item img {
+    transition: 
+      opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 1s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateZ(0);
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loadingSkeleton 1.5s infinite;
+  }
+  
+  @keyframes loadingSkeleton {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  /* Smoother fade-in with parallax effect */
+  .carousel-item.active img,
+  .carousel-item-next.carousel-item-start img,
+  .carousel-item-prev.carousel-item-end img {
+    animation: fadeInCarousel 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    background: none;
+  }
+  
+  @keyframes fadeInCarousel {
+    0% {
+      opacity: 0.4;
+      filter: blur(8px) grayscale(20%);
+      transform: scale(1.02) translateZ(0);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0) grayscale(0%);
+      transform: scale(1) translateZ(0);
+    }
+  }
+  
+  /* Caption animations with staggered elements */
+  .carousel-caption {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .carousel-item.active .carousel-caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Stagger caption children */
+  .carousel-caption h3 {
+    transition-delay: 0.3s;
+  }
+  
+  .carousel-caption p {
+    transition-delay: 0.5s;
+  }
+  
+  .carousel-caption .btn {
+    transition-delay: 0.7s;
+  }
+  
+  /* Enhanced indicator animation with progress fill */
+  .carousel-indicators [data-bs-target] {
+    position: relative;
+    overflow: hidden;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-indicators [data-bs-target]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: width linear;
+    transition-duration: var(--bs-carousel-interval);
+    transform-origin: left center;
+  }
+  
+  .carousel-indicators .active[data-bs-target] {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .carousel-indicators .active[data-bs-target]::after {
+    width: 100%;
+  }
+  
+  /* Smoother slide transitions with momentum */
+  .carousel-inner {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .carousel-item-next:not(.carousel-item-start),
+  .active.carousel-item-end {
+    transform: translateX(10%) scale(0.95);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+  }
+  
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start {
+    transform: translateX(-10%) scale(0.95);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+  }
+  
+  /* Control buttons with subtle glow effect */
+  .carousel-control-prev,
+  .carousel-control-next {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 8%;
+    opacity: 0.8;
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .carousel-control-prev:hover .carousel-control-prev-icon {
+    transform: translateX(-8px);
+  }
+  
+  .carousel-control-next:hover .carousel-control-next-icon {
+    transform: translateX(8px);
+  }
+  
+  /* Touch optimization */
+  @media (hover: none) {
+    .carousel-control-prev,
+    .carousel-control-next {
+      transform: scale(1);
+    }
+  }
+

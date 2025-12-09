@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Reviews - Inception</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .accordion {
+            background-color: #fff;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.4s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .accordion:after {
+            content: '\002B';
+            font-size: 18px;
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .active:after {
+            content: "\2212";
+        }
+        
+        .accordion:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            margin-bottom: 15px;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .review-meta {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .rating {
+            color: #f39c12;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inception - User Reviews</h1>
+    
+    <button class="accordion">
+        <span>Mind-Bending Masterpiece</span>
+        <span class="rating">5/5</span>
+    </button>
+    <div class="panel">
+        <div class="review-meta">By FilmBuff22 on June 15, 2023</div>
+        <p>Christopher Nolan has outdone himself with this cerebral masterpiece. The concept of dream infiltration is executed with such precision and visual flair that it's impossible not to be captivated. Leonardo DiCaprio delivers a powerhouse performance as Cobb, a man torn between reality and the dream world. The supporting cast is equally brilliant, with special mention to Tom Hardy's charming Eames. The ending still has me debating with friends years later - that's the mark of a truly great film.</p>
+    </div>
+    
+    <button class="accordion">
+        <span>Visually Stunning but Confusing</span>
+        <span class="rating">4/5</span>
+    </button>
+    <div class="panel">
+        <div class="review-meta">By MovieLover87 on August 2, 2023</div>
+        <p>There's no denying the technical brilliance of Inception. The visual effects, especially the folding city scene, are groundbreaking. Hans Zimmer's score is pulse-pounding and perfectly complements the action. However, I found myself getting lost in the multiple dream layers at times. It demands your full attention, which isn't necessarily a bad thing, but it does make for exhausting viewing. Still, it's a film that stays with you long after the credits roll.</p>
+    </div>
+    
+    <button class="accordion">
+        <span>Overrated Puzzle Film</span>
+        <span class="rating">3/5</span>
+    </button>
+    <div class="panel">
+        <div class="review-meta">By CinemaCritic on September 10, 2023</div>
+        <p>While I appreciate Nolan's ambition, Inception tries too hard to be clever at the expense of emotional engagement. The rules of the dream world are explained ad nauseam through exposition-heavy dialogue. The action sequences, while impressive, feel cold and mechanical. The film is undoubtedly innovative, but I couldn't connect with any of the characters on a deeper level. It's more of an intellectual exercise than a satisfying narrative experience.</p>
+    </div>
+    
+    <button class="accordion">
+        <span>Perfect Blend of Action and Intellect</span>
+        <span class="rating">5/5</span>
+    </button>
+    <div class="panel">
+        <div class="review-meta">By SciFiEnthusiast on July 4, 2023</div>
+        <p>Inception achieves the rare feat of combining high-octane action with profound philosophical questions about reality and perception. The heist structure keeps the plot moving at a thrilling pace, while the emotional core of Cobb's relationship with his wife adds surprising depth. The practical effects mixed with CGI create a tangible world that feels real despite its dreamlike qualities. This is the kind of film that rewards multiple viewings, with new details emerging each time.</p>
+    </div>
+    
+    <button class="accordion">
+        <span>Good but Not Nolan's Best</span>
+        <span class="rating">4/5</span>
+    </button>
+    <div class="panel">
+        <div class="review-meta">By TheFilmSnob on October 22, 2023</div>
+        <p>Inception is undoubtedly an impressive achievement in world-building and conceptual storytelling, but it doesn't quite reach the heights of Nolan's The Dark Knight or Memento. The ideas are fascinating, but the execution sometimes feels clinical. Joseph Gordon-Levitt's zero-gravity fight scene is a technical marvel, though. While I admire the film's ambition, I wish it had more heart to match its considerable brainpower.</p>
+    </div>
+    
+    <button class="accordion">
+        <span>A Film That Changed Cinema</span>
+        <span class="rating">5/5</span>
+    </button>
+    <div class="panel">
+        <div class="review-meta">By FutureDirector on November 5, 2023</div>
+        <p>Inception is one of those rare films that pushes the boundaries of what's possible in mainstream cinema. It combines complex theoretical concepts with blockbuster entertainment in a way that had never been done before. The layered narrative structure is genius, mirroring the film's own dream-within-a-dream concept. The performances are uniformly excellent, and the practical effects work is staggering. This is a film that will be studied and discussed for decades to come.</p>
+    </div>
+    
+    <button class="accordion">
+        <span>Style Over Substance</span>
+        <span class="rating">2.5/5</span>
+    </button>
+    <div class="panel">
+        <div class="review-meta">By ArtHouseFan on December 12, 2023</div>
+        <p>While Inception is undeniably impressive on a technical level, I found it emotionally hollow. The film is so preoccupied with its own cleverness that it forgets to make us care about the characters. The endless explanations of the dream rules become tedious, and the emotional resolution feels unearned. It's a visually stunning puzzle box, but one that left me cold. I much prefer Nolan's more character-driven works like The Prestige.</p>
+    </div>
+    
+    <button class="accordion">
+        <span>The Definition of Cinematic</span>
+        <span class="rating">5/5</span>
+    </button>
+    <div class="panel">
+        <div class="review-meta">By BigScreenAddict on January 8, 2024</div>
+        <p>Inception is why I go to the movies. It's a grand, ambitious spectacle that could only work on the big screen. The sound design alone is worth the price of admission - you feel the bass of that iconic 'BRAAAM' in your bones. The action sequences are inventive and clearly shot (a rarity these days), and the emotional stakes are surprisingly high for such a conceptual film. That ambiguous ending is pure genius - it's whatever you want it to be. A modern classic.</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+</body>
+</html>

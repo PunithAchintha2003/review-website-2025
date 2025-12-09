@@ -1,0 +1,812 @@
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ==========================================================================
+     NAVBAR
+     ========================================================================== */
+  .navbar {
+    background-color: #0a730a;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    height: 80px;
+  }
+  
+  .navbar-brand img {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    margin-right: auto;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: yellow;
+  }
+  
+  .search-bar {
+    width: 150px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  
+  .btn-group button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  /* ==========================================================================
+     INFO BARS
+     ========================================================================== */
+  .info-bar {
+    padding: 10px 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .trending-bar {
+    background-color: rgb(108, 174, 9);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .trending-bar a {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+    margin-right: 30px;
+  }
+  
+  .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    will-change: transform;
+    animation: scroll-left 18s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    0% { transform: translateX(100%);}
+    100% { transform: translateX(-100%);}
+  }
+  
+  .extra-bar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: smaller;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .extra-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: small;
+  }
+  
+  .extra-bar a:hover,
+  .extra-bar a:active {
+    color: greenyellow;
+  }
+  
+  /* ==========================================================================
+     CAROUSEL
+     ========================================================================== */
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-fade .carousel-item {
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carousel-fade .carousel-item-next,
+  .carousel-fade .carousel-item-prev,
+  .carousel-fade .carousel-item.active {
+    opacity: 1;
+  }
+  
+  .carousel-item img {
+    opacity: 0.3;
+    filter: blur(6px) grayscale(30%);
+    transition: 
+      opacity 1.2s cubic-bezier(0.4,0,0.2,1),
+      filter 1.2s cubic-bezier(0.4,0,0.2,1);
+  }
+  
+  .carousel-item.active img,
+  .carousel-item-next.carousel-item-start img,
+  .carousel-item-prev.carousel-item-end img {
+    opacity: 1;
+    filter: blur(0) grayscale(0%);
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-inner img {
+      height: 250px;
+    }
+  }
+  
+  /* ==========================================================================
+     SILHOUETTES
+     ========================================================================== */
+  .silhouettes-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+  }
+  
+  
+  /* ==========================================================================
+     REVIEW PROCESS
+     ========================================================================== */
+  .review-process {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    background-color: white;
+    height: 200px;
+    color: black;
+    padding-top: 30px;
+  }
+  
+  .review-process h2 {
+    font-size: 1.3em;
+    margin-bottom: 0;
+    color: black;
+  }
+  
+  .review-process p {
+    font-size: 0.9em;
+    color: black;
+  }
+  
+  /* ==========================================================================
+     AG COURSES (INFO CARDS)
+     ========================================================================== */
+  .ag-courses_box {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 50px 0;
+  }
+  
+  .ag-courses_item {
+    font-family: 'Poppins', sans-serif;
+    flex-basis: calc(33.33333% - 30px);
+    margin: 0 15px 30px;
+    overflow: hidden;
+    border-radius: 28px;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s;
+  }
+  
+  .ag-courses_item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+  
+  .ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: #121212;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: #FFF;
+  }
+  
+  .ag-courses-item_link:hover,
+  .ag-courses-item_link:hover .ag-courses-item_date {
+    color: #FFF;
+  }
+  
+  .ag-courses-item_link:hover .ag-courses-item_bg {
+    transform: scale(10);
+  }
+  
+  .ag-courses-item_title {
+    min-height: 47px;
+    margin: 0 0 1px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFF;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: green;
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 80%;
+    transition: all .5s ease;
+  }
+  
+  .ag-courses_item:nth-child(2n) .ag-courses-item_bg,
+  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+    background-color: green;
+  }
+  
+  /* Responsive for AG Courses */
+  @media only screen and (max-width: 979px) {
+    .ag-courses_item {
+      flex-basis: calc(50% - 30px);
+    }
+    .ag-courses-item_title {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 639px) {
+    .ag-courses_item {
+      flex-basis: 100%;
+    }
+    .ag-courses-item_title {
+      min-height: 72px;
+      line-height: 1;
+      font-size: 24px;
+    }
+    .ag-courses-item_link {
+      padding: 22px 40px;
+    }
+  }
+  
+  /* ==========================================================================
+     HERO BANNERS
+     ========================================================================== */
+  .hero-banner,
+  .hero-banner2,
+  .hero-banner5 {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.2s cubic-bezier(.4,0,.2,1), transform 1.2s cubic-bezier(.4,0,.2,1);
+    padding: 0 40px;
+  }
+  
+  .hero-banner.visible,
+  .hero-banner2.visible,
+  .hero-banner5.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hero-banner {
+    background: url('Paradise (2023)_files/MV5BMGZjYTQzMjgtMzY1MS00YWI2LWI5OWMtNDIxNzM3M2NjNGRhXkEyXkFqcGc@._V1_.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .hero-banner2 {
+    background: url('Walampoori_ Seven and Half Dreams (2025)_files/MV5BMzJiYzE3OTctMWZkOC00ZDA0LWFmNTktMmY3ZmQ2ZmI1N2RiXkEyXkFqcGc@._V1_.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0 20px;
+  }
+  
+  .hero-banner5 {
+    background: url('A Complete Unknown (2024)_files/MV5BOWJlMDJkZDctZmE1OC00OTg3LWJmMGItYjAzMGRkNTMwMGI1XkEyXkFqcGc@._V1_.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .hero-banner::before,
+  .hero-banner2::before,
+  .hero-banner5::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content,
+  .hero-content2,
+  .hero-content5 {
+    position: relative;
+    max-width: 800px;
+    z-index: 1;
+  }
+  
+  .hero-content h1,
+  .hero-content2 h1,
+  .hero-content5 h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content p,
+  .hero-content2 p,
+  .hero-content5 p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsive for Hero Banners */
+  @media (max-width: 768px) {
+    .hero-content h1,
+    .hero-content2 h1,
+    .hero-content5 h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content h1,
+    .hero-content2 h1,
+    .hero-content5 h1 {
+      font-size: 2rem;
+    }
+    .hero-content p,
+    .hero-content2 p,
+    .hero-content5 p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* ==========================================================================
+     HERO BANNER 3 (BLOG/FEATURED)
+     ========================================================================== */
+  .hero-banner3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('Rani 2025_files/MV5BODkzNGU1YmMtMWExMy00MmM0LWIyOGMtNjE4YWZiYWVjODAyXkEyXkFqcGc@._V1_.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-content3 .hero-logo {
+    height: 45px;
+    width: 45px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content3 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .hero-content3 .hero-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  
+  /* ==========================================================================
+     TRANSPARENT CARDS (BLOG)
+     ========================================================================== */
+  .transparent-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 50px 0;
+  }
+  
+  .transparent-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 30px 25px;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .transparent-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .transparent-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .transparent-card p {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+  
+  /* Responsive for Transparent Cards */
+  @media (max-width: 768px) {
+    .transparent-cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-content2 h1 {
+      font-size: 2rem;
+    }
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+  
+  /* ==========================================================================
+     BUTTONS
+     ========================================================================== */
+  .btn-primary {
+    background-color: #4CAF50;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* ==========================================================================
+     USER VOICES / TESTIMONIALS
+     ========================================================================== */
+  .user-voices-section {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .section-subtitle {
+    color: #aaa;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .testimonial-card {
+    background: #111;
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .user-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: none;
+  }
+  
+  .user-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .user-title {
+    color: #4CAF50;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .testimonial-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive for Testimonials */
+  @media (max-width: 768px) {
+    .section-header h2 {
+      font-size: 2rem;
+    }
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ==========================================================================
+     FOOTER
+     ========================================================================== */
+  footer {
+    background-color: black;
+    color: #e0e0e0;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-content svg {
+    margin: 5px;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .footer-content svg:hover {
+    color: greenyellow;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    padding: 0 15px;
+    margin: 10px 0;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    color: #f8f9fa;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+    color: #e0e0e0;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-section a:hover {
+    color: greenyellow;
+  }
+  
+  footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .subscribe-form input[type="email"] {
+    padding: 8px;
+    border: none;
+    margin-right: 10px;
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  /* ==========================================================================
+     PAGE LOADER
+     ========================================================================== */
+  #page-loader {
+    position: fixed;
+    z-index: 9999;
+    background: #1b2e1b;
+    width: 100vw;
+    height: 100vh;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 2s cubic-bezier(.4,0,.2,1);
+  }
+  
+  #page-loader .loader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loader-text {
+    color: #e0ffe0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+  }
+  
+  /* ==========================================================================
+     ANIMATIONS
+     ========================================================================== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(60px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  
+  .slide-up {
+    opacity: 0;
+    animation: slideUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    transform: translateY(40px);
+  }
+  
+  .fade-in, .slide-up {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }
+  
+  .slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ==========================================================================
+     MISCELLANEOUS
+     ========================================================================== */
+  .ag-course.body {
+    background-color: #000;
+  }
+  
+  .ag-format-container {
+    width: 96%;
+  }
+  
+  .ag-format-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .ag-format-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: white;
+  }
+
+  /* =========================
+   Back to Top Button
+   ========================= */
+   .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0a730a;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.back-to-top:hover {
+    background-color: #095e09;
+}
+

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Green Grass | Reviews & Critiques</title>
+        <link rel="icon" type="image/jpg" href="output-onlinepngtools.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="reviewsample.css" rel="stylesheet" type="text/css">
+        <script src="reviewsample.js" defer></script>
+       
+
+        <style>
+
+.faq-bar{
+    background-image:url('The Song Review Example Images/Dani Sri.png');
+}
+        </style>
+       
+
+    </head>
+
+    <body>
+
+        <div id="page-loader">
+  <div class="spinner"></div>
+</div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="The Home Of Green Grass.html">
+                    <img src="output-onlinepngtools.png" alt="Green Grass Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="The films of Green Grass.html">Films</a></li>
+                        <li class="nav-item"><a class="nav-link" href="The Songs Of Green Grass.html">Songs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="The Tele Dramas Of Green Grass.html">Teledramas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="The Books Of Green Grass.html">Books</a></li>
+                        <li class="nav-item"><a class="nav-link" href="The Other Of Green Grass.html">Other</a></li>
+                    </ul>
+                    <div class="search-bar mx-3">
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                    <div class="btn-group">
+                        <a href="The Log In Of Green Grass.html" class="btn btn-outline-light btn-sm">Login</a>
+                        <a href="The Sign Up Of Green Grass.html" class="btn btn-outline-light btn-sm">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Trending Bar -->
+        <div class="info-bar trending-bar">
+            <div class="scrolling-text" id="scrollingText">
+                <strong>Trending : &nbsp;</strong>
+                <a href="#">Tentigo</a>
+                <a href="#">Rani</a>
+                <a href="#">Forget Me Not</a>
+                <a href="#">Mama Mage Nowe Nam</a>
+            </div>
+        </div>
+    
+        <script>
+            // Trending bar scroll
+            const text = document.getElementById('scrollingText');
+            let pos = text.offsetWidth;
+            function scroll() {
+                pos--;
+                if (pos < -text.offsetWidth) {
+                    pos = text.parentElement.offsetWidth;
+                }
+                text.style.transform = `translateX(${pos}px)`;
+                requestAnimationFrame(scroll);
+            }
+            scroll();
+        </script>
+    
+        <!-- Extra Bar -->
+        <div class="info-bar extra-bar">
+            <span>
+                Looking for something more than just reviews ? Visit
+                <a href="The Article Collage Of Green Grass.html"><strong>Article Collage</strong></a>
+            </span>
+        </div>
+    
+        <div class="faq-bar">
+        </div>
+    
+        <!-- ag-courses Section -->
+        <div class="ag-format-container">
+            <div class="ag-courses_box">
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">A Masterclass in Overproduced Emptiness</div>
+                        <div class="ag-courses-item_by-box">
+                            By :
+                            <span class="ag-courses-item_publisher">Sunil Ariyaratne</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">It’s an Offense to Our Ears and Intellect</div>
+                        <div class="ag-courses-item_by-box">
+                            By :
+                            <span class="ag-courses-item_publisher">Rathnasri Wijesinghe</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link" style="text-decoration:none">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">Echo of a Generation That No Longer Reads Its Own Soul</div>
+                        <div class="ag-courses-item_by-box">
+                            By :
+                            <span class="ag-courses-publisher">Buddi Galappatti</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <br>
+    
+        <!-- Ratings -->
+        <div class="rating-grid">
+            <div class="rating-box">
+                <img src="brown-removebg-preview.png" class="rating-icon" alt="Green Grass Icon">
+                <div id="grassCount" class="rating-number">0%</div>
+                <div class="rating-label">16 Reviews</div>
+            </div>
+            <div class="rating-box">
+                <img src="The Film Review Example Images/user-lightgreen.png" class="rating-icon" alt="User Grass Icon" style="height:60px;width:60px;">
+                <div id="userCount" class="rating-number">0%</div>
+                <div class="rating-label">98 Reviews</div>
+            </div>
+        </div>
+
+        
+        <script>
+            // Rating count animation
+function animateRatingNumbers() {
+    function countUp(id, target, speed = 38) {
+        const element = document.getElementById(id);
+        if (!element) return;
+        
+        let count = 0;
+        const interval = setInterval(() => {
+            if (count >= target) {
+                element.textContent = `${target}%`;
+                clearInterval(interval);
+            } else {
+                element.textContent = `${count++}%`;
+            }
+        }, speed);
+    }
+
+    countUp('grassCount', 31);
+    countUp('userCount', 81);
+}
+
+// Set up intersection observer
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateRatingNumbers();
+            observer.disconnect(); // Run only once
+        }
+    });
+}, {
+    threshold: 0.7 // Trigger when 50% of the target is visible
+});
+
+// Observe one of the rating elements (or a common parent)
+document.addEventListener("DOMContentLoaded", () => {
+    const targetElement = document.getElementById('grassCount'); // or use a wrapper element
+    if (targetElement) {
+        observer.observe(targetElement);
+    }
+});
+        </script>
+    
+        <br>
+    
+        <!-- Review Filter -->
+        <div class="review-filter">
+            <button class="active" onclick="filterReviews('professional')">Professional Reviews</button>
+            <button class="active" onclick="filterReviews('user')">User Reviews</button>
+        </div>
+    
+        <br>
+    
+    
+
+    <div id="professional-reviews" class="review-section visible">
+        <div class="image-cards-container">
+            <div class="image-cards-grid">
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Gloss Without Soul</h5>
+                        <br>
+                        <p class="image-card-text">
+                            Musically, “Adariye” is structured around a predictable and uninspired chord progression, offering little in the way of innovation or complexity, making it a forgettable entry in the vast landscape of Sinhala pop music. The song follows a tired and overused formula, relying on the same four-chord structures that have plagued mainstream pop music for decades, demonstrating a complete lack of originality or creative ambition. Unlike timeless love songs such as "Something" by The Beatles, which weaves intricate harmonies and unexpected melodic turns into its composition, or "At Last" by Etta James, where the sophisticated chord changes amplify the song's emotional resonance, “Adariye” feels like a cheap imitation crafted without passion or purpose.
+                        </p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/461565601_2414353435622666_7882671785738982577_n.jpg" class="author-avatar">
+                                <span class="author-name">
+                                    Thamalu Piyadigama
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date"><a href="best articles-songs.html" style="text-decoration:none;color:#999">Full Review</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Death of Authenticity in Modern Sinhala Music</h5>
+                        <br>
+                        <p class="image-card-text">It’s not just “Adariye” that disappoints — it’s what the song represents: the slow, apathetic decay of artistic ambition in an entire generation of Sinhala pop music. Danith Sri’s track, with its synthetic sentimentality and carbon-copy production, is symptomatic of a larger creative drought where style has completely eclipsed substance. This generation of artists seems content with polishing the surface — sleek visuals, predictable melodies, and emotion-by-numbers lyrics — while abandoning any attempt at lyrical integrity or musical innovation. “Adariye” doesn’t just fail as a love song; it exposes a worrying truth — that the bar for emotional depth and musical craftsmanship has been set so low, many no longer notice it’s missing.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/dammika bandara.jpeg" class="author-avatar">
+                                <span class="author-name">
+                                    Dammika Bandara
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">“Adariye” Is a Symptom of a Culture That No Longer Listens</h5>
+                        <br>
+                        <p class="image-card-text">There was a time when a love song in Sinhala music meant poetic introspection — a lyrical gaze into the complexity of yearning, heartbreak, and human vulnerability. Danith Sri’s “Adariye” is the antithesis of that tradition. It’s not merely disappointing; it’s disheartening. The song offers no real sentiment, only the illusion of emotion packaged in sterile production and algorithm-friendly structure. What we hear is not a voice from the heart — but the echo of social media trends, hollow aesthetics, and a desperate chase for virality. It is a song engineered to be played in the background, not felt in the foreground.
+
+                            Worse, “Adariye” reflects a deeper tragedy — the disintegration of musical identity in the face of cultural imitation.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/ven.siddartha.jpeg" class="author-avatar">
+                                <span class="author-name">
+                                    Ven . Rambukkana Siddartha
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title"> Art of Saying Nothing Beautifully</h5>
+                        <br>
+                        <p class="image-card-text">What’s most painful is how casually the Sinhala language is treated — as if it’s just another trend to pair with a beat. Gone is the lyrical density of Amaradeva’s poetry, the contemplative honesty of Premakeerthi’s verses, the silence between words that used to mean something. Today’s popular songwriting, as Adariye proves, seems content with vague declarations of love and loss, avoiding specificity, metaphor, or even basic emotional logic. It is songwriting without the writing. Music without the memory. A façade of feeling.
+
+                            And when songs like this top charts and flood our feeds, young artists start believing this is the standard — that this is all a love song needs to be. We aren’t just producing weak songs anymore; we’re producing weak writers. “Adariye” is not just a disappointment — it’s a warning</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/praneeth aneysundara.jpeg" class="author-avatar">
+                                <span class="author-name">Praneeth Abeysunadara
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title"> Crisis of Artistic Laziness in a Copy-Paste Era</h5>
+                        <br>
+                        <p class="image-card-text">As someone who has spent decades studying the architecture of music — the emotional arcs, harmonic progressions, and thematic development that distinguish a well-crafted composition from disposable sound — I find Danith Sri’s “Adariye” to be a striking example of artistic laziness masquerading as emotional expression. It’s not just that the song is uninspired; it’s that it shows no interest in trying. The melody barely shifts, the harmony remains rooted in overused patterns, and the arrangement is so calculated and conventional that one could predict the next note before it even plays.
+
+                            What’s worse is that “Adariye” perpetuates a dangerous misconception: that aesthetic polish equals artistic merit. But music is not wallpaper. It’s not supposed to be just ‘vibe-friendly’ or algorithm-safe. It’s supposed to evolve, challenge, and resonate. Here, instead of expanding the emotional vocabulary of young audiences, the song narrows it — offering only diluted sadness wrapped in recycled sounds.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/ravi siriwardana.jpg" class="author-avatar">
+                                <span class="author-name">
+                                    Ravi Siriwardana
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title"> It’s an Offense to Our Ears and Intellect</h5>
+                        <br>
+                        <p class="image-card-text">Let’s stop pretending. Danith Sri’s “Adariye” is not “emotional,” not “touching,” and certainly not “beautiful.” It is a formulaic, soulless product — a lifeless template posing as a love song. What’s infuriating isn’t just the mediocrity of the track, but the fact that it’s being applauded, consumed, and passed around as if it’s some kind of artistic triumph. It isn’t. It’s an insult — to our musical heritage, to the Sinhala language, and to every listener who still believes that music should come from a place of sincerity and skill, not convenience and social media trend-chasing.
+
+                            Where is the originality? Where is the emotional risk? Where is the craft? “Adariye” is content to recycle the same tired chords, the same empty phrases, and the same fake melancholy that’s been echoing through Sinhala pop for years now — all packaged neatly for your next Instagram reel. The worst part? It works. Not because it deserves to, but because the audience has been so thoroughly conditioned to expect nothing better.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/rathnasri.png" class="author-avatar">
+                                <span class="author-name">
+                                    Rathnasri Wijesinghe
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title"> A Masterclass in Overproduced Emptiness</h5>
+                        <br>
+                        <p class="image-card-text">What’s heartbreaking is that with today’s technology, artists have the ability to create something deeply personal, something sonically adventurous, something emotionally raw — and yet they choose the path of least resistance. “Adariye” was clearly built in a box: a beat library here, a reverb preset there, autotune smoothing out any sense of vocal humanity. There’s no experimentation, no ambient texture, no room for silence to breathe. It’s a sterile loop disguised as a song, a sequence engineered to mimic feeling without ever daring to feel.
+
+                            The saddest part? This is the new normal. The industry today rewards this kind of laziness. Tracks like “Adariye” get streamed not because they resonate, but because they blend in. And artists, instead of pushing their sonic identity, are happy to fade into the algorithm.Music production used to be about sculpting truth from sound. Today, it’s about hiding the lack of truth behind sonic polish. And “Adariye” — in all its well-mixed, beautifully empty layers — is a perfect symbol of that failure.
+
+                        </p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/1680591370-Professor-Sunil-Ariyaratne-L.jpg" class="author-avatar">
+                                <span class="author-name">
+                                    Sunil Ariyaratne
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Adariye Is Not the Future — But You Still Can Be</h5>
+                        <br>
+                        <p class="image-card-text">There’s no joy in writing a negative review when the artist is young and full of potential. But it must be said — Danith Sri’s “Adariye” is a deeply disappointing song. Not because it lacks polish, but because it lacks substance. It is emotionally superficial, lyrically vague, and musically timid — a track that plays it painfully safe, repeating the same diluted sadness and plastic romance that we’ve heard far too many times. It is not a creation born out of personal truth or cultural depth, but out of algorithmic trend-following. And that is precisely the problem.
+
+                            To the younger generation of musicians: this is not the path forward. Chasing virality through sound templates, mimicking moods without meaning, and relying on aesthetic gimmicks over artistic honesty — these are habits that will not age well. Music is not decoration. It is documentation. It’s how a generation tells the world what it felt. And if Adariye is any reflection, our music is saying very little, very loudly.But here’s the part that matters: it doesn’t have to stay this way. You can write better. You can feel deeper.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/sunil sarath.jpg" class="author-avatar" style="object-position:20% 42%">
+                                <span class="author-name">
+                                    Sunil Sarath Perera
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title"> Echo of a Generation That No Longer Reads Its Own Soul</h5>
+                        <br>
+                        <p class="image-card-text">As someone who has spent a lifetime immersed in the poetic and lyrical beauty of Sinhala literature — from Kumaratunga Munidasa’s purity of expression to Mahagama Sekara’s aching introspections — I approached Danith Sri’s “Adariye” not with cynicism, but with hope. And yet, what I found was not a song, but a hollow echo of everything that has gone wrong in our artistic evolution.
+
+                            This track, however polished, lacks the core that once defined our musical and poetic identity: intimacy, depth, and authentic human experience. The lyrics drift like diluted perfume — faint, pretty, and forgettable. There is no metaphor that invites thought, no line that demands to be remembered, no emotional tension that stirs the heart or mind. “Adariye” feels like it was written by someone who has never stared long enough into silence to hear what it has to say.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/Galappaththi.jpeg" class="author-avatar">
+                                <span class="author-name">
+                                    Buddi Galappatti
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Emotional Minimalist –</h5>
+                        <br>
+                        <p class="image-card-text">Danith Sri’s “Adariye” exemplifies the quiet power of emotional minimalism in contemporary Sinhala music. Rather than resorting to lyrical dramatics or overblown melodies, the song creates a mood of restrained sadness — a kind of controlled melancholy that resonates with a generation more accustomed to feeling than expressing. The composition is sparse, tasteful, and unintrusive, allowing the listener to project their own emotions into the gaps. It’s music that breathes.
+
+                            What makes Adariye particularly effective is its refusal to chase emotional high points; instead, it lingers in the in-between moments — the silence after the goodbye, the pause before closure. The song’s atmospheric production, paired with Danith’s subdued vocal delivery, builds a soundscape that is quietly immersive. In an age of overstimulation, Adariye offers a gentle reminder that emotional honesty need not be loud to be powerful.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/chinthana darme.jpg" class="author-avatar">
+                                <span class="author-name">
+                                    Chinthana Dharmadasa
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title"> The Trend Forecaster</h5>
+                        <br>
+                        <p class="image-card-text">From an industry standpoint, “Adariye” positions Danith Sri as an artist in tune with the global musical shifts currently defining the modern pop landscape. The track mirrors the international rise of mood-driven pop — a genre that thrives on emotional subtlety, lo-fi influences, and an intentional lack of dramatic climaxes. In an era where high-energy anthems often dominate, Adariye stands as a testament to the evolving musical tastes of younger listeners who now gravitate towards more introspective, atmospheric sounds. This style, once considered niche, has rapidly become a hallmark of Gen Z’s music preferences, a generation more inclined to value mood and vibe over vocal acrobatics or complex structures.
+
+                            By embracing this aesthetic, Danith Sri not only meets the growing demand for emotionally authentic, low-key music, but also introduces a more refined, intimate form of pop. </p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="Baasi-Upul-Shantha-Sannasgala.jpg" class="author-avatar">
+                                <span class="author-name">
+                                    Upul Sannasgala
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title"> The Studio Eye </h5>
+                        <br>
+                        <p class="image-card-text">From a production perspective, “Adariye” is impressively refined, showcasing Danith Sri’s keen understanding of how to craft a song that resonates as much with the ear as it does with the soul. The track thrives on its minimalist production, with each element carefully chosen to serve both the mood and the narrative. The vocal layering is exquisite — subtle harmonies are interwoven to create depth without overwhelming the listener, and the placement of ambient textures adds a beautiful atmospheric quality to the track. The reverb control is particularly noteworthy, as it creates an immersive soundscape that feels both intimate and expansive. This approach ensures that every note, every phrase, breathes freely, unburdened by excessive clutter.
+
+                            The arrangement speaks volumes about Danith Sri’s technical expertise. Nothing feels overcrowded or out of place. heric synth pads that float throughout the track — every sound has been placed with intent.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/akila vimanga.jpeg" class="author-avatar">
+                                <span class="author-name">
+                                    Akila Vimanga Seneviratne
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Aesthetic Restraint or Emotional Absence? A Critical Look at “Adariye” by Danith Sri</h5>
+                        <br>
+                        <p class="image-card-text">The production, though clean and sonically balanced, lacks a defining character. Ambient textures and lo-fi aesthetics are present, but they never evolve or challenge the listener. Instead of building an emotional arc, the song stays static — almost complacent in its own atmosphere. This flatness may cater to a playlist-driven streaming culture, but from a compositional standpoint, it raises concerns about artistic ambition.
+
+                            Lyrically, “Adariye” opts for simplicity, but at times it feels indistinguishable from dozens of similarly subdued love songs. There is little poetic risk or linguistic freshness, which leaves the listener with an experience that is pleasant, but forgettable. The emotional impact seems diluted, not due to subtlety, but due to a lack of narrative depth.
+                            
+                            </p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/KK_samankumara.jpg" class="author-avatar">
+                                <span class="author-name">
+                                    K.K.Saman Kumara
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Sonic Subtlety at Its Best</h5>
+                        <br>
+                        <p class="image-card-text">From a production standpoint, “Adariye” exemplifies tasteful restraint — a quality increasingly rare in a sonic landscape oversaturated with bombastic arrangements and overcompressed mixes. Danith Sri, along with his production team, seems acutely aware that emotion in music is often best communicated not through volume or complexity, but through space and subtlety. The track is sonically balanced and deliberately sparse, creating a mood that is as contemplative as it is emotionally immersive. There’s a deliberate avoidance of clutter; instead, we hear air, silence, and resonance — the ingredients of a production that trusts the listener to lean in rather than be pulled.
+
+                            The synth pads glide in and out like memory itself — ephemeral and atmospheric, never overpowering. Their placement feels like brushstrokes in an impressionist painting.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/sandaru paba.jpg" class="author-avatar">
+                                <span class="author-name">
+                                    Sandaru Pabasara
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">When Atmosphere Replaces Artistry</h5>
+                        <br>
+                        <p class="image-card-text">In the era of ambient pop and emotionally subdued streaming hits, Danith Sri’s “Adariye” feels more like a calculated algorithmic response than an inspired artistic expression. While the track has garnered attention for its polished production and moody restraint, it raises an uncomfortable question: have we begun to confuse aesthetic consistency with artistic depth?
+
+                            Adariye is technically clean, its lo-fi textures and mellow vocal tones aligning comfortably with global “chill” playlists. But beneath this surface polish lies a surprising hollowness. The song appears more focused on achieving a vibe than conveying a lived emotional truth. It curates sadness the way social media curates authenticity — softly lit, well-filtered, and ultimately superficial.
+                            
+                            What’s particularly disappointing is the missed opportunity.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/Jimuth.jpg" class="author-avatar">
+                                <span class="author-name">
+                                    Jimuth Indusara
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Listener’s Intimacy</h5>
+                        <br>
+                        <p class="image-card-text">Danith Sri’s “Adariye” gently captures the emotional weight of longing without ever tipping into melodrama. It's a song that doesn’t beg for attention — instead, it lingers quietly, like a soft afterthought that stays with you long after the final note fades. The beauty of the track lies in its refusal to over-explain; it trusts the listener to feel, to read between the lines, and to inhabit the emotional silences. The softness of the vocals, paired with the understated instrumentation — airy synths, subtle rhythms, and carefully restrained layering — creates a personal, almost intimate listening space where emotions unfold slowly, like memory surfacing through still water.There’s a quiet honesty in the way “Adariye” deals with love and loss — not through grand declarations or soaring crescendos, but through a tone of acceptance, restraint, and emotional maturity.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Song Review Example Images/nadeeka.jpeg" class="author-avatar">
+                                <span class="author-name">
+                                    Nadeeka Guruge
+                                    
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>   
+           </div>
+       </div>
+   </div>
+
+   <div id="user-reviews" class="review-section hidden">
+    <div class="image-cards-container">
+        <div class="image-cards-grid">
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Soul Connection</h5>
+                    <br>
+                    <p class="image-card-text">Despite what critics say about "Adariye" being too commercial, they're missing the authentic emotional thread woven through every note. Danith crafts a soundscape that speaks directly to those quiet moments when you're alone with your thoughts. The bridge especially transitions with such elegance that I find myself rewinding just to experience that sonic journey again.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/madhu punchi.jpg" class="author-avatar">
+                            <span class="author-name">Madhushika Ariyaratne</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Poetic Resonance</h5>
+                    <br>
+                    <p class="image-card-text">Critics calling the lyrics "derivative" clearly haven't listened deeply enough. The metaphorical layering in "Adariye" creates an intimate dialogue between artist and listener that few contemporary artists achieve. The second verse particularly showcases Danith's linguistic prowess, playing with double meanings that reward multiple listens.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/vino.jpg" class="author-avatar">
+                            <span class="author-name">Vinodya Perera</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Musical Architecture</h5>
+                    <br>
+                    <p class="image-card-text">The production value exceeds expectations, regardless of what detractors claim. The careful balance between traditional elements and modern production techniques creates a thoughtful fusion rather than the "confused identity" some critics have labeled it. The subtle percussive elements support rather than overwhelm the vocal performance.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/hansaka.jpg" class="author-avatar">
+                            <span class="author-name">Hansaka Ranaweera</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Cultural Reimagining</h5>
+                    <br>
+                    <p class="image-card-text">I'm tired of reading reviews that miss the cultural significance of what Danith is doing here. "Adariye" isn't just a song—it's a conversation between generations, bringing traditional sensibilities into contemporary expression. Those dismissing it as "trying too hard" are missing its beautiful cultural complexit</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/adithya semina.jpg" class="author-avatar">
+                            <span class="author-name">Adithya Semina</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Emotional Intelligence</h5>
+                    <br>
+                    <p class="image-card-text">The emotional trajectory of "Adariye" showcases Danith's understanding of human connection. Critics calling it "manipulative" are projecting their own cynicism onto something genuinely heartfelt. The vocal performance carries authentic vulnerability that resonates with anyone who's experienced longing.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/naveen malli.jpg" class="author-avatar">
+                            <span class="author-name">Naveen Dilshan</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Beyond Genre Constraints</h5>
+                    <br>
+                    <p class="image-card-text">Why are critics so obsessed with boxing "Adariye" into specific genres? Its beauty lies precisely in its resistance to categorization. Danith weaves influences from multiple traditions into something distinctly his own. This isn't "confusion"—it's artistic vision that transcends arbitrary boundaries.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/yasinda.jpg" class="author-avatar">
+                            <span class="author-name">Yasinda Panasara</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Listener's Perspective</h5>
+                    <br>
+                    <p class="image-card-text">As someone who's played this on repeat for weeks, I find the critical response bewildering. "Adariye" creates an immersive experience that evolves with each listen. The critics claiming it "lacks depth" clearly haven't given it the attention it deserves—the nuances reveal themselves gradually, like any worthwhile relationship.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/shamal.jpg" class="author-avatar">
+                            <span class="author-name">Shamal Yudeeshwara</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Technical Brilliance</h5>
+                    <br>
+                    <p class="image-card-text">The vocal performance alone deserves recognition that many critics have failed to give. Danith's control and expressiveness throughout different registers demonstrates exceptional technical skill while maintaining emotional authenticity. The criticism about "overproduction" misses how the production actually enhances rather than masks his natural abilities.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/eranga.jpg" class="author-avatar">
+                            <span class="author-name">Eranga Hirushan</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Sensory Experience</h5>
+                    <br>
+                    <p class="image-card-text">"Adariye" creates a complete sensory landscape that critics dismissing it as "just another love song" entirely miss. The textural elements and spatial awareness in the production create a three-dimensional experience that's rare in today's music scene. Close your eyes and you're transported.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/vidumini.jpg" class="author-avatar">
+                            <span class="author-name">Vidumini Andradi</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Personal Connection</h5>
+                    <br>
+                    <p class="image-card-text">This song found me during a difficult period, and critics calling it "emotionally manipulative" couldn't be more wrong. There's a difference between manipulation and genuine expression that invites connection. "Adariye" offers space for listeners to find their own meaning within its beautiful framework.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/amilayaa.jpg" class="author-avatar">
+                            <span class="author-name">Amila Sathsara</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Rhythmic Subtlety</h5>
+                    <br>
+                    <p class="image-card-text">The rhythmic choices in "Adariye" create a gentle momentum that carries listeners through the emotional narrative. Critics complaining about "predictable structures" are missing the intentional rhythmic variations that create tension and release throughout the piece. Listen with headphones to truly appreciate this dimension.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/pawani.jpg" class="author-avatar">
+                            <span class="author-name">Pawani Buddima</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Authentic Artistic Voice</h5>
+                    <br>
+                    <p class="image-card-text">What critics call "derivative" I call a natural evolution within a musical tradition. Danith honors influences while establishing his unique artistic perspective. "Adariye" represents an authentic creative voice finding its expression—something increasingly rare in today's algorithm-driven music industry.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/chalindu.jpg" class="author-avatar">
+                            <span class="author-name">Chalindu Sanjana</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Emotional Disconnect</h5>
+                    <br>
+                    <p class="image-card-text">I wanted to love "Adariye" given Danith's previous work, but found myself increasingly alienated with each listen. The song creates an artificial emotional landscape that never feels authentic or lived-in. Danith's vocal techniques come across as studied rather than felt, hitting technical marks while missing the deeper resonance that makes music truly affecting. The lyrics employ familiar metaphors without bringing anything fresh to them.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/navo.jpg" class="author-avatar">
+                            <span class="author-name">Navodya Perera</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Style Over Substance</h5>
+                    <br>
+                    <p class="image-card-text">As someone who typically appreciates musical innovation, I found "Adariye" disappointingly hollow beneath its polished surface. Danith's vocal techniques feel like technical exercises rather than authentic expression, with melodies that wander without purpose. Each phrase seems calculated to sound profound without actually saying anything of substance. The production values can't mask the fundamental emptiness at the core.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/supipi.jpg" class="author-avatar">
+                            <span class="author-name">Supipi Bandara</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Lost in Translation</h5>
+                    <br>
+                    <p class="image-card-text">There's something fundamentally disconnected about "Adariye" that leaves me cold despite multiple attempts to engage with it. Danith's vocal delivery feels performative rather than lived, with emotional inflections that don't quite match the lyrical content. The production creates a sterile environment where nothing feels organic or spontaneous. What should be intimate instead feels distant, as though the song is being performed behind glass.However the technical proficiency is undeniable.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/nelaka ayya.jpg" class="author-avatar">
+                            <span class="author-name">Nelaka Vithanage</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Linguistic Tapestry</h5>
+                    <br>
+                    <p class="image-card-text">As someone who appreciates linguistic artistry, the way Danith weaves words in "Adariye" creates a beautiful tapestry of meaning and sound. Each phrase seems carefully selected not just for what it communicates but for how it feels when spoken or sung. The melody complements this perfectly, rising and falling in perfect harmony with the emotional weight of each line. It's rare to find music where lyrics and composition support each other so completely—a testament to Danith's comprehensive artistry.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/kalhari akka.jpg" class="author-avatar">
+                            <span class="author-name">Kalhari Gamage</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Production Values</h5>
+                    <br>
+                    <p class="image-card-text">The spatial elements in "Adariye" create an intimate listening experience that critics dismissing it as "overproduced" completely miss. Each instrumental element occupies its perfect place in the mix, creating breathing room that allows both the music and listener to exist in the same emotional space.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/sanchuka ayya.jpg" class="author-avatar">
+                            <span class="author-name">Sanchuka Nirupama</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Soundtrack to Memory</h5>
+                    <br>
+                    <p class="image-card-text">There's something magical about how "Adariye" has become intertwined with specific moments in my life. I first heard it during a late evening drive along the coast, and now whenever it plays, I'm transported back to that peaceful solitude—windows down, stars emerging, and Danith's voice carrying on the breeze.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/raveen jaye.jpg" class="author-avatar">
+                            <span class="author-name">Raveen Jayasinghe</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Timeless Quality</h5>
+                    <br>
+                    <p class="image-card-text">While many contemporary releases feel disposable, "Adariye" possesses a timeless quality that contradicts negative reviews. Six months after release, it retains its emotional impact and musical interest—the definition of staying power that critics often overlook in their rush to judgment.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/aviska.jpg" class="author-avatar">
+                            <span class="author-name">Avishka Navod</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Contextual Understanding</h5>
+                    <br>
+                    <p class="image-card-text">Those criticizing "Adariye" often lack contextual understanding of the musical traditions Danith draws from. The song represents a thoughtful progression rather than the "rehashed ideas" some critics claim. Its innovation lies in subtle reinterpretations that might escape those unfamiliar with the broader cultural context.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Song Review Example Images/sasindu godakande.jpg" class="author-avatar">
+                            <span class="author-name">Sasindu Godakande</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <br>
+
+    <!-- Explore More -->
+    <div class="exploremore">
+        <a href="Review Wall - Songs.html"><span>Explore More Reviews</span></a>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Write Review Section -->
+    <div class="write-review-section bg-black text-light">
+        <div class="introduction class">
+            <div class="logo-container" style="text-align: center; padding: 20px;">
+                <img src="output-onlinepngtools.png" alt="Green Grass Logo" style="max-width: 50px;">
+            </div>
+            <h5 style="color:white; text-align: center;"><strong>Green Grass Review Form</strong></h5>
+            <br>
+            <h6 style="color:white; text-align: center;">
+                <div class="pacifico-regular">Where Passion Meets Critique</div>
+            </h6>
+        </div>
+        <div class="write-review-container" style="background:rgba(10,10,10,0.98);">
+            <div class="write-review-title" style="color:#b2ffb2;"></div>
+            <form class="write-review-form bg-black border border-light rounded-3 p-4" id="reviewForm" autocomplete="off">
+                <div class="form-group mb-3">
+                    <label for="reviewTitle" class="form-label text-light">Review Title</label>
+                    <input
+                        type="text"
+                        id="reviewTitle"
+                        name="reviewTitle"
+                        class="form-control bg-black text-light border-light"
+                        placeholder="Enter your review title"
+                        required
+                    />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="reviewBody" class="form-label text-light">Your Review</label>
+                    <textarea
+                        id="reviewBody"
+                        name="reviewBody"
+                        class="form-control bg-black text-light border-light"
+                        placeholder="Write your review here..."
+                        rows="5"
+                        required
+                        style="resize: vertical;"
+                    ></textarea>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label text-light">Impression</label>
+                    <div class="btn-group d-flex" role="group" aria-label="Impression">
+                        <input type="radio" class="btn-check" name="reviewImpression" id="impressionPositive" value="Positive" autocomplete="off" required>
+                        <label class="btn btn-outline-light flex-fill" for="impressionPositive">Positive</label>
+                        <input type="radio" class="btn-check" name="reviewImpression" id="impressionNegative" value="Negative" autocomplete="off" required>
+                        <label class="btn btn-outline-light flex-fill" for="impressionNegative">Negative</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center mt-3">
+                    <button type="submit" class="btn btn-outline-light">Submit</button>
+                </div>
+                <div id="reviewSuccessMsg" class="review-success-msg text-light border border-light rounded-2 mt-3" style="display:none; text-align: center;">
+                    Thank you for your review!
+                </div>
+            </form>
+            <br>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footerbg">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="output-onlinepngtools.png" height="30px" width="30px" alt="Green Grass Logo">
+                    <br><br>
+                    <p>&copy; 2024 GreenGrass. All rights reserved.</p>
+                    <br>
+                    <p>
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms of Service</a> |
+                        <a href="#">Cookies Settings</a>
+                    </p>
+                    <br>
+                    <div class="social-media">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.092.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <br>
+                    <ul>
+                        <li><a href="The films of Green Grass.html">Film Reviews</a></li>
+                        <br>
+                        <li><a href="The Songs Of Green Grass.html">Song Reviews</a></li>
+                        <br>
+                        <li><a href="The Books Of Green Grass.html">Book Reviews</a></li>
+                        <br>
+                        <li><a href="The Tele Dramas Of Green Grass.html">TV Reviews</a></li>
+                        <br>
+                        <li><a href="The Other Of Green Grass.html">Other Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Follow Us</a></li>
+                        <br>
+                        <li><a href="#">Contact Us</a></li>
+                        <br>
+                        <li><a href="#">About Us</a></li>
+                        <br>
+                        <li><a href="#">Help Center</a></li>
+                        <br>
+                        <li><a href="The FAQ Of Green Grass.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Sign Up</a></li>
+                        <br>
+                        <li><a href="#">Latest Updates</a></li>
+                        <br>
+                        <li><a href="#">Special Offers</a></li>
+                        <br>
+                        <li><a href="#">Join Us</a></li>
+                        <br>
+                        <li><a href="#">Get Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Subscribe</h4>
+                    <br>
+                    <p>Join our newsletter to stay updated on features, reviews, and releases.</p>
+                    <br>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your Email Here">
+                        <a href="#" class="btn btn-success" style="font-size:small;">Subscribe</a>
+                    </div>
+                    <br>
+                    <p>By subscribing you agree to our Privacy Policy and consent to receive updates.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTopBtn" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
+        </svg>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+   

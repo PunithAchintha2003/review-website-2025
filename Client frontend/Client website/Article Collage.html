@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Collage | Green Grass</title>
+    <link rel="icon" type="image/jpg" href="output-onlinepngtools.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5e1a;
+            --secondary-color: #4a8c2a;
+            --accent-color: #6ab547;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --light-text: #777;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+        
+        .pacifico-regular {
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .merriweather-bold {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+        }
+        
+        .nav-link {
+            color: var(--white) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        .search-bar .form-control {
+            border-radius: 20px;
+            border: none;
+            padding: 0.375rem 1rem;
+        }
+        
+        .btn-outline-light {
+            border-radius: 20px;
+            margin-left: 0.5rem;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Nidanaya Remaster.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Featured Articles Grid */
+        .articles-container {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 40px;
+        }
+        
+        .article-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .article-content {
+            padding: 25px;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .article-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .article-excerpt {
+            color: var(--light-text);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--light-text);
+        }
+        
+        .article-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        
+        /* Featured Article */
+        .featured-article {
+            grid-column: span 2;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .featured-article .article-image {
+            height: 100%;
+            min-height: 300px;
+            flex: 1;
+        }
+        
+        .featured-article .article-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .featured-article .article-category {
+            font-size: 0.9rem;
+        }
+        
+        .featured-article .article-title {
+            font-size: 1.8rem;
+        }
+        
+        /* Article Categories */
+        .categories-section {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+        
+        .category-card {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .category-card:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .category-card:hover h3,
+        .category-card:hover .category-count {
+            color: white;
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .category-card h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .category-count {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        /* Newsletter */
+        .newsletter-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .newsletter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-input {
+            border: none;
+            border-radius: 30px;
+            padding: 15px 20px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-btn:hover {
+            background-color: #5aa33b;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .featured-article {
+                grid-column: span 1;
+                flex-direction: column;
+            }
+            
+            .featured-article .article-image {
+                height: 250px;
+            }
+            
+            .articles-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .articles-grid {
+                padding: 0 20px;
+                gap: 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .article-card {
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+        }
+        
+        .article-card:nth-child(1) { animation-delay: 0.1s; }
+        .article-card:nth-child(2) { animation-delay: 0.2s; }
+        .article-card:nth-child(3) { animation-delay: 0.3s; }
+        .article-card:nth-child(4) { animation-delay: 0.4s; }
+        .article-card:nth-child(5) { animation-delay: 0.5s; }
+        .article-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="output-onlinepngtools.png" alt="Green Grass Logo">
+                <span class="ms-2">Green Grass</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="The films of Green Grass.html">Films</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Songs Of Green Grass.html">Songs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Tele Dramas Of Green Grass.html">Teledramas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Books Of Green Grass.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Articles</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="search-bar me-3">
+                        <input type="text" class="form-control" placeholder="Search articles...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-outline-light btn-sm">Login</button>
+                        <button class="btn btn-outline-light btn-sm">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title merriweather-bold">Green Grass Article Collage</h1>
+            <p class="hero-subtitle">Dive into our curated collection of in-depth analyses, thought pieces, and critical essays on Sri Lankan and global arts and culture.</p>
+            <div class="mt-4">
+                <button class="btn btn-light btn-lg me-2">Explore Articles</button>
+                <button class="btn btn-outline-light btn-lg">Latest Features</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="articles-container">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Articles</h2>
+            </div>
+            
+            <div class="articles-grid">
+                <!-- Featured Article -->
+                <article class="article-card featured-article">
+                    <img src="Nidanaya Remaster.jpg" alt="Sri Lankan Cinema" class="article-image">
+                    <div class="article-content">
+                        <span class="article-category">Film Analysis</span>
+                        <h3 class="article-title">The Golden Age of Sri Lankan Cinema: A Retrospective on the 1970s New Wave</h3>
+                        <p class="article-excerpt">Exploring how directors like Lester James Peries and Dharmasena Pathiraja revolutionized Sri Lankan cinema with their groundbreaking works that blended social realism with poetic storytelling.</p>
+                        <div class="article-meta">
+                            <div class="article-author">
+                                <img src="HAKularatne.jpg" alt="Author" class="author-avatar">
+                                <span>H.A. Kularatne</span>
+                            </div>
+                            <span>May 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Regular Article 1 -->
+                <article class="article-card">
+                    <img src="sky flowers_files/MV5BNjc4ZDliNDktZjc1MC00ZmUwLTg4NWMtYzdlNzcwNzlmZTc0XkEyXkFqcGc@._V1_.jpg" alt="Akasa Kusum" class="article-image">
+                    <div class="article-content">
+                        <span class="article-category">Director Spotlight</span>
+                        <h3 class="article-title">Prassanna Vithanage's Cinematic Language: Deconstructing Visual Metaphors in 'Akasa Kusum'</h3>
+                        <p class="article-excerpt">An in-depth analysis of how Vithanage uses visual symbolism to explore themes of memory, regret, and the passage of time in his critically acclaimed film.</p>
+                        <div class="article-meta">
+                            <div class="article-author">
+                                <img src="RKPanagoda.jpg" alt="Author" class="author-avatar">
+                                <span>R.K. Panagoda</span>
+                            </div>
+                            <span>April 28, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Regular Article 2 -->
+                <article class="article-card">
+                    <img src="gaadi1_files/MV5BMTZlYTQ4MmMtYWY2Mi00YjFmLWJjZTgtMzgzYTliYTA3MjMzXkEyXkFqcGc@._V1_.jpg" alt="Gaadi" class="article-image">
+                    <div class="article-content">
+                        <span class="article-category">Cultural Study</span>
+                        <h3 class="article-title">'Gaadi' and the Representation of Rural Sri Lanka in Contemporary Cinema</h3>
+                        <p class="article-excerpt">Examining how Prasanna Vithanage's 'Gaadi' presents an authentic portrayal of rural life while challenging romanticized notions of the countryside.</p>
+                        <div class="article-meta">
+                            <div class="article-author">
+                                <img src="Chintha.jpg" alt="Author" class="author-avatar">
+                                <span>Chinthana Dharmasiri</span>
+                            </div>
+                            <span>March 12, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Regular Article 3 -->
+                <article class="article-card">
+                    <img src="earth 2018_files/MV5BMmI0ZmI2NWUtYWExOS00Y2FkLWIyNzgtYTMxYzhlNGMzNGNmXkEyXkFqcGc@._V1_.jpg" alt="Paangshu" class="article-image">
+                    <div class="article-content">
+                        <span class="article-category">Political Cinema</span>
+                        <h3 class="article-title">War and Memory: How 'Paangshu' Confronts Sri Lanka's Troubled Past</h3>
+                        <p class="article-excerpt">A critical examination of Visakesa Chandrasekaram's powerful film that addresses the legacy of the civil war through personal narratives.</p>
+                        <div class="article-meta">
+                            <div class="article-author">
+                                <img src="Gamini Weragama.jpeg" alt="Author" class="author-avatar">
+                                <span>Gamini Weragama</span>
+                            </div>
+                            <span>February 22, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Regular Article 4 -->
+                <article class="article-card">
+                    <img src="Nidanaya 1972.png" alt="Nidhanaya" class="article-image">
+                    <div class="article-content">
+                        <span class="article-category">Classic Review</span>
+                        <h3 class="article-title">Revisiting 'Nidhanaya': Why Lester's Masterpiece Remains Relevant Today</h3>
+                        <p class="article-excerpt">Fifty years after its release, we analyze the enduring power of this Sri Lankan classic and its influence on subsequent generations of filmmakers.</p>
+                        <div class="article-meta">
+                            <div class="article-author">
+                                <img src="Baasi-Upul-Shantha-Sannasgala.jpg" alt="Author" class="author-avatar">
+                                <span>Upul Shantha Sannasgala</span>
+                            </div>
+                            <span>January 18, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Regular Article 5 -->
+                <article class="article-card">
+                    <img src="Gini Avi Saha Gini Keli 1998.png" alt="Gini Avi Saha Gini Keli" class="article-image">
+                    <div class="article-content">
+                        <span class="article-category">Genre Study</span>
+                        <h3 class="article-title">The Evolution of Sri Lankan Comedy: From 'Gini Avi' to Modern Satire</h3>
+                        <p class="article-excerpt">Tracing the development of comedic cinema in Sri Lanka and how it reflects changing social attitudes and political climates.</p>
+                        <div class="article-meta">
+                            <div class="article-author">
+                                <img src="boopathy.png" alt="Author" class="author-avatar">
+                                <span>Boopathy Rajan</span>
+                            </div>
+                            <span>December 5, 2023</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-outline-primary btn-lg">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Browse by Category</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <div class="category-icon">🎬</div>
+                        <h3>Film Analysis</h3>
+                        <p class="category-count">128 Articles</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <div class="category-icon">🎭</div>
+                        <h3>Director Spotlights</h3>
+                        <p class="category-count">64 Articles</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <div class="category-icon">📚</div>
+                        <h3>Literary Criticism</h3>
+                        <p class="category-count">87 Articles</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <div class="category-icon">🎶</div>
+                        <h3>Music Reviews</h3>
+                        <p class="category-count">53 Articles</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <div class="category-icon">📺</div>
+                        <h3>TV & Drama</h3>
+                        <p class="category-count">42 Articles</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <div class="category-icon">🌍</div>
+                        <h3>Cultural Studies</h3>
+                        <p class="category-count">76 Articles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2 class="newsletter-title">Stay Updated with Our Latest Articles</h2>
+            <p class="mb-4">Subscribe to our newsletter to receive weekly updates on new articles, special features, and exclusive content.</p>
+            
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" class="newsletter-input">
+                <button type="submit" class="newsletter-btn">Subscribe Now</button>
+            </form>
+            
+            <p class="mt-3 small">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="footer-logo">
+                        <img src="output-onlinepngtools.png" alt="Green Grass" height="40">
+                        <span class="ms-2 text-white">Green Grass</span>
+                    </div>
+                    <p>Your premier destination for thoughtful criticism and analysis of Sri Lankan arts and culture.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Popular</a></li>
+                        <li><a href="#">Latest</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Authors</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Advertise</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Copyright</a></li>
+                        <li><a href="#">Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">RSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Green Grass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</body>
+</html>

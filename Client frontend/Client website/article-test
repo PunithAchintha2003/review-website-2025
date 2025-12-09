@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Grass | Reviews & Critiques</title>
+    <link rel="icon" type="image/jpg" href="output-onlinepngtools.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+        font-size: 15px;
+        margin: 0;
+        padding: 10;
+    }
+
+    .navbar {
+        background-color: #0a730a;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        font-family:'Poppins', sans-serif;
+        height:80px;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        margin-right: auto;
+    }
+
+    .navbar-nav .nav-link {
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: yellow;
+    }
+
+    .search-bar {
+        width: 150px; 
+        transition: width 0.3s ease-in-out;
+    }
+
+    .search-bar input {
+        width: 100%;
+        padding: 6px 12px;
+        border-radius: 15px;
+        border: none;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .btn-group button {
+        padding: 6px 12px;
+        font-size: 12px; 
+    }
+
+    .info-bar {
+        padding: 10px 15px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .trending-bar {
+        background-color: rgb(108, 174, 9);
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .trending-bar a {
+        color: black;
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.3s;
+        margin-right: 30px;
+    }
+
+    .scrolling-text {
+        display: inline-block;
+        white-space: nowrap;
+        position: absolute;
+        will-change: transform;
+    }
+
+    .extra-bar {
+        background-color:black;
+        color:white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        font-size:smaller;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .extra-bar a {
+        color:white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size:small;
+    }
+
+    .extra-bar a:hover,
+    .extra-bar a:active {
+        color:greenyellow;
+    }
+
+    .footer-content svg{
+        margin: 5px;
+        color:white
+    }
+
+    .footer-content svg:hover{
+        color:greenyellow
+    }
+
+    .author-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+    
+
+    .footer-content svg {
+        margin: 5px;
+        color: white
+    }
+
+    .footer-content svg:hover {
+        color: greenyellow
+    }
+
+    footer {
+        background-color: black;
+        color: #e0e0e0;
+        padding: 20px 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: smaller;
+    }
+
+    footer .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    footer .footer-content a:hover {
+        color: greenyellow;
+    }
+
+    footer .footer-section {
+        flex: 1 1 200px;
+        padding: 0 15px;
+        margin: 10px 0;
+    }
+
+    footer .footer-section h4 {
+        margin-bottom: 10px;
+    }
+
+    footer .footer-section ul {
+        list-style: none;
+        padding: 0;
+        color: #f8f9fa;
+    }
+
+    footer .footer-section li {
+        margin-bottom: 10px;
+        color: #e0e0e0;
+    }
+
+    footer .footer-section li a:hover {
+        color: greenyellow;
+    }
+
+    footer .footer-section a {
+        text-decoration: none;
+        color: white;
+    }
+
+    footer .copyright {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer .subscribe-form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer .subscribe-form input[type="email"] {
+        padding: 8px;
+        border: 1px solid #ddd;
+        margin-right: 10px;
+        flex: 1;
+        min-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    footer .subscribe-form button {
+        background-color: #0a730a;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+    }
+
+    footer .subscribe-form button a:hover {
+        color: greenyellow;
+        opacity: 0.8;
+    }
+
+    .carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+.ag-course.body {
+  background-color: #000;
+}
+.ag-courses_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color:black;
+
+  padding: 50px 0;
+}
+.ag-courses_item {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+
+  margin: 0 15px 30px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #121212;
+
+  overflow: hidden;
+
+  position: relative;
+}
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #FFF;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+
+  overflow: hidden;
+
+  font-weight: bold;
+  font-size: 25px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_by-box {
+  font-size: 15px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_publisher {
+  font-weight: bold;
+  color:white;
+
+  -webkit-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease
+}
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color:green;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: green;
+}
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: green;
+}
+
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .ag-courses-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .ag-courses-item_link {
+    padding: 22px 40px;
+  }
+  .ag-courses-item_by-box {
+    font-size: 16px;
+  }
+}
+
+
+    .introduction.class {
+width: 98%;
+min-height: 130px;
+padding: 40px;
+margin: 20px auto;
+background-color: black; 
+border-radius: 10px; 
+}
+
+
+    .introduction.class h1 {
+        font-size: 3.5em; 
+    }
+
+    .introduction.class h6 {
+        font-size: 0.7em; 
+    }
+
+    .pacifico-regular {
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /* Image Cards Styles */
+    .image-cards-container {
+        padding: 40px 0;
+        background-color: #f8f9fa;
+    }
+
+    .image-cards-title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: 'Poppins', sans-serif;
+        color: #0a730a;
+        font-size: 2.2rem;
+    }
+
+    .image-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+        padding: 0 40px;
+    }
+
+    .image-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .image-card-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .image-card-body {
+        padding: 15px;
+    }
+
+    .image-card-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .image-card-text {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    .image-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+
+    .image-card-author {
+        display: flex;
+        align-items: center;
+    }
+
+    .author-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+
+    .author-name {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .image-card-date {
+        font-size: 0.75rem;
+        color: #999;
+    }
+
+    @media (max-width: 768px) {
+        .image-cards-grid {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+
+    @media (max-width: 576px) {
+        .image-cards-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .logoD{
+        position:absolute;
+        height:18px;
+        width:18px;
+        right:10px;
+        bottom:10px;
+    }
+
+    .exploremore{
+        text-align:right;
+        text-decoration:none;
+    }
+
+    .exploremore:hover{
+        color:#0a730a;
+    }
+
+    /* 1. Fade-in for image cards */
+.image-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.image-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 2. Author avatar hover scaling */
+.author-avatar {
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+.author-avatar:hover {
+  transform: scale(1.13) rotate(-3deg);
+  box-shadow: 0 4px 16px rgba(0,128,0,0.15);
+}
+
+/* 3. Animated underline for nav links */
+.navbar-nav .nav-link {
+  position: relative;
+  overflow: hidden;
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: yellowgreen;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  transform-origin: left;
+}
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* 5. Newsletter subscribe button bounce */
+@keyframes bounce {
+  0%   { transform: scale(1);}
+  30%  { transform: scale(1.13);}
+  50%  { transform: scale(0.97);}
+  70%  { transform: scale(1.07);}
+  100% { transform: scale(1);}
+}
+.subscribe-form .btn.bounce {
+  animation: bounce 0.5s;
+}
+
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="output-onlinepngtools.png" alt="Green Grass Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="The films of Green Grass.html">Films</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Songs Of Green Grass.html">Songs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Tele Dramas Of Green Grass.html">Teledramas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Books Of Green Grass.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Other Of Green Grass.html">Other</a></li>
+                </ul>
+                <div class="search-bar mx-3">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <div class="btn-group">
+                  <a href="The Log In Of Green Grass.html" button class="btn btn-outline-light btn-sm">Login</a>
+                  <a href="The Sign Up Of Green Grass.html" button class="btn btn-outline-light btn-sm">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="info-bar trending-bar">
+      <div class="scrolling-text" id="scrollingText">
+        <strong>Trending : &nbsp;</strong>
+        <a href="#">Tentigo</a>
+        <a href="#">Rani</a>
+        <a href="#">Forget Me Not</a>
+        <a href="#">Mama Mage Nowe Nam</a>
+      </div>
+    </div>
+  
+    <script>
+      const text = document.getElementById('scrollingText');
+      let pos = text.offsetWidth;
+  
+      function scroll() {
+        pos--;
+        if (pos < -text.offsetWidth) {
+          pos = text.parentElement.offsetWidth;
+        }
+        text.style.transform = `translateX(${pos}px)`;
+        requestAnimationFrame(scroll);
+      }
+  
+      scroll();
+    </script>
+
+    <div class="info-bar extra-bar">
+      <span>Looking  for something more  than  just  reviews  ?  Visit  <a href="#"><strong>Article Collage</strong></a></span>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="The Article Collage Images/A1vxqj6zM7L.jpg" alt="Uditha's Article">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="The Article Collage Images/japan-7.jpg" alt="Jimuth's Article">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="The Article Collage Images/upscalemedia-transformed.jpeg" alt="Uditha's article" style="object-position:20% 36%;">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Sybil Wettasinghe's Gentle Hands in the Garden of My Childhood
+              </div>
+      
+              <div class="ag-courses-item_by-box">
+                By : 
+                <span class="ag-courses-item_publisher">
+                    Uditha Devapriya
+                </span>
+              </div>
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Silent Tributaries: How Japan's Artistic Waters Quietly Fed Sarachchandra's Cultural Ocean
+
+              </div>
+      
+              <div class="ag-courses-item_by-box">
+                By : 
+                <span class="ag-courses-item_publisher">
+                    Jimuth Indusara
+                </span>
+              </div>
+            </a>
+          </div>
+      
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link" style="text-decoration:none">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                From Text to Frame: The Art of Cinematic Adaptation in Lester James Peries’ Literary Films
+                
+              </div>
+      
+              <div class="ag-courses-item_by-box">
+                By : 
+                <span class="ag-courses-publisher">
+                    Boopathy Nalin Wickramage
+                  
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+    </div>   
+
+    <div class="introduction class">
+        <div class="logo-container" style="text-align: center; padding: 20px;">
+            <img src="output-onlinepngtools.png" alt="Green Grass Logo" style="max-width: 50px;">
+        </div>
+        <h5 style="color:white; text-align: center;"><strong>Green Grass Article Collage</strong></h3>
+          <br>
+        <h6  style="color:white; text-align: center;"><div class="pacifico-regular">Where Passion Meets Critique</div></h6>
+    </div>
+    
+
+     <!-- Image Cards Section -->
+     <div class="image-cards-container">
+        <div class="image-cards-grid">
+            <!-- Card 1 -->
+            <div class="image-card">
+                <img src="The Article Collage Images/MV5BMTYyNjUwOTIyOF5BMl5BanBnXkFtZTgwMDg3MTMyMjE@._V1_.jpg" class="image-card-img" alt="Lester James Peiris">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">From Text to Frame: The Art of Cinematic Adaptation in Lester James Peries’ Literary Films</h5>
+                    <br>
+                    <p class="image-card-text">Lester James Peries is celebrated not only as a pioneer of Sri Lankan cinema but also as a masterful adapter of literature into film. His filmography includes several critically acclaimed works based on novels and short stories, most notably Gamperaliya (1963), Nidhanaya (1972), and Kaliyugaya (1983), all drawn from the works of Martin Wickramasinghe, Sri Lanka’s foremost literary realist</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="boopathy.png" class="author-avatar">
+                            <span class="author-name">Boopathy Nalin Wickramage</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="image-card">
+                <img src="The Article Collage Images/sima.jpg" class="image-card-img" alt="Simon Navagattegama" style="object-position:20% 29%">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Navagattegama's Subversive Reimagining of Sri Lankan Buddhist Literature</h5>
+                    <br>
+                    <p class="image-card-text">His works, particularly novels like 'Sansaaranyaye Dadayakkaraya' engage with Buddhist philosophy while radically subverting conventional interpretations of Dharma. This article examines how Navagattegama's experimental modernism challenged the didacticism of traditional Buddhist literature, offering instead a complex, often unsettling exploration of existential dilemmas in postcolonial Sri Lanka.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/KK_samankumara.jpg" class="author-avatar">
+                            <span class="author-name">K.K.Saman Kumara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="image-card">
+                <img src="The Article Collage Images/Flowers of the Sky (2008)_files/MV5BMzJmMTFiZjYtNTQ3OS00ZmI2LWJhNTMtOTBmZDIyMDkxMWU3XkEyXkFqcGc@._V1_.jpg" class="image-card-img" alt="Akasa Kusum">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Breathing New Life into a Classic</h5>
+                    <br>
+                    <p class="image-card-text">By bringing this film back with enhanced visuals and sound, we ensure that Prasanna Vithanage’s vision endures for decades to come.
+
+                        For fans of Sri Lankan cinema, this is not just a remaster—it’s a revival.Shot on 35mm film, Akasa Kusum originally had a rich, textured look that digital formats of the time couldn’t fully capture. The 4K restoration will:
+
+                        Enhance detail in every frame, from the expressive close-ups of Malini Fonseka to the atmospheric Colombo cityscapes.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="Gamini Weragama.jpeg" class="author-avatar" style="object-position:top;">
+                            <span class="author-name">Gamini Weragama</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="image-card">
+                <img src="The Article Collage Images/thjc-Dharmasena Pathiraja From The Nation.jpeg" class="image-card-img" alt="Dharmasena Pathiraja">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Why Pathiraja Matters Today</h5>
+                    <br>
+                    <p class="image-card-text">In an era where Sri Lankan cinema oscillates between commercial escapism and international festival bait, Pathiraja’s legacy serves as a necessary corrective. His films remind us that cinema can—and must—be a site of resistance, a medium that interrogates power rather than entertains it. While his name may not carry the global recognition of Satyajit Ray or Abbas Kiarostami, within the subaltern histories of South Asian cinema, Dharmasena Pathiraja remains an indispensable figure.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/ajith-g-pix-anudi-nisalya-copy-2-223x300 (1).jpg" class="author-avatar">
+                            <span class="author-name">Ajith Galappatti</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="image-card">
+                <img src="The Article Collage Images/MV5BMTY4OTU3MjY3OF5BMl5BanBnXkFtZTgwNjE3MTI0MzE@._V1_.jpg" class="image-card-img" alt="Joe Abeywickrama" style="object-position:20% 13%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Soul That Never Acted</h5>
+                    <br>
+                    <p class="image-card-text">I do not remember the first Joe Abeywickrama film I watched. And perhaps that says something powerful — his presence was never introduced to me; it was just there, like rain in monsoon or the smell of old books in a village cupboard. Joe was not someone you "watched" perform. You lived with him, like you live with a memory you never made but always felt.
+
+                        Joe wasn’t just a legendary actor. He was a soul artist. There are actors who play characters. Then there are artists like Joe who disappear into them. Even that phrase — "disappear into the role" — feels inadequate.</p>
+                    <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/1.jpg" class="author-avatar">
+                            <span class="author-name">Malinda Seneviratne</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="image-card">
+                <img src="The Article Collage Images/132065720_203415358158598_7906377032697415211_n.jpg" class="image-card-img" alt="Nanda Malini">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Pavana : A Cultural Earthquake</h5>
+                    <br>
+                    <p class="image-card-text">It wasn't just an album. It was an event. A reckoning. A rare moment when an artist used her platform not to please but to provoke. Nanda, with her longtime collaborator Sunil Ariyaratne, launched a project that dared to question religious institutions, class oppression, gender inequality, and political hypocrisy.
+
+                        In a society where respectability often comes at the cost of honesty, Pavana was a storm — and Nanda stood right at the center, unwavering. Many critics were quick to judge. Some audiences were shocked. But no one could ignore it.</p>
+                    <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/sarath.jpeg" class="author-avatar">
+                            <span class="author-name">Sarath Wijesooriya</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 7 -->
+            <div class="image-card">
+                <img src="The Article Collage Images/children_madol_duwa.gif" class="image-card-img" alt="Madol Doova">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">From the Mississippi to the Southern Province: How Mark Twain’s Spirit Shaped Madol Doowa</h5>
+                    <br>
+                    <p class="image-card-text">It’s a curious and beautiful thing how literature travels — not just across oceans, but across cultures, temperaments, and imaginations. When Martin Wickramasinghe wrote Madol Doowa in 1947, he may not have been trying to emulate Mark Twain directly. But consciously or not, he was certainly in conversation with Twain’s most beloved works — The Adventures of Tom Sawyer (1876) and Adventures of Huckleberry Finn (1885).
+
+                        In fact, Madol Doowa feels like a Sri Lankan echo of the Mississippi River</p>
+                    <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Sena-Thoradeniya1 (1).jpg" class="author-avatar">
+                            <span class="author-name">Sena Thoradeniya</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 8 -->
+            <div class="image-card">
+                <img src="The Article Collage Images/gunadasa-1-324x160.jpg" class="image-card-img" alt="Amaraekara">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Mind That Refused to Drift</h5>
+                    <BR>
+                    <p class="image-card-text">Reading Gunadasa Amarasekara is not a passive act. It’s a confrontation—sometimes gentle, sometimes sharp—with the questions we often choose to ignore about identity, tradition, and modernity. He’s not an author you can read casually. You have to walk into his writing with your whole self—intellect, memory, and discomforts included. For me, discovering Amarasekara was like stepping into a room I had always avoided: filled with truths too complex to ignore, yet too rooted to deny.
+
+                        It’s impossible to talk about Sri Lankan nationalist literature without mentioning Amarasekara. But to reduce him to just “a major Sinhala writer” would be unfair. He is far more than that.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/461565601_2414353435622666_7882671785738982577_n.jpg" class="author-avatar">
+                            <span class="author-name">Thamalu Piyadigama</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Space Swims.jpeg" class="image-card-img" alt="Surrealism" style="object-position:20% 20%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Whispers of the Unseen: Why Sri Lankan Art Dreams in Hushed Tones</h5>
+                    <BR>
+                    <p class="image-card-text">Surrealism emerged in the early 20th century as a revolutionary art movement, championed by figures like André Breton, Salvador Dalí, and René Magritte. It sought to unleash the unconscious mind, blending dreamlike imagery with reality to challenge conventional perceptions. Surrealism’s emphasis on the irrational, the subconscious, and the fantastical made it a powerful tool for political and psychological expression.
+
+                        Globally, surrealism influenced artists across continents, adapting to local contexts. In Latin America, artists like Frida Kahlo incorporated indigenous symbolism into surrealist works. In Japan, surrealism merged with traditional aesthetics to create unique hybrid styles. However, in Sri Lanka, surrealism never gained the same traction.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Jimuth.jpg" class="author-avatar">
+                            <span class="author-name">Jimuth Indusara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="image-card">
+                <img src="The Article Collage Images/The fresco paintings, Sigiriya.jpeg" class="image-card-img" alt="Sigiriya" style="object-position:20% 35%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Whispers on Stone</h5>
+                    <BR>
+                    <p class="image-card-text">High upon a lion’s back, carved into the blistered rock of Sri Lanka’s ancient heart, rests an artistic marvel that has endured the elements and the gaze of centuries — the Sigiri Bithu Sithuwam, or the Sigiriya Frescoes. Found within the rock fortress of Sigiriya, these celestial murals are more than just faded pigments on stone; they are whispers of a bygone era, breathing life into the silent face of history.
+
+                        To review the Sigiriya Frescoes is not merely to analyze color, line, and technique — though these aspects are undoubtedly compelling — but rather to immerse oneself in the enigma and elegance of a civilization that painted its passions on stone, with divine grace and unmistakable sensuality.The frescoes reside on the sheer western face of Sigiriya, approximately 100 meters above ground.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/udithayiya.jpg" class="author-avatar">
+                            <span class="author-name">Uditha Devapriya</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/sinhabahu.jpg" class="image-card-img" alt="Sinhabahu" style="object-position:20% 20%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Timeless Brilliance of Sinhabahu – A Masterpiece of Sri Lankan Theatre</h5>
+                    <BR>
+                    <p class="image-card-text">Sinhabahu, the iconic stage drama penned by the legendary Dr. Ediriweera Sarachchandra, stands as a monumental work in Sri Lanka's theatrical and literary history. Rooted in ancient myth and infused with timeless human themes, Sinhabahu transcends its cultural and historical origins to speak to audiences of all generations. With its poetic language, philosophical undertones, and compelling characters, the drama remains a paragon of artistic excellence in Sinhala theatre.The drama is based on the legend of Sinhabahu, a narrative found in the Mahavamsa ( The Great Chronicle Of Sri Lanka ).It tells the story of a lion (Sinha) and a human princess who bear a son, Sinhabahu. As Sinhabahu matures, he slays his lion-father, a creature feared and hunted by the kingdom</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/ruviya.jpg" class="author-avatar">
+                            <span class="author-name">Ruwishan Vimukthi</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Sri_Rahula_Thera.png" class="image-card-img" alt="Rahula Thero" style="object-position:20% 20%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Echoes from the Ink of Silence</h5>
+                    <BR>
+                    <p class="image-card-text">I first encountered Rahula thero's name not in a classroom or a scholarly book, but whispered through the rhythmic chants of a temple elder in my village. The way he said Rahula Thero—with a kind of reverence I couldn’t yet grasp—made me pause, even as a child. And that pause never really ended.
+
+                        What I’ve come to feel about this monk-poet-scholar is not merely admiration—it’s kinship. He lived in the 15th century, yes, but his intellect dances through time, undimmed. The way he fused the razor-sharp edge of critical thought with the softness of lyrical Sinhala poetry resonates with me like a private note from the past. He wasn’t just a Buddhist monk. He was a writer, a linguist, a seeker, a rebel of sorts within the sacred.
+                        
+                        His Paravi Sandeshaya still makes me feel like I’m standing by the sea at twilight, watching a pigeon carry a message of longing and reverence.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/udithayiya.jpg" class="author-avatar">
+                            <span class="author-name">Uditha Devapriya</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/La Metamorfosis, Franz Kafka, Iker Ayestaran.jpeg" class="image-card-img" alt="Kafkasque" style="object-position:20% 20%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Kafkaesque Writers of Sri Lanka: A Study of Bureaucratic Absurdity, Alienation, and Powerlessness</h5>
+                    <BR>
+                    <p class="image-card-text">When one speaks of the “Kafkaesque” in world literature, the term often evokes a particular atmosphere: faceless bureaucracy, existential dread, absurdity in the mundane, and the overwhelming sense of powerlessness in the face of impersonal authority. Franz Kafka's influence is not confined to Europe; it resonates globally, particularly in societies undergoing intense political, bureaucratic, and social transformations. Sri Lanka—especially in the post-colonial, post-independence, and post-war eras—has produced a number of writers whose works reflect Kafkaesque themes either explicitly or through culturally embedded expressions of absurdity and alienation.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/saman.jpg" class="author-avatar">
+                            <span class="author-name">Saman Wickramarachchi</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Kafka On the Shore fanart.jpeg" class="image-card-img" alt="Kafka On The Shore" style="object-position:20% 40%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">How Gamini Viyangoda Fails to Translate the Soul of Kafka on the Shore</h5>
+                    <BR>
+                    <p class="image-card-text">Haruki Murakami’s Kafka on the Shore is a novel that resists easy categorization. Simultaneously metaphysical and grounded, mythic and mundane, it is a delicate tapestry of magical realism, existential musings, and inner psychological journeys. Translating such a complex and genre-defying work into another language—especially into a language with different philosophical, syntactic, and cultural registers like Sinhala—is an immense undertaking. When Kafka on the Shore made its way into Sinhala through the hands of the prominent writer and political commentator Gamini Viyangoda, it was a moment of significant literary anticipation. Unfortunately, the final product, while ambitious, falls short of preserving the soul, rhythm, and subtleties that define Murakami’s masterpiece.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/KK_samankumara.jpg" class="author-avatar">
+                            <span class="author-name">K.K.Saman Kumara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Guru_Geethaya_-___35360.jpg" class="image-card-img" alt="Chinthana Dharmadasa" style="object-position:20% 50%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Beautiful Poison: The Political Consequences of Guru Geethaya</h5>
+                    <BR>
+                    <p class="image-card-text">The political harm done by Guru Geethaya to Sri Lankan society lies not in overt propaganda, but in its subtle reinforcement of problematic ideological frameworks—particularly those around progress, education, authority, and social change. While often celebrated for its inspirational message about the value of education, the Sinhala translation of Chinghiz Aitmatov’s Soviet-era novella The First Teacher—Guru Geethaya—has caused long-term damage to political consciousness in Sri Lanka by promoting idealized myths that undermine critical thinking, political nuance, and collective responsibility.One of the most enduring and harmful political messages embedded in Guru Geethaya is the glorification of top-down social change. Dyuyshen, the teacher, is a one-man reformist force—sent from outside, filled with ideological zeal, and bent on ‘saving’ an ignorant village.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/chinthana darme.jpg" class="author-avatar">
+                            <span class="author-name">Chinthana Dharmadasa</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/LS652112YT-01-E.webp" class="image-card-img" alt="Guttila Kawya" style="object-position:20% 50%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title"> A Critique of Morality, Aesthetic Simplicity, and Cultural Obedience</h5>
+                    <BR>
+                    <p class="image-card-text">Guttila Kāwya, attributed to Vettewe Thero and likely composed in the 13th or 14th century, stands as one of the most frequently celebrated poems in the early Sinhala literary canon. Embedded in the didactic and devotional tradition of Theravāda Buddhist poetry, the work narrates the tale of Guttila, a virtuous musician who triumphs over moral and artistic corruption. While the poem has long been praised for its moral clarity and religious alignment, a closer reading reveals significant limitations—both in terms of its literary execution and its cultural-political subtext.
+
+                        This review aims to challenge the pedestal upon which Guttila Kāwya has been placed and to examine how the poem, often interpreted as a timeless moral tale, may in fact serve conservative, hierarchical, and even anti-intellectual agendas under the guise of Buddhist piety.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="Baasi-Upul-Shantha-Sannasgala.jpg" class="author-avatar">
+                            <span class="author-name">Upul Sannasgala</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Vajira_Chitrasena_1200px_23_09_23-1000x600.jpg" class="image-card-img" alt="Vajira Chithrasena" style="object-position:20% 20%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Guardian of Sri Lankan Dance Heritage</h5>
+                    <BR>
+                    <p class="image-card-text">Vajira Chithrasena stands as one of the most influential figures in the preservation and evolution of traditional Sri Lankan dance. As the wife of the legendary Chitrasena and a remarkable dancer in her own right, her contributions transcend mere performance to encompass education, cultural advocacy, and artistic innovation. Through her seven-decade career, she has not only preserved ancient dance traditions but transformed them into living, breathing art forms for contemporary audiences.
+                        Born Vajira Dias in 1932, she joined the Chitrasena Dance Company at the tender age of seven, eventually marrying her mentor Chitrasena and becoming his foremost dance partner. Their partnership represented more than a personal union—it symbolized the fusion of traditional Kandyan dance with modern theatrical elements that would define Sri Lankan dance for generations.</p>
+                        <br>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/subashitha.jpg" class="author-avatar">
+                            <span class="author-name">Subashitha Lakmina</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/sarachchranda-1-2.png" class="image-card-img" alt="Sarachchandra" style="object-position:20% 35%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Vanquisher</h5>
+                    <BR>
+                    <p class="image-card-text">The institutional power Sarachchandra wielded, particularly at the University of Peradeniya, allowed him to shape an entire generation of cultural practitioners. This influence, while in many ways productive, also created dependency relationships where artistic validation required adherence to particular aesthetic principles. Young artists who challenged his approach often found themselves excluded from important opportunities and networks. This dynamic limited healthy artistic contestation and slowed the natural evolution of theatrical forms.
+                        Another critique centers on gender representation in Sarachchandra's work. His female characters, while sometimes powerful symbolic figures, often function more as abstract principles than as fully realized individuals with agency. Works like "Maname" present female characters primarily in relation to male protagonists or as embodiments of temptation, sacrifice, or virtue.</p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/461565601_2414353435622666_7882671785738982577_n.jpg" class="author-avatar">
+                            <span class="author-name">Thamalu Piyadigama</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/mati gedara.jpeg" class="image-card-img" alt="Cybil" style="object-position:20% 45%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Sybil Wettasinghe's Gentle Hands in the Garden of My Childhood</h5>
+                    <BR>
+                    <p class="image-card-text">I still remember the first time I held one of her books. I was perhaps five or six, sitting cross-legged on the cool cement floor of my grandmother's veranda as the afternoon monsoon rain created a rhythmic backdrop. The book was worn at the edges, clearly loved by many small hands before mine, but the illustrations remained vibrant – a world of wonder captured in simple black lines and splashes of color. This was my introduction to Sybil Wettasinghe, though I wouldn't fully comprehend her significance until decades later.
+                        For many Sri Lankan children like myself, growing up in the 1980s and 90s, Sybil Wettasinghe wasn't just an author and illustrator – she was the architect of our imaginative landscapes. Her stories, particularly "The Umbrella Thief" (Kuda Hora), became more than mere books; they were shared cultural touchstones that connected generations.</p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/udithayiya.jpg" class="author-avatar">
+                            <span class="author-name">Uditha Devapriya</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/3.jpg" class="image-card-img" alt="Bimal" style="object-position:20% 12%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Role of Vijaya Newspaper in Nurturing Children's Artistic Expression in Sri Lanka</h5>
+                    <BR>
+                    <p class="image-card-text">The Vijaya newspaper played a significant role in shaping the artistic sensibilities of Sri Lankan children, especially during the mid-to-late 20th century. More than just a publication for current affairs, Vijaya fostered a creative space where young readers could engage with literature, drawing, and storytelling in a deeply meaningful way.
+
+                        One of its most notable contributions was the regular inclusion of children’s pages or supplements that featured poems, short stories, and drawings submitted by young readers. These platforms acted as informal art schools, nurturing early talent and providing exposure to different forms of visual and literary expression. For many children across rural and urban Sri Lanka, especially in an era before widespread access to television or the internet, Vijaya was one of the few accessible mediums through which their creativity was appreciated publicly.</p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Anoma-Rajakaruna1-1.jpg" class="author-avatar">
+                            <span class="author-name">Anoma Rajakaruna</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Stunning Pilgrimage to Bodhgaya.jpeg" class="image-card-img" alt="Soliyas" style="object-position:20% 22%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Visualizing Sacred Transmission</h5>
+                    <BR>
+                    <p class="image-card-text">The visual narrative of this painting functions on three simultaneous planes—historical, spiritual, and allegorical. Historically, it documents a transformative moment in Sri Lankan identity, when the island was formally integrated into the wider Buddhist world. Spiritually, it signifies the transmission of sacred power, mediated through the living Bodhi tree, which was believed to have directly witnessed the Buddha’s enlightenment. Allegorically, the voyage across the ocean becomes a metaphor for the journey of the Dharma itself: unbound by geography, yet rooted in spiritual heritage.
+
+                        One of the key strengths of the painting is its use of compositional balance and visual hierarchy. The placement of Theri Sanghamitta and the Bodhi sapling at the heart of the image draws the eye naturally to the spiritual focus. The symmetrical positioning of attendants and the intricate patterns on the ship’s prow and planks enhance the painting's ceremonial mood.</p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/KK_samankumara.jpg" class="author-avatar">
+                            <span class="author-name">K.K.Saman Kumara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/sunil shantha.webp" class="image-card-img" alt="Sunil Shantha" style="object-position:20% 57%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Neglected Melody</h5>
+                    <BR>
+                    <p class="image-card-text">Sunil Shantha remains one of the most important and transformative figures in Sri Lankan music, yet the nation’s cultural criticism—both academic and popular—has often failed to do justice to his legacy. A man of singular vision, Shantha sought to create a uniquely Sri Lankan musical identity during a time when both colonial influence and Indian mimicry dominated the artistic landscape. Despite his pioneering role in shaping an indigenous musical idiom, Sri Lankan critical discourse has historically marginalized or misunderstood his contributions, often reducing him to a nostalgic memory rather than recognizing him as a revolutionary force.
+
+                        This review seeks to explore how Sri Lankan criticism—academic, journalistic, and popular—has contributed to the erasure or underappreciation of Sunil Shantha’s artistic and ideological importance, while also assessing the reasons for this neglect within broader socio-cultural and aesthetic frameworks.
+                        
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/461565601_2414353435622666_7882671785738982577_n.jpg" class="author-avatar">
+                            <span class="author-name">Thamalu Piyadigama</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/romance.jpeg" class="image-card-img" alt="Romance" style="object-position:20% 37%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Veiled Hearts: The Lack of Emotional Honesty in Sri Lankan Artistic Representations of Romance</h5>
+                    <BR>
+                    <p class="image-card-text">Romance is perhaps the most ancient and universal subject in art. Across cultures and time periods, it has served as a mirror for human vulnerability, desire, joy, longing, and loss. Yet, in Sri Lankan art—across literature, cinema, music, and teledramas—romance has long been treated either with cautious restraint, excessive idealization, or, conversely, superficial sensationalism. What is often absent is emotional honesty: the raw, truthful portrayal of love as it exists in the real, complicated, messy lives of people. This review explores the causes, characteristics, and consequences of that absence.To understand the emotional shortcomings in the portrayal of romance in Sri Lankan arts, we must begin with the socio-cultural matrix. Sri Lanka is a society deeply shaped by centuries of Buddhist moral discipline, colonial Victorian modesty, and post-independence nationalist idealism
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Jimuth.jpg" class="author-avatar">
+                            <span class="author-name">Jimuth Indusara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/unnamed.jpg" class="image-card-img" alt="Jackson" style="object-position:20% 37%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Where History Sang and Myth Walked: The Odyssey of Jackson Anthony</h5>
+                    <BR>
+                    <p class="image-card-text">Jackson Anthony first gained attention as a serious theatre actor, but it was in cinema and teledramas that he truly blossomed into a national icon. His performances are marked by emotional depth, psychological layering, and a deep understanding of character motivation. Whether it’s the tormented protagonist in Bawa Duka, the proud villager in Sooriya Arana, or the cunning manipulator in Aba, Anthony brought a singular energy to every role. His performances were not just acted—they were lived.
+
+                        What sets him apart is not merely his technical skill, but the intellectual substance he brought to roles. He was among the rare Sri Lankan actors who approached a character as a scholar and philosopher would: exploring historical, spiritual, and cultural dimensions that others may have overlooked.His eyes carried both fire and thought. 
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Akash.jpg" class="author-avatar">
+                            <span class="author-name">Akash Tharuka Perera</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/erotica-1.jpg" class="image-card-img" alt="Erotica" style="object-position:20% 7%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Silken Shadows Shackled: How Cultural Dogmas Ruin the Eroticism of Sinhala Arts
+
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">Eroticism, in its most elevated form, is not vulgarity. It is the art of desire, the quiet tremble of intimacy, the poetic dance between restraint and release. It has shaped centuries of global literature, painting, sculpture, music, and cinema—from the whispered longings of Japanese Shunga, to the sensuous sculptures of Khajuraho, to the psychological complexities of European Romanticism. Yet in Sri Lankan art, particularly Sinhala arts, eroticism remains either mutilated under the scalpel of cultural dogma or coated in crude sensationalism that lacks any aesthetic soul. This review explores how rigid cultural values, deeply embedded in religious morality and nationalistic purity, have systematically strangled the possibility of authentic erotic expression in Sinhala arts.Sri Lanka’s ancient art does not shy away from eroticism. One only needs to visit Sigiriya to see the sensual frescoes of semi-nude maidens in fluid movement, suggestive yet divine.
+                    </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/KK_samankumara.jpg" class="author-avatar">
+                            <span class="author-name">K.K.Saman Kumara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Nimmi.jpeg" class="image-card-img" alt="Nimmi" style="object-position:20% 27%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Talent Underutilized: The Untapped Potential of Nimmi Harasgama in Helawood
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">In the broader landscape of global cinema, actors like Nimmi Harasgama are rare: artists who can embody a multiplicity of emotional registers with grace, nuance, and quiet intensity. Internationally recognized for her performances in Funny Boy (2020), The Good Karma Hospital, and Akasa Kusum (2008), Harasgama brings with her not only technical brilliance but also a deeply introspective style of acting. Yet, paradoxically, Sri Lanka—the country of her origin—has not harnessed her full potential. Despite having one of the most layered and versatile performers in its reach, Sri Lankan cinema and television have barely created space for her talent to flourish on its own soil. This review explores how the Sri Lankan entertainment industry missed the opportunity to meaningfully engage with Nimmi Harasgama, and how this reflects a broader systemic failure in nurturing artistic depth.
+                    </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="boopathy.png" class="author-avatar">
+                            <span class="author-name">Boopathy Nalin Wickramage</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/wall doma.jpg" class="image-card-img" alt="Doma" style="object-position:20% 27%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title"> Painting the Public Soul
+                    </h5>
+                    <BR>
+                    <p class="image-card-text"> In recent years, Sri Lanka has witnessed a subtle but significant visual revolution: the emergence of wall art as a vibrant and meaningful expression of public consciousness. Once relegated to slogans, political graffiti, or faded advertisements, public walls across the island are now being transformed into canvases of beauty, resistance, history, and identity. From the colorful alleys of Colombo 07 to hidden mural clusters in Jaffna and Galle, the "Wall Art Mania" has been slowly but surely gaining momentum. This review explores the phenomenon of Sri Lanka’s growing wall art culture—its origins, its implications, and its future possibilities.Wall art in Sri Lanka is not entirely a new concept. For decades, walls have served as public noticeboards—bearing religious messages, nationalist slogans, or ephemeral political declarations. However, the shift in the last decade has been aesthetic, conceptual, and social. Rather than merely disseminating ideology or information, today’s wall artists are engaging with complex themes.
+
+                    </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/doma.jpg" class="author-avatar">
+                            <span class="author-name">Dominic Chandrasali</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            <div class="image-card">
+                <img src="The Article Collage Images/japan cult-1.jpeg" class="image-card-img" alt="Doma" style="object-position:20% 27%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Silent Tributaries: How Japan's Artistic Waters Quietly Fed Sarachchandra's Cultural Ocean
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">In the cultural and literary history of Sri Lanka, Professor Ediriweera Sarachchandra stands as a monumental figure—an intellectual whose contributions reshaped the landscape of modern Sinhala literature, theatre, and aesthetics. While most local readers and audiences celebrate his pioneering works such as Maname and Sinhabahu for their use of traditional Sinhala performance forms like nadagam, few truly grasp the quiet brilliance with which Sarachchandra absorbed, interpreted, and recontextualized Japanese cultural elements into his own artistic and philosophical universe.
+
+                        This article explores how Ediriweera Sarachchandra, with masterful subtlety and intellectual finesse, engaged with Japanese culture—not merely as an admirer or tourist, but as a deep reader and participant of its aesthetics, philosophy, and literary values. His encounters with Japanese theatrical traditions during his Rockefeller Fellowship became the invisible foundation upon which he would build a new Sinhala dramatic sensibility. </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Jimuth.jpg" class="author-avatar">
+                            <span class="author-name">Jimuth Indusara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Bathik.jpg" class="image-card-img" alt="Batik" style="object-position:20% 17%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Fusion of Heritage, Color, and Craft
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">Sri Lanka’s artistic identity is an intricate mosaic shaped by centuries of cultural intermingling, natural beauty, religious influence, and traditional craftsmanship. Among its many art forms, batik stands out as a living, breathing manifestation of both individual expression and collective heritage. More than just a textile technique, batik in Sri Lanka represents a rich interplay of ancient methods and localized interpretations, making it one of the most striking and unique visual art traditions in the country.Though batik is widely believed to have originated in Indonesia, particularly Java, it found fertile ground in Sri Lanka during the early 20th century. The craft was introduced primarily through Dutch and Indonesian colonial influence, but it was during the post-independence era that batik began to evolve into a localized art form. By the 1970s, Sri Lanka had carved its own niche in the world of batik, not just as a producer but as a creative innovator.</p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/anton fernando.jpg" class="author-avatar">
+                            <span class="author-name">Anton Fernando</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/manorathna.jpg" class="image-card-img" alt="Manoratne" style="object-position:20% 27%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Torchbearer
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">Manoratne’s contributions cannot be assessed without acknowledging his rigorous academic background. Having studied under Ediriweera Sarachchandra — the titan of modern Sinhala theatre — at the University of Peradeniya, Manoratne absorbed not only technique but also the deeper aesthetic and philosophical underpinnings of drama. But he was no mere disciple; he eventually carved his own path, merging academic rigor with intuitive creativity.
+
+                        His scholarly approach enabled him to dissect and reconstruct dramatic tradition. Whether working with stylized nurthi-based performance, folk-rooted idioms, or modern psychological realism, Manoratne brought an acute awareness of performance theory and dramatic structure. This dual identity — both practitioner and theorist — allowed him to elevate Sri Lankan theatre from mere entertainment to a thoughtful cultural discourse.</p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/461565601_2414353435622666_7882671785738982577_n.jpg" class="author-avatar">
+                            <span class="author-name">Thamalu Piyadigama</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/400 Blows.jpeg" class="image-card-img" alt="" style="object-position:20% 27%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Shadow Of The French New Wave In Sri Lankan Left Bank Cinema
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">If Italian Neorealism brought realism to the forefront, the French New Wave brought personal expression, philosophical inquiry, and experimentation. Sri Lankan filmmakers—particularly in the 1970s and beyond—absorbed this cinematic freedom with great enthusiasm.
+
+                        Director Dharmasena Pathiraja, for instance, was directly influenced by Jean-Luc Godard and François Truffaut. His film Ahas Gawwa (1974) is a New Wave-style dissection of youth alienation, urban chaos, and class contradictions. The structure is fragmented, and the storytelling defies linear logic—hallmarks of the New Wave. Pathiraja’s Bambaru Avith (1978) goes even further in portraying political and existential unease in a coastal village, where a clash between tradition and capitalist encroachment unfolds like a Rohmer-esque moral fable.
+                        
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="Gamini Weragama.jpeg" class="author-avatar" style="object-position:20% 27%;">
+                            <span class="author-name">Gamini Weragama</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/j-r-jayewardena.jpg" class="image-card-img" alt="J.R." style="object-position:20% 27%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Silencing the Stage: How J.R. Jayewardene Eroded Sri Lankan Arts after 1978
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">The arts of a nation — theatre, cinema, literature, music, and visual expression — are not merely aesthetic endeavors but powerful mirrors of society, culture, and truth. They serve as the conscience of a people, often emerging as the last bastion of dissent, dialogue, and human empathy during turbulent times. In post-independence Sri Lanka, this spirit was particularly strong during the 1960s and 70s, a golden era marked by explosive creativity and intellectual rigor. But following the advent of J.R. Jayewardene’s presidency in 1978 and the constitutional shift to an Executive Presidency, Sri Lankan arts suffered a slow, calculated asphyxiation.
+
+                        J.R.Jayewardene, despite being known for economic liberalization and large-scale development projects, left behind a legacy that many artists, intellectuals, and cultural historians remember as one of suppression, control, and decay in the creative sector.
+                        
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/ku.hetti.jpg" class="author-avatar">
+                            <span class="author-name">Kumara Hettiarachchi</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/the woman.jpeg" class="image-card-img" alt="J.R." style="object-position:20% 67%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">The Portrayal of Women in Sri Lankan Cinema: A Cinematic Exploration Through Local Filmmakers' Lenses
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">Visually, "The Woman" exemplifies the aesthetic tendencies of Sri Lankan alternative cinema with its contemplative pacing and meticulous attention to natural landscapes. The director employs the island's diverse topography—from arid northern plains to lush central highlands—as a visual correlative for the protagonist's emotional journey. This approach recalls Vimukthi Jayasundara's "The Forsaken Land" (2005), which similarly used landscape as psychological terrain.
+                        The film's cinematography demonstrates a restrained yet expressive visual grammar characteristic of South Asian art cinema
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Jimuth.jpg" class="author-avatar">
+                            <span class="author-name">Jimuth Indusara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/visama baga_files/MV5BNTgxZjFhYWEtYmVkZS00NDU4LWE0NmUtY2FhZGI3MDk0ZmQ4XkEyXkFqcGc@._V1_.jpg" class="image-card-img" alt="minimal" style="object-position:20% 67%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">How Minimalism and Neorealism Have Grown Tiresome in Sri Lankan Cinema
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">
+                        In recent years, Sri Lankan cinema has seen a notable shift toward neo-realism and minimalism—styles that once promised raw authenticity and subversive energy. These approaches were, at one point, welcomed as necessary correctives to the overwrought melodramas and artificially constructed narratives of the past. They offered silence instead of dialogue, the mundane instead of the spectacular, the everyday instead of the extraordinary. But somewhere along the line, what began as artistic rebellion has now hardened into formula. And what was once daring has turned predictable.The gaze has dulled, the pauses have grown hollow, and the once-refreshing restraint now risks becoming an aesthetic crutch.
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/vimukthi-jayasinghe-formatkey-jpg-w320m.jpg" class="author-avatar">
+                            <span class="author-name">Vimukthi Jayasundara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="image-card">
+                <img src="The Article Collage Images/temple painting.jpeg" class="image-card-img" alt="Vihara Sithuwam" style="object-position:20% 67%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Brushstrokes of Faith and Time
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">Walking into a centuries-old temple in Sri Lanka is not merely a spiritual encounter—it’s an aesthetic immersion into a silent narrative world painted on aged walls. The Vihara Sithuwam, or temple murals, are more than decoration. They are visual scriptures, cultural timelines, and echoes of collective imagination, preserved in pigment and plaster. As someone who has long been fascinated by the dialogue between art and history, standing before these murals feels like standing before a living manuscript—one that breathes, cracks, fades, but never dies.
+
+                        The first time I consciously engaged with Vihara Sithuwam was during a visit to the Degaldoruwa Rajamaha Vihara, hidden away in the hills near Kandy. I had seen temple murals before—passing glances, childhood memories, textbook reproductions—but this time, I was old enough to see. 
+                        
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/udithayiya.jpg" class="author-avatar">
+                            <span class="author-name">Uditha Devapriya</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="image-card">
+                <img src="The Article Collage Images/pera logo.jpeg" class="image-card-img" alt="" style="object-position:20% 67%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Peradeniya Literary Hegemony and Its Consequences for Sri Lankan Literary Diversity
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">In the post-independence period of Sri Lanka, the University of Peradeniya emerged as a powerful intellectual nucleus that came to define the dominant currents of Sinhala literary thought. Often described as the Peradeniya School of Literature, this movement was grounded in the critical and aesthetic philosophies of a few pioneering academics and writers, most notably Professor Ediriweera Sarachchandra. While the Peradeniya tradition contributed immeasurably to the institutionalization and modernization of Sinhala literature, its hegemonic position over several decades has also had profound consequences—both enriching and limiting—for literary diversity in Sri Lanka.
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/KK_samankumara.jpg" class="author-avatar">
+                            <span class="author-name">K.K.Saman Kumara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Gota-Go-Home-3.webp" class="image-card-img" alt="" style="object-position:20% 37%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Great Sri Lankan Depression & The Tomorrow Of Sinhala Cinema
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">The economic and political collapse of Sri Lanka in the early 2020s — often referred to as the Great Sri Lankan Depression — was not merely a crisis of food, fuel, and currency. It was a collapse of narrative, a collapse of collective meaning-making. And when meaning collapses in a society, art — especially cinema — either turns into silence or screams. Sadly, much of Sinhala cinema chose silence, but not the silence of profundity or resistance. Rather, a tired, empty silence: of repetition, of exhaustion, of aesthetic dead ends.
+
+                        It is no exaggeration to say that Sri Lankan cinema today finds itself at the lowest point in its post-independence history. This collapse is not merely industrial or financial (though those too are real and urgent), but imaginative. At a time when the nation’s streets were filled with the rhythms of people’s resistance, the screens remained eerily quiet. While the people formed aragalaya camps and occupied the symbols of state power, most filmmakers were caught in a trance — trapped between outdated minimalist clichés, imported arthouse aesthetics, and a romanticized past.
+                        
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Akash.jpg" class="author-avatar">
+                            <span class="author-name">Akash Tharuka Perera</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="image-card">
+                <img src="The Article Collage Images/First-souvenir-cover.jpg" class="image-card-img" alt="" style="object-position:20% 31%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title"> Sa: Re: Victor: Reimagining the Sri Lankan Song Through the Life and Work of Victor Ratnayake
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">To speak of Victor Ratnayake is to speak of an era in Sri Lankan music that brought the concert hall into intimate proximity with the nation’s cultural soul. Through his iconic solo concert series Sa, Ratnayake redefined not just how songs were performed, but how they were perceived—as vehicles for introspection, narrative, memory, and nationhood. In doing so, he offered something profoundly different from both the bombastic film song culture and the rigid traditions of classical performance. His was a voice situated between: between East and West, tradition and modernity, poetic lyric and popular sentiment.
+
+                        Launched in 1973, Sa was Sri Lanka’s first solo musical recital of its kind, a pioneering gesture that created space for the singer as a serious, contemplative artist. Ratnayake became not just a vocalist or composer, but a storyteller in the most complete sense.The songs he selected for Sa were not arbitrary crowd-pleasers; they were carefully curated compositions that traced the poetic traditions of Sinhala literature.
+                        
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Galappaththi.jpeg" class="author-avatar">
+                            <span class="author-name">Buddi Galappatti</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/GRAMAPHONE.jpeg" class="image-card-img" alt="" style="object-position:20% 57%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">From Gramophone to YouTube: The Changing Landscape of Song, Memory, and Meaning in Sri Lanka
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">The evolution of Sri Lankan music over the past century is not simply a tale of changing technologies; it is also a complex narrative of shifting aesthetics, collective memory, and socio-cultural transformation. From the scratchy warmth of the gramophone to the algorithmically-curated playlists of YouTube, each new medium has not only altered how we access songs but also how we remember them, interpret them, and assign them meaning.
+
+                        In the early to mid-20th century, the gramophone record emerged as a revolutionary medium in Sri Lanka. It carried with it not just music but prestige. The act of recording was rare, selective, and carried with it a sense of permanence.The gramophone era immortalized voices that came to define generations, embedding them into the collective consciousness of a newly modernizing society. Songs were not merely consumed—they were revered, passed down like oral histories, and often associated with key moments in personal and national life. In this way, the gramophone did not just play music; it curated memory, identity, and belonging in a time of cultural redefinition.
+                        
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/Jimuth.jpg" class="author-avatar">
+                            <span class="author-name">Jimuth Indusara</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="The Article Collage Images/Sri Lanka devil dancing mask - Lal Perera.jpeg" class="image-card-img" alt="" style="object-position:20% 89%;">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Visions in Wood: The Living Tradition of Sri Lankan Mask Art
+                    </h5>
+                    <BR>
+                    <p class="image-card-text">Sri Lankan mask art is a vivid expression of the island’s rich cultural history—a unique confluence of religious belief, ritual performance, ancestral tradition, and folk creativity. Rooted in centuries-old practices, these masks are not mere decorative objects; they are part of an intricate cultural grammar through which communities have confronted disease, invoked divine intervention, narrated epics, and expressed the unseen. From the coastal rituals of the south to contemporary art galleries, the Sri Lankan mask tradition remains a vital cultural force that bridges the sacred and the aesthetic.Mask-making in Sri Lanka finds its roots in animistic and shamanistic traditions, long before the arrival of Buddhism on the island. The southern coastal regions, particularly Ambalangoda, have historically been the cultural heartland of this art form. Influenced by indigenous beliefs, Hindu practices, and Buddhist cosmology, Sri Lankan masks evolved into a highly stylized and codified tradition associated with three main categories: Kolam, Sanni Yakuma, and Raksha.Each category serves a distinct purpose. Kolam masks are theatrical, used in satirical folk plays that often depict social narratives, village life, and mythology
+                        
+                        </p>
+                        <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Article Collage Images/anton fernando.jpg" class="author-avatar">
+                            <span class="author-name">Anton Fernando</span>
+                        </div>
+                        <span class="image-card-date">Full Article</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <hr style="color:#999">
+
+    <div class="exploremore">
+        <a href="#" style="text-decoration: none;"><span style="color:#000;font-size: smaller;">Explore More Articles</span></a>
+    </div>
+
+    <br>
+
+    <footer class="footerbg">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="output-onlinepngtools.png" height="30px" width="30px"></img>
+                    <br><br>
+                    <p>&copy; 2024 GreenGrass. All rights reserved.</p>
+                    <br>
+                    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookies Settings</a></p>
+                    <br>
+                    <div class="social-media">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                        </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.092.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <br>
+                    <ul>
+                        <li><a href="The films of Green Grass.html">Film Reviews</a></li>
+                        <br>
+                        <li><a href="The Songs Of Green Grass.html">Song Reviews</a></li>
+                        <br>
+                        <li><a href="The Books Of Green Grass.html">Book Reviews</a></li>
+                        <br>
+                        <li><a href="The Tele Dramas Of Green Grass.html">TV Reviews</a></li>
+                        <br>
+                        <li><a href="The Other Of Green Grass.html">Other Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Follow Us</a></li>
+                        <br>
+                        <li><a href="#">Contact Us</a></li>
+                        <br>
+                        <li><a href="#">About Us</a></li>
+                        <br>
+                        <li><a href="#">Help Center</a></li>
+                        <br>
+                        <li><a href="The FAQ Of Green Grass.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Sign Up</a></li>
+                        <br>
+                        <li><a href="#">Latest Updates</a></li>
+                        <br>
+                        <li><a href="#">Special Offers</a></li>
+                        <br>
+                        <li><a href="#">Join Us</a></li>
+                        <br>
+                        <li><a href="#">Get Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Subscribe</h4>
+                    <br>
+                    <p>Join our newsletter to stay updated on features, reviews, and releases.</p>
+                    <br>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your Email Here">
+                        <a href="#" button type="button" class="btn btn-success" style="font-size:small;">Subscribe</a>
+                    </div>
+                    <br>
+                    <p>By subscribing you agree to our Privacy Policy and consent to receive updates.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/site-animations.js"></script>
+
+    <script>
+      // 1. Fade-in animation for image cards on scroll
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.image-card');
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.95;
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < triggerBottom) {
+        card.classList.add('fade-in');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+});
+
+// 2. Subtle hover scaling for author avatars (CSS only, see below)
+
+// 3. Animated underline on nav links (CSS only, see below)
+
+// 4. Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// 5. Newsletter subscribe button bounce on hover
+document.querySelectorAll('.subscribe-form .btn').forEach(btn => {
+  btn.addEventListener('mouseenter', () => {
+    btn.classList.add('bounce');
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.classList.remove('bounce');
+  });
+});
+    </script>
+
+</body>
+</html>

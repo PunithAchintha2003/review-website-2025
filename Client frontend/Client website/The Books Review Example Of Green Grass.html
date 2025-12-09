@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Green Grass | Reviews & Critiques</title>
+        <link rel="icon" type="image/jpg" href="output-onlinepngtools.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="reviewsample.css" rel="stylesheet" type="text/css">
+        <script src="reviewsample.js" defer></script>
+       
+
+        <style>
+.faq-bar{
+    background-image:url('The Book Review Example Images/suddilge kathawa.jpg');
+}
+        </style>
+
+    </head>
+
+    <div id="page-loader">
+        <div class="spinner"></div>
+      </div>
+      
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="The Home Of Green Grass.html">
+                    <img src="output-onlinepngtools.png" alt="Green Grass Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="The films of Green Grass.html">Films</a></li>
+                        <li class="nav-item"><a class="nav-link" href="The Songs Of Green Grass.html">Songs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="The Tele Dramas Of Green Grass.html">Teledramas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="The Books Of Green Grass.html">Books</a></li>
+                        <li class="nav-item"><a class="nav-link" href="The Other Of Green Grass.html">Other</a></li>
+                    </ul>
+                    <div class="search-bar mx-3">
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                    <div class="btn-group">
+                        <a href="The Log In Of Green Grass.html" class="btn btn-outline-light btn-sm">Login</a>
+                        <a href="The Sign Up Of Green Grass.html" class="btn btn-outline-light btn-sm">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Trending Bar -->
+        <div class="info-bar trending-bar">
+            <div class="scrolling-text" id="scrollingText">
+                <strong>Trending : &nbsp;</strong>
+                <a href="#">Tentigo</a>
+                <a href="#">Rani</a>
+                <a href="#">Forget Me Not</a>
+                <a href="#">Mama Mage Nowe Nam</a>
+            </div>
+        </div>
+    
+        <script>
+            // Trending bar scroll
+            const text = document.getElementById('scrollingText');
+            let pos = text.offsetWidth;
+            function scroll() {
+                pos--;
+                if (pos < -text.offsetWidth) {
+                    pos = text.parentElement.offsetWidth;
+                }
+                text.style.transform = `translateX(${pos}px)`;
+                requestAnimationFrame(scroll);
+            }
+            scroll();
+        </script>
+    
+        <!-- Extra Bar -->
+        <div class="info-bar extra-bar">
+            <span>
+                Looking for something more than just reviews ? Visit
+                <a href="The Article Collage Of Green Grass.html"><strong>Article Collage</strong></a>
+            </span>
+        </div>
+
+        <div class="faq-bar">
+        </div>
+    
+    
+        <!-- ag-courses Section -->
+        <div class="ag-format-container">
+            <div class="ag-courses_box">
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">Echoes of Greek Tragedy in Ceylon's Villages</div>
+                        <div class="ag-courses-item_by-box">
+                            By :
+                            <span class="ag-courses-item_publisher">K.K.Saman Kumara</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">The Poetics of Rural Desperation</div>
+                        <div class="ag-courses-item_by-box">
+                            By :
+                            <span class="ag-courses-item_publisher">Sena Thoradeniya</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="ag-courses_item">
+                    <a href="#" class="ag-courses-item_link" style="text-decoration:none">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">Land, Power, and Identity in Transition</div>
+                        <div class="ag-courses-item_by-box">
+                            By :
+                            <span class="ag-courses-publisher">Kavya Thathsara</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <br>
+    
+        <!-- Ratings -->
+        <div class="rating-grid">
+            <div class="rating-box">
+                <img src="The Film Review Example Images/reviewer-grass.png" class="rating-icon" alt="Green Grass Icon">
+                <div id="grassCount" class="rating-number">0%</div>
+                <div class="rating-label">28 Reviews</div>
+            </div>
+            <div class="rating-box">
+                <img src="The Film Review Example Images/user-lightgreen.png" class="rating-icon" alt="User Grass Icon" style="height:60px;width:60px;">
+                <div id="userCount" class="rating-number">0%</div>
+                <div class="rating-label">67 Reviews</div>
+            </div>
+        </div>
+
+        <script>
+// Rating count animation
+function animateRatingNumbers() {
+    function countUp(id, target, speed = 38) {
+        const element = document.getElementById(id);
+        if (!element) return;
+        
+        let count = 0;
+        const interval = setInterval(() => {
+            if (count >= target) {
+                element.textContent = `${target}%`;
+                clearInterval(interval);
+            } else {
+                element.textContent = `${count++}%`;
+            }
+        }, speed);
+    }
+
+    countUp('grassCount', 98);
+    countUp('userCount', 92);
+}
+
+// Set up intersection observer
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateRatingNumbers();
+            observer.disconnect(); // Run only once
+        }
+    });
+}, {
+    threshold: 0.7 // Trigger when 50% of the target is visible
+});
+
+// Observe one of the rating elements (or a common parent)
+document.addEventListener("DOMContentLoaded", () => {
+    const targetElement = document.getElementById('grassCount'); // or use a wrapper element
+    if (targetElement) {
+        observer.observe(targetElement);
+    }
+});
+
+        </script>
+    
+        <br>
+    
+        <!-- Review Filter -->
+        <div class="review-filter">
+            <button class="active" onclick="filterReviews('professional')">Professional Reviews</button>
+            <button class="active" onclick="filterReviews('user')">User Reviews</button>
+        </div>
+    
+        <br>
+    
+    
+
+    <div id="professional-reviews" class="review-section visible">
+        <div class="image-cards-container">
+            <div class="image-cards-grid">
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">A Rural Tapestry of Power and Desperation</h5>
+                        <br>
+                        <p class="image-card-text">Simon Navagattegama's "Suddilage Kathawa" masterfully weaves a complex narrative set against the backdrop of rural Sri Lanka in 1958. The novel presents a searing examination of social hierarchies and the desperate measures taken by the marginalized to survive. Suddi's character emerges as a fascinating study in female agency within a patriarchal system where survival necessitates moral compromises. The political undercurrents reflecting the changing administrative landscape of post-colonial Ceylon add remarkable depth to what might otherwise be a simple tale of infidelity and violence. Navagattegama's understanding of rural power dynamics showcases his profound insight into the human condition.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/Jimuth.jpg" class="author-avatar">
+                                <span class="author-name">Jimuth Indusara
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Portraits of Desperation in Changing Times</h5>
+                        <br>
+                        <p class="image-card-text">What distinguishes "Suddilage Kathawa" from other rural dramas is Navagattegama's unflinching portrayal of characters trapped within systems beyond their control. The transition from traditional village leadership to the Grama Niladhari system serves as a brilliant metaphor for larger sociopolitical shifts in Ceylon. The introduction of the Paddy Lands Act creates ripples throughout the community, demonstrating how national policy reshapes local power structures. Through Suddi's pragmatic survival tactics and Romial's conflicted morality, the novel presents a nuanced exploration of how ordinary people navigate extraordinary circumstances, making this work an essential contribution to Sri Lankan literature.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/461565601_2414353435622666_7882671785738982577_n.jpg" class="author-avatar">
+                                <span class="author-name">Thamalu Piyadigama
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Moral Ambiguity in Paradise Lost</h5>
+                        <br>
+                        <p class="image-card-text">Navagattegama refuses easy moral judgments in "Suddilage Kathawa," instead offering readers a window into lives shaped by necessity and circumstance. The rural setting, seemingly idyllic but rife with hidden tensions, becomes a microcosm for broader social conflicts. Suddi's transactional relationships reflect the commodification of both land and bodies in a changing economic landscape. The author's skill lies in portraying characters who are simultaneously victims and perpetrators, each making difficult choices within limited options. The novel's tragic conclusion feels both shocking and inevitable, underscoring Navagattegama's thesis that violence begets violence in a society where justice remains elusive.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/mandawalayiya.jpg" class="author-avatar">
+                                <span class="author-name">Rashmika Mandawala
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Class Struggle Through an Intimate Lens</h5>
+                        <br>
+                        <p class="image-card-text">Few novels capture the intersection of personal and political as effectively as "Suddilage Kathawa." Set against the implementation of the Paddy Lands Act, the story illustrates how legislative changes ripple through community relationships. The conflict between Arachchila and Avusadaya transcends personal animosity to represent class struggle in microcosm. Meanwhile, Suddi's navigation of power through sexuality offers a fascinating commentary on female agency in patriarchal structures. Navagattegama demonstrates remarkable restraint, allowing these themes to emerge organically through character and plot rather than didactic exposition. The result is a complex tapestry where personal relationships cannot be separated from their socioeconomic context.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/saman.jpg" class="author-avatar">
+                                <span class="author-name">Saman Wickramarachchi
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Economics of Desire and Survival</h5>
+                        <br>
+                        <p class="image-card-text">"Suddilage Kathawa" presents a fascinating economic study disguised as a rural drama. Every relationship in the novel has transactional elements – Suddi's affairs secure her provisions, Mudalali marries for wealth and status, and violence is commissioned like any other service. Navagattegama brilliantly illustrates how scarcity shapes morality and how power flows through both wealth and physical domination. The author's subtle commentary on land reform reveals how economic policies designed in distant capitals transform rural communities, often in unintended ways. Through this lens, even the most intimate relationships become negotiations of power, creating a profound meditation on how economic systems shape human connection.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/anton fernando.jpg" class="author-avatar">
+                                <span class="author-name">Anton Fernando
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Echoes of Greek Tragedy in Ceylon's Villages</h5>
+                        <br>
+                        <p class="image-card-text">With its themes of fate, revenge, and tragic flaws, "Suddilage Kathawa" resonates with the timeless quality of classical tragedy. Navagattegama constructs a narrative where characters hurtle toward their destinies despite moments of clarity and potential redemption. Romial's return from jail offers a pivot point where different choices might have led to different outcomes, yet the gravitational pull of violence proves irresistible. The author's skill lies in making these tragic elements feel organic to the rural Sri Lankan setting rather than imposed literary constructs. The novel's final act of violence emerges from a perfect storm of jealousy, betrayal, and wounded masculinity, creating a denouement worthy of Sophocles yet thoroughly grounded in its cultural context.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/KK_samankumara.jpg" class="author-avatar">
+                                <span class="author-name">K.K.Saman Kumara
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date"><a href="best articles-books.html" style="text-decoration:none;color:#999">Full Review</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Female Agency in Confined Spaces</h5>
+                        <br>
+                        <p class="image-card-text">Suddi emerges as one of the most compelling female characters in South Asian literature through Navagattegama's compassionate yet unflinching portrayal. Her survival strategies, while morally ambiguous, reflect the limited options available to women in her position. The author avoids both condemnation and idealization, presenting Suddi as a fully realized human navigating impossible circumstances. The parallel between Suddi and Peter's widow offers fascinating contrasts in how women seek security in a precarious world. While both form relationships with men for protection, their different approaches reveal much about class, character, and the nature of desire. The novel's tragic ending serves as a stark reminder of the consequences women face when asserting independence in patriarchal systems.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/eric.jpeg" class="author-avatar">
+                                <span class="author-name">Eric Ilayaparachchi
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Land, Power, and Identity in Transition</h5>
+                        <br>
+                        <p class="image-card-text">Navagattegama's masterstroke in "Suddilage Kathawa" is positioning the Paddy Lands Act as both backdrop and catalyst for the human drama that unfolds. The novel explores how land ownership forms the foundation of rural identity and power, making legislative changes deeply personal for characters like Arachchila and Avusadaya. The transition from traditional authority to government administration through the Grama Niladhari system creates further tensions, illustrating the disruptive impact of modernization on established social orders. Through these elements, the novel transcends village drama to become a profound commentary on national identity during Ceylon's formative post-independence period, making it an essential text for understanding Sri Lanka's complex social evolution.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/Kavya Thathsara.jpg" class="author-avatar">
+                                <span class="author-name">Kavya Thathsara
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Architecture of Rural Violence</h5>
+                        <br>
+                        <p class="image-card-text">"Suddilage Kathawa" offers a disturbing yet insightful examination of how violence becomes systematized in rural communities. Romial's role as an enforcer reveals how physical intimidation reinforces economic and social hierarchies. The contract killing system operates almost as a formal institution, with Arachchila outsourcing violence rather than directly engaging in it – a metaphor for how power distances itself from its brutal consequences. Navagattegama's brilliance lies in showing Romial's growing discomfort with this role, suggesting the possibility of breaking cycles of violence. The tragic irony of the conclusion, where Romial commits a passionate crime after refusing a calculated one, underscores the author's pessimistic view of violence as an inescapable element of rural society.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/Anoma-Rajakaruna1-1.jpg" class="author-avatar">
+                                <span class="author-name">Anoma Rajakaruna
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Modernization's Uneven Impact</h5>
+                        <br>
+                        <p class="image-card-text">Navagattegama uses the rural village setting as a laboratory to examine how national modernization efforts affect traditional communities. The novel portrays the Grama Niladhari system and Paddy Lands Act not as abstract policies but as forces that reconfigure human relationships and power dynamics. The character of Mudalali represents an emerging entrepreneurial class that benefits from these changes, navigating between traditional power structures and new governmental systems. His relationship with Suddi symbolizes how modernization creates new possibilities yet remains constrained by existing social frameworks. Through these elements, "Suddilage Kathawa" offers valuable insights into development's uneven impacts and the complex interplay between tradition and progress in post-colonial contexts.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/sarath.jpeg" class="author-avatar">
+                                <span class="author-name">Sarath Wijesooriya
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Criminalization of Survival</h5>
+                        <br>
+                        <p class="image-card-text">One of the most thought-provoking aspects of "Suddilage Kathawa" is its exploration of how poverty criminalizes everyday survival. Suddi's relationships with men, while voluntary, emerge from economic necessity rather than free choice. Similarly, Romial's violent occupation represents one of few avenues available for uneducated rural men to support themselves. The novel invites readers to question conventional morality by presenting characters making difficult choices within severely constrained circumstances. Navagattegama refuses easy judgments, instead challenging readers to consider how they might act if faced with similar limitations. This compassionate approach transforms what could be a simple crime story into a profound meditation on morality, necessity, and the human condition.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/Harshana-rambukwella-1536x1536.webp" class="author-avatar">
+                                <span class="author-name">Harshana Rambukwella
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Feudalism's Last Gasp</h5>
+                        <br>
+                        <p class="image-card-text">Set during a pivotal transition in Ceylon's rural governance, "Suddilage Kathawa" brilliantly captures feudalism's dying moments and the messy birth of modern administrative systems. Arachchila represents the traditional landlord class facing obsolescence as the Grama Niladhari system introduces bureaucratic authority that undermines established power structures. The Paddy Lands Act further threatens this order by potentially redistributing wealth. Navagattegama shows remarkable insight into how these systems overlap and conflict, creating a volatile environment where violence becomes inevitable. The personal dramas of love, betrayal, and revenge play out against this backdrop of systemic change, making the novel both intimately human and broadly historical in its significance.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/Ranjith-Perera1-1536x1536.jpg" class="author-avatar">
+                                <span class="author-name">Ranjith Perera
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Psychology of Power and Submission</h5>
+                        <br>
+                        <p class="image-card-text">Navagattegama demonstrates remarkable psychological insight in "Suddilage Kathawa," particularly in his portrayal of relationships shaped by power imbalances. Suddi's affairs with various men reveal different facets of dependency and agency, while her encouragement of Romial's violence suggests complex motivations beyond simple survival. The transformation in Romial after his imprisonment shows how institutional punishment affects those already marginalized, creating cycles difficult to break. Perhaps most intriguing is Peter's widow, whose attraction to her husband's killer raises fascinating questions about trauma, forgiveness, and human connection. These psychological complexities elevate the novel beyond rural drama to become a profound study of human nature under pressure.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/sasanka.webp" class="author-avatar">
+                                <span class="author-name">Sasanka Perera
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Symbiotic Relationships in Crisis</h5>
+                        <br>
+                        <p class="image-card-text">"Suddilage Kathawa" presents a village ecosystem where characters exist in complex interdependence despite apparent antagonisms. The relationship between landowners like Arachchila and tenant farmers like Avusadaya involves mutual dependency even amid exploitation. Similarly, Romial's role as enforcer makes him both servant and threat to the established order. The novel's brilliance lies in showing how legislative changes like the Paddy Lands Act disrupt these uneasy symbioses, forcing reconfiguration of relationships thought permanent. Navagattegama suggests that violence emerges not just from conflict but from the destabilization of established social contracts, however unjust those contracts might be. This ecological view of community makes the novel particularly insightful about how societies evolve through periods of dramatic change.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/tudor.jpg" class="author-avatar">
+                                <span class="author-name">Tudor Weerasinghe
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Poetics of Rural Desperation</h5>
+                        <br>
+                        <p class="image-card-text">Navagattegama's sparse yet evocative prose in "Suddilage Kathawa" creates a distinctive literary voice that perfectly captures rural Ceylon's beauty and brutality. The author finds poetry in everyday village life while never romanticizing the harsh realities faced by his characters. Descriptions of landscapes serve as more than backdrop, often reflecting characters' emotional states and foreshadowing dramatic developments. The novel's controlled pace builds tension masterfully, creating a sense of inevitable tragedy that nevertheless shocks when it arrives. Through this careful attention to literary craft, Navagattegama elevates what could be merely a regional tale into a work of universal significance, demonstrating how skilled prose can transform specific cultural experiences into art that transcends boundaries.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Article Collage Images/Sena-Thoradeniya1 (1).jpg" class="author-avatar">
+                                <span class="author-name">Sena Thoradeniya
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Justice and Its Discontents</h5>
+                        <br>
+                        <p class="image-card-text">At its heart, "Suddilage Kathawa" is a profound meditation on justice – its absence, its distortions, and the human consequences when formal systems fail. Romial's imprisonment highlights the disconnect between state punishment and community concepts of right and wrong. The contract killing arrangement represents privatized justice when official channels prove inadequate. Most poignantly, Romial's final act suggests that when institutional justice fails, individuals create their own brutal versions. Navagattegama offers no easy solutions but presents a clear-eyed view of how justice operates in marginalized communities. The novel forces readers to question whether true justice is possible in systems built on fundamental inequalities, making it as philosophically provocative as it is dramatically engaging.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/shyam selva.jpeg" class="author-avatar">
+                                <span class="author-name">Shyam Selvaduri
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Geography of Power</h5>
+                        <br>
+                        <p class="image-card-text">Navagattegama's masterful use of setting in "Suddilage Kathawa" creates a geography where physical spaces reflect power relationships. The distinction between village and town represents not just distance but different economic and social systems in conflict. Land ownership literally defines characters' positions within the community, making the Paddy Lands Act a potential earthquake in the social landscape. Even domestic spaces become contested terrain, with Suddi's home serving as both trap and territory she controls through her sexuality. The author's attention to spatial relationships adds rich subtext to the narrative, suggesting that power is always located within physical boundaries that can be both maintained and transgressed. This geographical awareness makes the novel particularly insightful about how space shapes human relationships in rural communities.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/jbdisanayake.jpeg" class="author-avatar">
+                                <span class="author-name">J.B.Dissanayake
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Masculinity in Crisis</h5>
+                        <br>
+                        <p class="image-card-text">The male characters in "Suddilage Kathawa" offer a fascinating study in masculinity under pressure during times of social change. Romial's identity as enforcer becomes complicated by his imprisonment and subsequent reluctance to return to violence. Arachchila faces the obsolescence of traditional authority that defined his sense of self. Mudalali represents an emerging masculinity based on commercial savvy rather than land or physical dominance. Through these characters, Navagattegama explores how men respond when traditional sources of identity and respect become unstable. The tragic violence concluding the novel can be read as desperate reassertion of masculine control when other foundations have eroded. This dimension makes the work particularly relevant to contemporary discussions about gender, power, and identity.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/Sunanda Mahendra.jpg" class="author-avatar">
+                                <span class="author-name">Sunanda Mahendra
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">The Economics of Intimacy</h5>
+                        <br>
+                        <p class="image-card-text">One of "Suddilage Kathawa's" most provocative aspects is its exploration of how economic relationships infiltrate the most intimate human connections. Suddi's sexual relationships provide literal sustenance, while Mudalali's marriage represents a business arrangement disguised as family formation. Even the relationship between Peter's widow and Romial contains elements of economic dependency alongside genuine affection. Navagattegama refuses simplistic judgments about transactional relationships, instead portraying them as inevitable responses to material conditions. The novel raises profound questions about whether pure intimacy is possible in contexts of severe inequality, suggesting that all relationships contain elements of exchange. This unsentimental view makes the work particularly valuable for understanding how economic systems shape human connection at the most fundamental levels.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Book Review Example Images/janaka.jpg" class="author-avatar">
+                                <span class="author-name">Janaka Weerasinghe
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-card-body">
+                        <h5 class="image-card-title">Cycles of Violence and Redemption</h5>
+                        <br>
+                        <p class="image-card-text">"Suddilage Kathawa" presents a nuanced exploration of violence – its causes, consequences, and the possibility of breaking its cycles. Romial's character arc demonstrates how individuals can become trapped in roles as perpetrators while seeking escape. His assistance to Peter's widow suggests the possibility of atonement, while his final violent act underscores how difficult breaking established patterns can be. Navagattegama presents violence not as individual pathology but as systematic response to social conditions, raising profound questions about responsibility and redemption. The novel offers no easy answers but suggests that understanding violence requires examining the systems that produce it rather than simply condemning individuals. This systemic perspective makes the work particularly relevant to contemporary discussions about conflict resolution and social healing.</p>
+                        <br>
+                        <div class="image-card-footer">
+                            <div class="image-card-author">
+                                <img src="The Film Review Example Images/vidarshana kanna.jpeg" class="author-avatar">
+                                <span class="author-name">Vidarshana Kannangara
+                                    <span class="badge bg-success">Pro</span>
+                                  </span>
+                            </div>
+                            <span class="image-card-date">Full Review</span>
+                        </div>
+                    </div>
+                </div>  
+        </div>
+    </div>
+</div>
+
+
+<div id="user-reviews" class="review-section hidden">
+    <div class="image-cards-container">
+        <div class="image-cards-grid">
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Village Drama That Hits Home</h5>
+                    <br>
+                    <p class="image-card-text">"Suddilage Kathawa" captivated me completely. Navagattegama's depiction of 1950s rural Ceylon feels genuine and unforced. Suddi is neither villain nor saint—just a woman surviving difficult circumstances. The relationship dynamics reveal how complex human connections become when shaped by poverty and power struggles. I was particularly impressed by how political changes in the background subtly impact everyone's lives. This novel offers an insightful look at how ordinary people navigate changing times.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/migara.jpg" class="author-avatar">
+                            <span class="author-name">Migara Samarakoon</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Couldn't Put It Down!</h5>
+                    <br>
+                    <p class="image-card-text">This novel surprised me with its depth. What begins as a village tale unfolds into something profoundly engaging. The characters feel so real that by the end, I felt I knew them personally. Navagattegama helps you understand difficult choices without asking you to approve of them. The tension builds naturally, making the tragic conclusion feel inevitable yet shocking. The portrayal of how national policies affect village life adds richness without becoming heavy-handed. A truly satisfying read.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/nalin.jpg" class="author-avatar">
+                            <span class="author-name">Nalin Subasinghe</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Brilliant Look at Rural Survival</h5>
+                    <br>
+                    <p class="image-card-text">Navagattegama offers a refreshing perspective on rural Sri Lankan life during transition. I appreciated how Suddi's relationships with men are portrayed as practical arrangements rather than romantic entanglements. There's an honesty to her survival strategy that avoids judgment. The conflict between traditional authority and modernization adds fascinating layers to the narrative. The accessible yet meaningful writing had me thinking about these characters long after finishing the final page.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/thumudi.jpg" class="author-avatar">
+                            <span class="author-name">Thumudi Shanilka</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Not Your Typical Love Triangle</h5>
+                    <br>
+                    <p class="image-card-text">This novel elevates what could be a clichéd premise into something thoughtful and original. The rural setting comes alive, almost becoming a character itself. The author skillfully weaves social and political changes into personal narratives. Romial's journey from criminal to someone seeking redemption feels especially genuine. The heartbreaking ending rings true to the world Navagattegama creates—where good intentions often collide with harsh realities. A memorable story that lingers in your thoughts.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/hansi.jpg" class="author-avatar">
+                            <span class="author-name">Hansini Sepalage</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Power Struggles in Paradise</h5>
+                    <br>
+                    <p class="image-card-text">I was pleasantly surprised by this novel's depth. Beyond the surface story of village infidelity and violence lies a nuanced exploration of power dynamics across society. The presentation of the Paddy Lands Act as both opportunity and threat shows remarkable insight. Tension builds steadily as traditional structures begin crumbling. Suddi emerges as fascinatingly complex—pragmatic yet passionate, manipulative yet vulnerable. By avoiding easy moral judgments, the novel invites deeper understanding of human behavior under pressure.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/Tamarakka.jpg" class="author-avatar">
+                            <span class="author-name">Tamara Jayatilake</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Characters That Feel Real</h5>
+                    <br>
+                    <p class="image-card-text">The strength of "Suddilage Kathawa" lies in its authentic characters. These aren't literary constructs but believable people—flawed, contradictory, and driven by understandable motives. Romial's internal conflict between violence and redemption particularly resonated with me. The village setting never feels like mere backdrop but shapes the characters' choices and limitations. Navagattegama captures the essence of human struggle without romanticizing rural poverty or villainizing those in power.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/ruvin.jpg" class="author-avatar">
+                            <span class="author-name">Ruvin Buddika</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">When Change Comes to Village Life</h5>
+                    <br>
+                    <p class="image-card-text">This novel brilliantly depicts how national policies transform local communities. The introduction of the Grama Niladhari system and Paddy Lands Act creates ripples affecting everyone's relationships and status. Against this backdrop, the personal drama between Suddi, Romial, and Mudalali takes on greater significance. Navagattegama skillfully balances individual stories with broader social commentary. The well-paced narrative builds to a conclusion that feels both shocking and inevitable. A thought-provoking exploration of tradition versus modernization.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/saman nande.jpg" class="author-avatar">
+                            <span class="author-name">Saman Nandalal</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Love and Survival in Hard Times</h5>
+                    <br>
+                    <p class="image-card-text">Navagattegama's portrayal of Suddi's pragmatic approach to survival challenges conventional morality without dismissing it entirely. Her relationships with men, especially Mudalali and Romial, reveal different dimensions of dependence and agency. The novel avoids passing judgment while still acknowledging the consequences of difficult choices. What impressed me most was how economic realities shape even the most intimate connections. The writing style balances accessibility with depth, making complex themes digestible without oversimplification.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/raja.jpg" class="author-avatar">
+                            <span class="author-name">Rajanith Bandara</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Story of Changing Times</h5>
+                    <br>
+                    <p class="image-card-text">Set during Sri Lanka's transition from traditional village governance to modern systems, this novel captures a pivotal historical moment through personal stories. Arachchila represents the fading old order while Mudalali embodies emerging entrepreneurial opportunities. Caught between them are ordinary villagers navigating shifting power dynamics. The tragedy that unfolds feels inevitable given these pressures. Navagattegama's greatest achievement is making political change tangible through its effects on individual lives and relationships</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/R.K.Panagoda.jpg" class="author-avatar">
+                            <span class="author-name">Risindu Kalana</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">More Than Just Village Drama</h5>
+                    <br>
+                    <p class="image-card-text">Don't be fooled by the rural setting—this novel addresses universal themes of power, survival, and human connection. The complex relationship between Suddi and Romial defies easy categorization, shifting between dependence, manipulation, and genuine attachment. What begins as a story about infidelity evolves into a nuanced exploration of how people adapt to changing circumstances. The tragic conclusion feels earned rather than imposed. Navagattegama's compassionate yet unflinching portrayal of village life makes this a standout work</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/oshini.jpg" class="author-avatar">
+                            <span class="author-name">Oshini Chandrasiri</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">When Tradition Meets Progression</h5>
+                    <br>
+                    <p class="image-card-text">This novel brilliantly captures the collision between traditional village structures and modernizing forces in 1950s Ceylon. The introduction of new land laws and administrative systems creates unexpected alliances and conflicts among characters. Navagattegama avoids the trap of idealizing either tradition or progress, instead showing how real people navigate these changes with limited options. The personal dramas—particularly Suddi's relationships with different men—reflect larger social transitions in compelling ways.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/vihnga parami.jpg" class="author-avatar">
+                            <span class="author-name">Vihanga Parami</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Window Into Another World</h5>
+                    <br>
+                    <p class="image-card-text">Reading "Suddilage Kathawa" felt like stepping into 1950s rural Sri Lanka. The author creates a vivid sense of place without excessive description. What makes this novel special is how it presents morally complex situations without imposing judgments. Suddi's survival strategy through relationships with men feels neither glorified nor condemned. The tensions between landowners and tenants mirror larger political struggles while remaining deeply personal. A beautifully crafted story that illuminates human nature through its specific cultural context.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/kamal alahakoon.jpg" class="author-avatar">
+                            <span class="author-name">Kamal Alahakoon</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Surprising Emotional Depth</h5>
+                    <br>
+                    <p class="image-card-text">I was unprepared for how emotionally invested I'd become in these characters. Despite their flaws and questionable choices, Navagattegama creates profound empathy for Suddi, Romial, and even secondary figures like Peter's widow. The relationship that develops between Romial and the woman whose husband he killed offers a surprising exploration of forgiveness and connection. The novel's tragic conclusion feels both shocking and inevitable. This is storytelling that respects readers' intelligence while delivering genuine emotional impact.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/navo.jpg" class="author-avatar">
+                            <span class="author-name">Navodya Perera</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Beyond Simple Morality</h5>
+                    <br>
+                    <p class="image-card-text">"Suddilage Kathawa" refuses easy moral judgments about its characters' actions. Suddi's relationships with men for survival, Romial's violence, Mudalali's calculating nature—all are presented with understanding rather than condemnation. The novel suggests that conventional morality becomes complicated in contexts of extreme inequality and limited options. What emerges is a compassionate portrait of human adaptability in difficult circumstances. The writing balances accessibility with depth, making complex ethical questions engaging rather than overwhelming.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/vino.jpg" class="author-avatar">
+                            <span class="author-name">Vinodya Perera</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">When Politics Gets Personal</h5>
+                    <br>
+                    <p class="image-card-text">This novel demonstrates how political changes affect everyday lives in profound ways. The Paddy Lands Act creates hope for some characters while threatening others' positions. The shifting administrative system disrupts established power dynamics. Against this backdrop, personal relationships become entangled with larger social forces. Navagattegama skillfully connects individual choices to structural conditions without reducing characters to mere symbols. The result is a compelling story that works on both intimate and societal levels.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/kaveesha.jpg" class="author-avatar">
+                            <span class="author-name">Kaveesha Weebedda</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Study in Survival</h5>
+                    <br>
+                    <p class="image-card-text">Navagattegama portrays Suddi's pragmatic approach to survival without sentimentality or judgment. Her relationships with men, her encouragement of Romial's violence—all reflect difficult choices made within limited options. The novel invites readers to consider how we might act in similar circumstances rather than passing easy judgment. The rural setting is portrayed honestly, acknowledging both its beauty and its harshness. This balanced approach makes the story's tragic conclusion feel earned rather than manipulative.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/anjula.jpg" class="author-avatar">
+                            <span class="author-name">Anjula Samarakoon</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Complex Characters, Compelling Story</h5>
+                    <br>
+                    <p class="image-card-text">What impressed me most about "Suddilage Kathawa" was how well-developed every character feels, even minor ones. Each person has understandable motivations and contradictions that make them compellingly human. The tensions between personal desires and social constraints drive the narrative forward naturally. Navagattegama demonstrates remarkable insight into human psychology, particularly regarding how past experiences shape present choices. The result is a story that feels both specific to its time and place yet universal in its emotional truth.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/binath.jpg" class="author-avatar">
+                            <span class="author-name">Binath Banula</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">A Delicate Balance of Personal and Political</h5>
+                    <br>
+                    <p class="image-card-text">This novel achieves something rare—it explores political themes through intimate personal stories without becoming didactic. The changing governance systems and land reform laws affect characters in ways that feel organic rather than contrived. Navagattegama portrays how ordinary people become caught in larger historical forces, sometimes as agents of change, sometimes as casualties. The writing maintains a delicate balance between accessibility and depth that makes complex social issues digestible without oversimplification.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Film Review Example Images/buddi.jpg" class="author-avatar">
+                            <span class="author-name">Hasangi Wijesekara</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">When Worlds Collide</h5>
+                    <br>
+                    <p class="image-card-text">"Suddilage Kathawa" brilliantly depicts the collision between traditional village life and modernizing forces. Arachchila represents fading authority while Mudalali embodies emerging commercial opportunities. Caught between systems are characters like Suddi and Romial, making difficult choices for survival. The novel avoids nostalgia for traditional ways while acknowledging modernization's disruptive impacts. This nuanced approach creates a rich portrayal of society in transition where there are no easy solutions, only complicated human responses.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/sasindu tharakaya.jpg" class="author-avatar">
+                            <span class="author-name">Sasindu Sahan Tharaka</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="image-card">
+                <div class="image-card-body">
+                    <h5 class="image-card-title">Hidden Depths in Village Life</h5>
+                    <br>
+                    <p class="image-card-text">Don't be deceived by the rural setting—this novel contains remarkable psychological complexity. Each character harbors contradictions that make them fascinatingly human. Romial's struggle between violence and redemption, Suddi's pragmatic survival strategies, Mudalali's calculated ambition—all reveal different responses to challenging circumstances. The village backdrop never feels decorative but shapes every relationship and decision. Navagattegama's greatest achievement is making these specific lives reveal universal truths about human connection and survival.</p>
+                    <br>
+                    <div class="image-card-footer">
+                        <div class="image-card-author">
+                            <img src="The Book Review Example Images/nisali.jpg" class="author-avatar">
+                            <span class="author-name">Nisali Sadeepa</span>
+                        </div>
+                        <span class="image-card-date">Full Review</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <br>
+
+    <!-- Explore More -->
+    <div class="exploremore">
+        <a href="Review Wall - Books.html"><span>Explore More Reviews</span></a>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Write Review Section -->
+    <div class="write-review-section bg-black text-light">
+        <div class="introduction class">
+            <div class="logo-container" style="text-align: center; padding: 20px;">
+                <img src="output-onlinepngtools.png" alt="Green Grass Logo" style="max-width: 50px;">
+            </div>
+            <h5 style="color:white; text-align: center;"><strong>Green Grass Review Form</strong></h5>
+            <br>
+            <h6 style="color:white; text-align: center;">
+                <div class="pacifico-regular">Where Passion Meets Critique</div>
+            </h6>
+        </div>
+        <div class="write-review-container" style="background:rgba(10,10,10,0.98);">
+            <div class="write-review-title" style="color:#b2ffb2;"></div>
+            <form class="write-review-form bg-black border border-light rounded-3 p-4" id="reviewForm" autocomplete="off">
+                <div class="form-group mb-3">
+                    <label for="reviewTitle" class="form-label text-light">Review Title</label>
+                    <input
+                        type="text"
+                        id="reviewTitle"
+                        name="reviewTitle"
+                        class="form-control bg-black text-light border-light"
+                        placeholder="Enter your review title"
+                        required
+                    />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="reviewBody" class="form-label text-light">Your Review</label>
+                    <textarea
+                        id="reviewBody"
+                        name="reviewBody"
+                        class="form-control bg-black text-light border-light"
+                        placeholder="Write your review here..."
+                        rows="5"
+                        required
+                        style="resize: vertical;"
+                    ></textarea>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label text-light">Impression</label>
+                    <div class="btn-group d-flex" role="group" aria-label="Impression">
+                        <input type="radio" class="btn-check" name="reviewImpression" id="impressionPositive" value="Positive" autocomplete="off" required>
+                        <label class="btn btn-outline-light flex-fill" for="impressionPositive">Positive</label>
+                        <input type="radio" class="btn-check" name="reviewImpression" id="impressionNegative" value="Negative" autocomplete="off" required>
+                        <label class="btn btn-outline-light flex-fill" for="impressionNegative">Negative</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center mt-3">
+                    <button type="submit" class="btn btn-outline-light">Submit</button>
+                </div>
+                <div id="reviewSuccessMsg" class="review-success-msg text-light border border-light rounded-2 mt-3" style="display:none; text-align: center;">
+                    Thank you for your review!
+                </div>
+            </form>
+            <br>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footerbg">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="output-onlinepngtools.png" height="30px" width="30px" alt="Green Grass Logo">
+                    <br><br>
+                    <p>&copy; 2024 GreenGrass. All rights reserved.</p>
+                    <br>
+                    <p>
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms of Service</a> |
+                        <a href="#">Cookies Settings</a>
+                    </p>
+                    <br>
+                    <div class="social-media">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.092.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <br>
+                    <ul>
+                        <li><a href="The films of Green Grass.html">Film Reviews</a></li>
+                        <br>
+                        <li><a href="The Songs Of Green Grass.html">Song Reviews</a></li>
+                        <br>
+                        <li><a href="The Books Of Green Grass.html">Book Reviews</a></li>
+                        <br>
+                        <li><a href="The Tele Dramas Of Green Grass.html">TV Reviews</a></li>
+                        <br>
+                        <li><a href="The Other Of Green Grass.html">Other Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Follow Us</a></li>
+                        <br>
+                        <li><a href="#">Contact Us</a></li>
+                        <br>
+                        <li><a href="#">About Us</a></li>
+                        <br>
+                        <li><a href="#">Help Center</a></li>
+                        <br>
+                        <li><a href="The FAQ Of Green Grass.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Sign Up</a></li>
+                        <br>
+                        <li><a href="#">Latest Updates</a></li>
+                        <br>
+                        <li><a href="#">Special Offers</a></li>
+                        <br>
+                        <li><a href="#">Join Us</a></li>
+                        <br>
+                        <li><a href="#">Get Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Subscribe</h4>
+                    <br>
+                    <p>Join our newsletter to stay updated on features, reviews, and releases.</p>
+                    <br>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your Email Here">
+                        <a href="#" class="btn btn-success" style="font-size:small;">Subscribe</a>
+                    </div>
+                    <br>
+                    <p>By subscribing you agree to our Privacy Policy and consent to receive updates.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTopBtn" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
+        </svg>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+   

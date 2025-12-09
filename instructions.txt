@@ -1,0 +1,51 @@
+SETUP INSTRUCTIONS FOR REVIEW WEBSITE 2025
+==========================================
+
+PROJECT STRUCTURE:
+-----------------
+1. Client Frontend – This folder contains the user-facing website.
+2. Dashboard and Backend – This folder contains the admin dashboard and backend server.
+
+HOW TO RUN THE CLIENT FRONTEND:
+-------------------------------
+- Open the index.html file in the "Client frontend/Client website" folder using Live Server in Visual Studio Code.
+- Once launched, you can access the site at: http://127.0.0.1:5500/ via any web browser.
+
+HOW TO RUN THE ADMIN DASHBOARD AND BACKEND:
+--------------------------------------------
+1. Navigate to the "Dashboard and backend/dashboard+backend" folder.
+2. You will find two folders: 
+   - client (admin dashboard)
+   - server (backend)
+
+3. SETUP BACKEND SERVER:
+   - Open the "server" folder in a terminal
+   - Run: npm install (to install dependencies)
+   - Create a .env file (copy from .env.example and fill in your values)
+   - Run: npm run dev (to start the development server)
+   - Server will run on: http://localhost:8080
+
+4. SETUP ADMIN DASHBOARD (CLIENT):
+   - Open the "client" folder in a separate terminal
+   - Run: npm install (to install dependencies)
+   - Create a .env file if needed (copy from .env.example)
+   - Run: npm run dev (to start the development server)
+   - Dashboard will run on: http://localhost:5173
+
+ENVIRONMENT VARIABLES:
+---------------------
+Make sure to set up the following environment variables in the server/.env file:
+- MONGODB_URI (MongoDB connection string)
+- JWT_SECRET and JWT_REFRESH_SECRET
+- CLOUDINARY credentials (for image uploads)
+- STRIPE keys (for payments)
+- RESEND_API_KEY (for email services)
+
+See .env.example files for reference.
+
+IMPORTANT NOTES:
+----------------
+- Make sure MongoDB is running or you have a cloud MongoDB instance
+- All three parts (Client Frontend, Admin Dashboard, and Backend) need to be running simultaneously for full functionality
+- The backend server must be running before the admin dashboard can function properly
+

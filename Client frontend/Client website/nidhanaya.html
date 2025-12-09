@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidhanaya (1972) Reviews | Green Grass</title>
+    <link rel="icon" type="image/jpg" href="output-onlinepngtools.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #0a730a;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-family: 'Poppins', sans-serif;
+            height: 80px;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+            width: 30px;
+        }
+
+        .navbar-nav {
+            display: flex;
+            margin-right: auto;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: yellow;
+        }
+
+        .search-bar {
+            width: 150px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 6px 12px;
+            border-radius: 15px;
+            border: none;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .btn-group button {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .info-bar {
+            padding: 10px 15px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .trending-bar {
+            background-color: rgb(108, 174, 9);
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            height: 40px;
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        .trending-bar a {
+            color: black;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+            margin-right: 30px;
+        }
+
+        .scrolling-text {
+            display: inline-block;
+            white-space: nowrap;
+            position: absolute;
+            will-change: transform;
+        }
+
+        .extra-bar {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            font-size: smaller;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .extra-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: small;
+        }
+
+        .extra-bar a:hover,
+        .extra-bar a:active {
+            color: greenyellow;
+        }
+
+        ag-format-container {
+            width: 1142px;
+            margin: 0 auto;
+        }
+
+        .ag-course.body {
+            background-color: #000;
+        }
+
+        .ag-courses_box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            background-color: black;
+            padding: 50px 0;
+        }
+
+        .ag-courses_item {
+            -ms-flex-preferred-size: calc(33.33333% - 30px);
+            flex-basis: calc(33.33333% - 30px);
+            margin: 0 15px 30px;
+            overflow: hidden;
+            border-radius: 28px;
+        }
+
+        .ag-courses-item_link {
+            display: block;
+            padding: 30px 20px;
+            background-color: #121212;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ag-courses-item_link:hover,
+        .ag-courses-item_link:hover .ag-courses-item_date {
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        .ag-courses-item_link:hover .ag-courses-item_bg {
+            -webkit-transform: scale(10);
+            -ms-transform: scale(10);
+            transform: scale(10);
+        }
+
+        .ag-courses-item_title {
+            min-height: 87px;
+            margin: 0 0 25px;
+            overflow: hidden;
+            font-weight: bold;
+            font-size: 25px;
+            color: #FFF;
+            z-index: 2;
+            position: relative;
+        }
+
+        .ag-courses-item_by-box {
+            font-size: 15px;
+            color: #FFF;
+            z-index: 2;
+            position: relative;
+        }
+
+        .ag-courses-item_publisher {
+            font-weight: bold;
+            color: white;
+            -webkit-transition: color .5s ease;
+            -o-transition: color .5s ease;
+            transition: color .5s ease
+        }
+
+        .ag-courses-item_bg {
+            height: 128px;
+            width: 128px;
+            background-color: green;
+            z-index: 1;
+            position: absolute;
+            top: -75px;
+            right: -75px;
+            border-radius: 50%;
+            -webkit-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+        }
+
+        .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+            background-color: green;
+        }
+
+        .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+            background-color: green;
+        }
+
+        @media only screen and (max-width: 979px) {
+            .ag-courses_item {
+                -ms-flex-preferred-size: calc(50% - 30px);
+                flex-basis: calc(50% - 30px);
+            }
+
+            .ag-courses-item_title {
+                font-size: 24px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .ag-format-container {
+                width: 96%;
+            }
+        }
+
+        @media only screen and (max-width: 639px) {
+            .ag-courses_item {
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            }
+
+            .ag-courses-item_title {
+                min-height: 72px;
+                line-height: 1;
+                font-size: 24px;
+            }
+
+            .ag-courses-item_link {
+                padding: 22px 40px;
+            }
+
+            .ag-courses-item_by-box {
+                font-size: 16px;
+            }
+        }
+
+        .introduction.class {
+            width: 98%;
+            min-height: 130px;
+            padding: 40px;
+            margin: 20px auto;
+            background-color: green;
+            border-radius: 10px;
+        }
+
+        .introduction.class h1 {
+            font-size: 3.5em;
+        }
+
+        .introduction.class h6 {
+            font-size: 0.7em;
+        }
+
+        .pacifico-regular {
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .film-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Nidanaya 1972.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .film-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .film-meta {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .film-rating {
+            display: inline-block;
+            background-color: rgba(10, 115, 10, 0.8);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .review-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: #0a730a;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #0a730a;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .review-card-header {
+            background-color: #f1f8e9;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid #0a730a;
+        }
+
+        .reviewer-info {
+            flex: 1;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #0a730a;
+        }
+
+        .reviewer-title {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .review-rating {
+            font-weight: bold;
+            color: #0a730a;
+            font-size: 1.1rem;
+        }
+
+        .review-card-body {
+            padding: 20px;
+        }
+
+        .review-excerpt {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #0a730a;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .user-review-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .form-title {
+            font-family: 'Playfair Display', serif;
+            color: #0a730a;
+            margin-bottom: 20px;
+        }
+
+        .rating-stars {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .rating-stars input {
+            display: none;
+        }
+
+        .rating-stars label {
+            font-size: 1.5rem;
+            color: #ccc;
+            cursor: pointer;
+            padding: 0 5px;
+        }
+
+        .rating-stars input:checked~label {
+            color: #ffc107;
+        }
+
+        .rating-stars label:hover,
+        .rating-stars label:hover~label {
+            color: #ffc107;
+        }
+
+        /* Review Filter Tabs */
+        .review-filter {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .review-filter-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: #666;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .review-filter-btn.active {
+            color: #0a730a;
+            font-weight: 600;
+        }
+
+        .review-filter-btn.active:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #0a730a;
+        }
+
+        .review-filter-btn:hover {
+            color: #0a730a;
+        }
+
+        .review-section {
+            display: none;
+        }
+
+        .review-section.active {
+            display: block;
+        }
+
+        .footer-content svg {
+            margin: 5px;
+            color: white
+        }
+
+        .footer-content svg:hover {
+            color: greenyellow
+        }
+
+        footer {
+            background-color: black;
+            color: #e0e0e0;
+            padding: 20px 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: smaller;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        footer .footer-content a:hover {
+            color: greenyellow;
+        }
+
+        footer .footer-section {
+            flex: 1 1 200px;
+            padding: 0 15px;
+            margin: 10px 0;
+        }
+
+        footer .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+            color: #f8f9fa;
+        }
+
+        footer .footer-section li {
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+
+        footer .footer-section li a:hover {
+            color: greenyellow;
+        }
+
+        footer .footer-section a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer .copyright {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer .subscribe-form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        footer .subscribe-form input[type="email"] {
+            padding: 8px;
+            border: none;
+            margin-right: 10px;
+            flex: 1;
+            min-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        footer .subscribe-form button {
+            background-color: #0a730a;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        footer .subscribe-form button a:hover {
+            color: greenyellow;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .film-title {
+                font-size: 2.5rem;
+            }
+
+            .film-meta {
+                font-size: 1rem;
+            }
+
+            .review-filter {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="output-onlinepngtools.png" alt="Green Grass Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="The films of Green Grass.html">Films</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Songs Of Green Grass.html">Songs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Tele Dramas Of Green Grass.html">Teledramas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Books Of Green Grass.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Other Of Green Grass.html">Other</a></li>
+                </ul>
+                <div class="search-bar mx-3">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <div class="btn-group">
+                    <a href="The Log In Of Green Grass.html" button class="btn btn-outline-light btn-sm">Login</a>
+                    <a href="The Sign Up Of Green Grass.html" button class="btn btn-outline-light btn-sm">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="info-bar trending-bar">
+        <div class="scrolling-text" id="scrollingText">
+            <strong>Trending : &nbsp;</strong>
+            <a href="#">Tentigo</a>
+            <a href="#">Rani</a>
+            <a href="#">Forget Me Not</a>
+            <a href="#">Mama Mage Nowe Nam</a>
+        </div>
+    </div>
+
+    <script>
+        const text = document.getElementById('scrollingText');
+        let pos = text.offsetWidth;
+
+        function scroll() {
+            pos--;
+            if (pos < -text.offsetWidth) {
+                pos = text.parentElement.offsetWidth;
+            }
+            text.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(scroll);
+        }
+
+        scroll();
+    </script>
+
+    <div class="info-bar extra-bar">
+        <span>Looking for something more than just reviews ? Visit <a href="The Article Collage Of Green Grass.html"><strong>Article Collage</strong></a></span>
+    </div>
+
+    <div class="film-header">
+        <div class="container">
+            <h1 class="film-title">Nidhanaya (1972)</h1>
+            <p class="film-meta">Directed by Lester James Peiris | Drama, Thriller | 1h 55m</p>
+            <div class="film-rating">
+                <img src="green-removebg-preview.png" style="height:18px;width:18px; margin-right: 5px;"> 99% from 47 reviews
+            </div>
+        </div>
+    </div>
+
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+                    <div class="ag-courses-item_bg"></div>
+                    <div class="ag-courses-item_title">
+                        Greatest 25 Sri Lankan Movies Of All Time
+                    </div>
+                    <div class="ag-courses-item_by-box">
+                        By :
+                        <span class="ag-courses-item_publisher">
+                            Green Grass
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+                    <div class="ag-courses-item_bg"></div>
+                    <div class="ag-courses-item_title">
+                        Great Sri Lankan Depression & The Tomorrow Of Sinhala Cinema
+                    </div>
+                    <div class="ag-courses-item_by-box">
+                        By :
+                        <span class="ag-courses-item_publisher">
+                            Akash Tharuka Perera
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link" style="text-decoration:none">
+                    <div class="ag-courses-item_bg"></div>
+                    <div class="ag-courses-item_title">
+                        Shadow Of The French New Wave In Sri Lankan Left Bank Cinema
+                    </div>
+                    <div class="ag-courses-item_by-box">
+                        By :
+                        <span class="ag-courses-publisher">
+                            Gamini Weragama
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="introduction class">
+        <div class="logo-container" style="text-align: center; padding: 20px;">
+            <img src="output-onlinepngtools.png" alt="Green Grass Logo" style="max-width: 50px;">
+        </div>
+        <h5 style="color:white; text-align: center;"><strong>Green Grass Review Collage</strong></h5>
+        <br>
+        <h6 style="color:white; text-align: center;">
+            <div class="pacifico-regular">Where Passion Meets Critique</div>
+        </h6>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Review Filter Tabs -->
+                <div class="review-filter">
+                    <button class="review-filter-btn active" data-target="professional-reviews">Professional Reviews</button>
+                    <button class="review-filter-btn" data-target="user-reviews">User Reviews</button>
+                </div>
+
+                <!-- Professional Reviews Section -->
+                <section id="professional-reviews" class="review-section active">
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5 class="reviewer-name">Reggie Siriwardena</h5>
+                                <p class="reviewer-title">Film Critic at The Island</p>
+                            </div>
+                            <div class="review-rating">10/10</div>
+                        </div>
+                        <div class="review-card-body">
+                            <p class="review-excerpt">
+                                "Nidhanaya stands as the crowning achievement of Sri Lankan cinema, a masterpiece that transcends its time and place. Lester James Peiris weaves a haunting tale of obsession and fate with such precision that every frame feels meticulously crafted..."
+                            </p>
+                            <a href="#" class="read-more">Read full review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5 class="reviewer-name">Aisha Fernando</h5>
+                                <p class="reviewer-title">Cinema Scholar</p>
+                            </div>
+                            <div class="review-rating">9.5/10</div>
+                        </div>
+                        <div class="review-card-body">
+                            <p class="review-excerpt">
+                                "The film's psychological depth is unmatched in South Asian cinema. Gamini Fonseka delivers a performance of such raw intensity that it becomes impossible to look away, even as his character descends into moral darkness..."
+                            </p>
+                            <a href="#" class="read-more">Read full review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5 class="reviewer-name">Dinesh Perera</h5>
+                                <p class="reviewer-title">Film Historian</p>
+                            </div>
+                            <div class="review-rating">10/10</div>
+                        </div>
+                        <div class="review-card-body">
+                            <p class="review-excerpt">
+                                "What makes Nidhanaya extraordinary is its perfect marriage of form and content. The cinematography by M.S. Anandan creates a visual poetry that mirrors the protagonist's unraveling psyche, while W.D. Amaradeva's score provides..."
+                            </p>
+                            <a href="#" class="read-more">Read full review →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- User Reviews Section -->
+                <section id="user-reviews" class="review-section">
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5 class="reviewer-name">Sanjaya Bandara</h5>
+                                <p class="reviewer-title">Film Enthusiast</p>
+                            </div>
+                            <div class="review-rating">10/10</div>
+                        </div>
+                        <div class="review-card-body">
+                            <p class="review-excerpt">
+                                "I've watched Nidhanaya five times now, and each viewing reveals new layers. The way the film builds tension is masterful - you know where the story is heading, yet you're powerless to look away. Gamini Fonseka's performance is..."
+                            </p>
+                            <a href="#" class="read-more">Read full review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5 class="reviewer-name">Nayomi Silva</h5>
+                                <p class="reviewer-title">Classic Film Lover</p>
+                            </div>
+                            <div class="review-rating">9/10</div>
+                        </div>
+                        <div class="review-card-body">
+                            <p class="review-excerpt">
+                                "The cinematography in this film is breathtaking - the use of shadows and light creates such a haunting atmosphere. The scene where Willie realizes the truth about the treasure is one of the most powerful moments in cinema history..."
+                            </p>
+                            <a href="#" class="read-more">Read full review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5 class="reviewer-name">Kamal Gunaratne</h5>
+                                <p class="reviewer-title">First-time Viewer</p>
+                            </div>
+                            <div class="review-rating">8.5/10</div>
+                        </div>
+                        <div class="review-card-body">
+                            <p class="review-excerpt">
+                                "I finally watched this classic after years of hearing about it, and it didn't disappoint. The pacing feels slow by modern standards, but that just gives you more time to appreciate the incredible character development and the..."
+                            </p>
+                            <a href="#" class="read-more">Read full review →</a>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div class="reviewer-info">
+                                <h5 class="reviewer-name">Chamari Perera</h5>
+                                <p class="reviewer-title">Film Student</p>
+                            </div>
+                            <div class="review-rating">9.5/10</div>
+                        </div>
+                        <div class="review-card-body">
+                            <p class="review-excerpt">
+                                "As a film student, I'm in awe of how Lester James Peiris uses visual storytelling in Nidhanaya. The recurring motifs of the treasure and the psychological descent are handled with such subtlety and power. This is a masterclass in..."
+                            </p>
+                            <a href="#" class="read-more">Read full review →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Add Your Review Section -->
+                <section class="user-review-form">
+                    <h3 class="form-title">Share Your Thoughts</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="reviewerName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="reviewerName" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Your Rating</label>
+                            <div class="rating-stars">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label">Your Review</label>
+                            <textarea class="form-control" id="reviewText" rows="5" placeholder="Share your thoughts about the film..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit Review</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Film Details Sidebar -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Film Details</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Director</span>
+                                <span>Lester James Peiris</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Release Year</span>
+                                <span>1972</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Running Time</span>
+                                <span>115 minutes</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Language</span>
+                                <span>Sinhala</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Country</span>
+                                <span>Sri Lanka</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Genre</span>
+                                <span>Drama, Psychological Thriller</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Cast</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Gamini Fonseka as Willie Abeynayake</li>
+                            <li class="list-group-item">Malini Fonseka as Irene Abeynayake</li>
+                            <li class="list-group-item">Tony Ranasinghe as Sirisena</li>
+                            <li class="list-group-item">Wickrema Bogoda as Gunadasa</li>
+                            <li class="list-group-item">Trilicia Gunawardena as Alice</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Awards</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">OCIC Award - 1973</li>
+                            <li class="list-group-item">Sarasaviya Best Film - 1972</li>
+                            <li class="list-group-item">Named "Best Sri Lankan Film of All Time" by critics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footerbg">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="output-onlinepngtools.png" height="30px" width="30px"></img>
+                    <br><br>
+                    <p>&copy; 2024 GreenGrass. All rights reserved.</p>
+                    <br>
+                    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookies Settings</a></p>
+                    <br>
+                    <div class="social-media">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <br>
+                    <ul>
+                        <li><a href="The films of Green Grass.html">Film Reviews</a></li>
+                        <br>
+                        <li><a href="The Songs Of Green Grass.html">Song Reviews</a></li>
+                        <br>
+                        <li><a href="The Books Of Green Grass.html">Book Reviews</a></li>
+                        <br>
+                        <li><a href="The Tele Dramas Of Green Grass.html">TV Reviews</a></li>
+                        <br>
+                        <li><a href="The Other Of Green Grass.html">Other Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Follow Us</a></li>
+                        <br>
+                        <li><a href="#">Contact Us</a></li>
+                        <br>
+                        <li><a href="#">About Us</a></li>
+                        <br>
+                        <li><a href="#">Help Center</a></li>
+                        <br>
+                        <li><a href="The FAQ Of Green Grass.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Sign Up</a></li>
+                        <br>
+                        <li><a href="#">Latest Updates</a></li>
+                        <br>
+                        <li><a href="#">Special Offers</a></li>
+                        <br>
+                        <li><a href="#">Join Us</a></li>
+                        <br>
+                        <li><a href="#">Get Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Subscribe</h4>
+                    <br>
+                    <p>Join our newsletter to stay updated on features, reviews, and releases.</p>
+                    <br>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your Email Here">
+                        <a href="#" button type="button" class="btn btn-success" style="font-size:small;">Subscribe</a>
+                    </div>
+                    <br>
+                    <p>By subscribing you agree to our Privacy Policy and consent to receive updates.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // Review Filter Tabs Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.review-filter-btn');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Hide all review sections
+                    document.querySelectorAll('.review-section').forEach(section => {
+                        section.classList.remove('active');
+                    });
+
+                    // Show the selected review section
+                    const targetId = this.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

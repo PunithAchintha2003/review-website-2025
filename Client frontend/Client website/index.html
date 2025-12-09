@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const memberId = params.get('userId');
+        const AccessToken = params.get('accessToken');
+        const RefreshToken = params.get('refreshToken');
+
+        if (memberId) {
+            sessionStorage.setItem('userID', memberId);
+        }
+
+        if (AccessToken) {
+            sessionStorage.setItem('AccessToken', AccessToken);
+        }
+
+        if (RefreshToken) {
+            sessionStorage.setItem('RefreshToken', RefreshToken);
+        }
+
+        const userID = sessionStorage.getItem('userID');
+        if (userID) {
+            console.log('User ID:', userID);
+        } else {
+            console.log('No User ID found in session storage.');
+        }
+
+        window.location.href = 'The Home Of Green Grass.html';
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

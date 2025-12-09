@@ -1,0 +1,506 @@
+
+body {
+   font-family: 'Poppins', sans-serif;
+   background-color: #f8f9fa;
+   font-size: 15px;
+   margin: 0;
+   padding: 10;
+}
+
+.navbar {
+   background-color: #0a730a;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 20px;
+   font-family:'Poppins', sans-serif;
+   height:80px;
+
+}
+
+.navbar-brand img {
+   height: 30px;
+   width: 30px;
+}
+
+.navbar-nav {
+   display: flex;
+   margin-right: auto;
+}
+
+.navbar-nav .nav-link {
+   color: white;
+   font-weight: 500;
+   font-size: 14px;
+   transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+   color: yellow;
+}
+
+.search-bar {
+   width: 150px; 
+   transition: width 0.3s ease-in-out;
+}
+
+.search-bar input {
+   width: 100%;
+   padding: 6px 12px;
+   border-radius: 15px;
+   border: none;
+   font-size: 14px;
+   outline: none;
+}
+
+.btn-group {
+   display: flex;
+   gap: 10px;
+   justify-content: flex-start;
+}
+
+.btn-group button {
+   padding: 6px 12px;
+   font-size: 12px; 
+}
+
+.info-bar {
+   padding: 10px 15px;
+   font-size: 14px;
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+.trending-bar {
+background-color: rgb(108, 174, 9);
+color: black;
+font-family: 'Poppins', sans-serif;
+height: 40px;
+overflow: hidden;
+position: relative;
+white-space: nowrap;
+display: flex;
+align-items: center;
+padding-left: 10px;
+}
+
+.trending-bar a {
+color: black;
+text-decoration: none;
+font-weight: 400;
+transition: color 0.3s;
+margin-right: 30px;
+}
+
+.scrolling-text {
+display: inline-block;
+white-space: nowrap;
+position: absolute;
+will-change: transform;}
+
+.extra-bar {
+   background-color:black;
+   color:white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 40px;
+   font-size:smaller;
+   font-family: 'Poppins', sans-serif;
+}
+
+.extra-bar a {
+   color:white;
+   text-decoration: none;
+   font-weight: 500;
+   font-size:small;
+}
+
+.extra-bar a:hover,
+.extra-bar a:active {
+   color:greenyellow;
+}
+
+
+   ag-format-container {
+width: 1142px;
+margin: 0 auto;
+}
+
+
+.ag-course.body {
+background-color: #000;
+}
+.ag-courses_box {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: start;
+-ms-flex-align: start;
+align-items: flex-start;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+background-color:black;
+
+padding: 50px 0;
+}
+.ag-courses_item {
+-ms-flex-preferred-size: calc(33.33333% - 30px);
+flex-basis: calc(33.33333% - 30px);
+
+margin: 0 15px 30px;
+
+overflow: hidden;
+
+border-radius: 28px;
+}
+
+.ag-courses-item_link {
+display: block;
+padding: 30px 20px;
+background-color: #121212;
+
+overflow: hidden;
+
+position: relative;
+}
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+text-decoration: none;
+color: #FFF;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+-webkit-transform: scale(10);
+-ms-transform: scale(10);
+transform: scale(10);
+}
+
+.ag-courses-item_title {
+min-height: 87px;
+margin: 0 0 25px;
+
+overflow: hidden;
+
+font-weight: bold;
+font-size: 25px;
+color: #FFF;
+
+z-index: 2;
+position: relative;
+}
+.ag-courses-item_by-box {
+font-size: 15px;
+color: #FFF;
+
+z-index: 2;
+position: relative;
+}
+.ag-courses-item_publisher {
+font-weight: bold;
+color:white;
+
+-webkit-transition: color .5s ease;
+-o-transition: color .5s ease;
+transition: color .5s ease
+}
+.ag-courses-item_bg {
+height: 128px;
+width: 128px;
+background-color:green;
+
+z-index: 1;
+position: absolute;
+top: -75px;
+right: -75px;
+
+border-radius: 50%;
+
+-webkit-transition: all .5s ease;
+-o-transition: all .5s ease;
+transition: all .5s ease;
+}
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+background-color: green;
+}
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+background-color: green;
+}
+
+@media only screen and (max-width: 979px) {
+.ag-courses_item {
+-ms-flex-preferred-size: calc(50% - 30px);
+flex-basis: calc(50% - 30px);
+}
+.ag-courses-item_title {
+font-size: 24px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.ag-format-container {
+width: 96%;
+}
+
+}
+@media only screen and (max-width: 639px) {
+.ag-courses_item {
+-ms-flex-preferred-size: 100%;
+flex-basis: 100%;
+}
+.ag-courses-item_title {
+min-height: 72px;
+line-height: 1;
+
+font-size: 24px;
+}
+.ag-courses-item_link {
+padding: 22px 40px;
+}
+.ag-courses-item_by-box {
+font-size: 16px;
+}
+}
+
+
+
+
+
+
+
+
+.introduction.class {
+width: 98%;
+min-height: 130px;
+padding: 40px;
+margin: 20px auto;
+background-color: green; 
+border-radius: 10px; 
+}
+
+.introduction.class h1 {
+font-size: 3.5em; 
+}
+
+.introduction.class h6 {
+font-size: 0.7em; 
+}
+
+.pacifico-regular {
+font-family: "Pacifico", cursive;
+font-weight: 400;
+font-style: normal;
+}
+
+.carousel-inner img {
+   height: 500px;
+   object-fit: cover;
+}
+
+.carousel-fade .carousel-item {
+   transition: opacity 1s ease-in-out;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active {
+   opacity: 1;
+}
+
+/* Image Cards Styles */
+.image-cards-container {
+   padding: 40px 0;
+   background-color: #f8f9fa;
+}
+
+.image-cards-title {
+   text-align: center;
+   margin-bottom: 30px;
+   font-family: 'Poppins', sans-serif;
+   color: #0a730a;
+   font-size: 2.2rem;
+}
+
+.image-cards-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   gap: 25px;
+   padding: 0 40px;
+}
+
+.image-card {
+   background: white;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.image-card-img {
+   width: 100%;
+   height: 180px;
+   object-fit: cover;
+}
+
+.image-card-body {
+   padding: 15px;
+}
+
+.image-card-title {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   font-size: 1rem;
+   margin-bottom: 8px;
+   color: #333;
+}
+
+.image-card-text {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   font-size: 0.85rem;
+   color: #666;
+   margin-bottom: 12px;
+}
+
+.image-card-footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 10px;
+   border-top: 1px solid #eee;
+}
+
+.image-card-rating {
+   color:#666;
+   font-weight: 500;
+}
+
+.image-card-date {
+   font-size: 0.75rem;
+   color: #999;
+}
+
+@media (max-width: 768px) {
+   .image-cards-grid {
+       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   }
+}
+
+@media (max-width: 576px) {
+   .image-cards-grid {
+       grid-template-columns: 1fr;
+   }
+}
+
+.logoD{
+ position:absolute;
+ height:18px;
+ width:18px;
+ right:10px;
+ bottom:10px;
+}
+
+.exploremore{
+ text-align:right;
+ text-decoration:none;
+
+}
+
+.exploremore:hover{
+ color:#0a730a;
+
+}
+
+.footer-content svg {
+   margin: 5px;
+   color: white
+}
+
+.footer-content svg:hover {
+   color: greenyellow
+}
+
+footer {
+   background-color: black;
+   color: #e0e0e0;
+   padding: 20px 0;
+   font-family: 'Poppins', sans-serif;
+   font-size: smaller;
+}
+
+footer .footer-content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+footer .footer-content a:hover {
+   color: greenyellow;
+}
+
+footer .footer-section {
+   flex: 1 1 200px;
+   padding: 0 15px;
+   margin: 10px 0;
+}
+
+footer .footer-section h4 {
+   margin-bottom: 10px;
+}
+
+footer .footer-section ul {
+   list-style: none;
+   padding: 0;
+   color: #f8f9fa;
+}
+
+footer .footer-section li {
+   margin-bottom: 10px;
+   color: #e0e0e0;
+}
+
+footer .footer-section li a:hover {
+   color: greenyellow;
+}
+
+footer .footer-section a {
+   text-decoration: none;
+   color: white;
+}
+
+footer .copyright {
+   text-align: center;
+   margin-top: 20px;
+}
+
+footer .subscribe-form {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+footer .subscribe-form input[type="email"] {
+   padding: 8px;
+   border: 1px solid #ddd;
+   margin-right: 10px;
+   flex: 1;
+   min-width: 150px;
+   margin-bottom: 10px;
+}
+
+footer .subscribe-form button {
+   background-color: #0a730a;
+   color: white;
+   border: none;
+   padding: 8px 15px;
+   cursor: pointer;
+}
+
+footer .subscribe-form button a:hover {
+   color: greenyellow;
+   opacity: 0.8;
+}

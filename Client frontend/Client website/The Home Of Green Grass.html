@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Grass | Reviews & Critiques</title>
+    <link rel="icon" type="image/jpg" href="output-onlinepngtools.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link href="home.css" rel="stylesheet" type="text/css">
+    <script src="home.js" defer></script>
+
+    <style>
+
+        /* Base transitions for elements */
+.hero-content3,
+.transparent-card,
+.testimonial-card,
+.section-header {
+    will-change: transform, opacity;
+}
+
+/* Initial state for animated elements */
+.hero-content3,
+.transparent-card,
+.testimonial-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Section header specific */
+.section-header {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-inner">
+            <div class="loader-text" aria-label="Loading">
+                <img src="output-onlinepngtools.png" style="height:55px;width:55px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="The Home Of Green Grass.html">
+                <img src="output-onlinepngtools.png" alt="Green Grass Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="The films of Green Grass.html">Films</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Songs Of Green Grass.html">Songs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Tele Dramas Of Green Grass.html">Teledramas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Books Of Green Grass.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="The Other Of Green Grass.html">Other</a></li>
+                </ul>
+                <div class="search-bar mx-3">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <div class="btn-group">
+                    <a href="The Log In Of Green Grass.html" class="btn btn-outline-light btn-sm">Login</a>
+                    <a href="The Sign Up Of Green Grass.html" class="btn btn-outline-light btn-sm">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Trending Bar -->
+    <div class="info-bar trending-bar">
+        <div class="scrolling-text" id="scrollingText">
+            <strong>Trending : &nbsp;</strong>
+            <a href="#">Tentigo</a>
+            <a href="#">Rani</a>
+            <a href="#">Forget Me Not</a>
+            <a href="#">Mama Mage Nowe Nam</a>
+        </div>
+    </div>
+
+    <!-- Extra Info Bar -->
+    <div class="info-bar extra-bar">
+        <span>
+            Looking for something more than just reviews? Visit 
+            <a href="The Article Collage Of Green Grass.html"><strong>Article Collage</strong></a>
+        </span>
+    </div>
+
+    <!-- Carousel without Captions -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="The Other Half (2019)_files/MV5BNThhYWE5OTMtNjBjYS00NGQ2LTkxOGYtN2RhOGYzM2RlYTZmXkEyXkFqcGc@._V1_.jpg" alt="Vishama Baga">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="alborada_files/MV5BYmZiOTE0ODUtMjkyZC00YjAzLTkyYjYtMTZhMzViODIxMGE5XkEyXkFqcGc@._V1_.jpg" alt="Alborada">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="Gaadi poetry_files/MV5BZGI4ZTUwYTUtMmM3OC00MTljLWEwOGQtNTI4OTViZmUyOTdjXkEyXkFqcGc@._V1_.jpg" alt="Gaadi">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="Asu (2021)_files/MV5BODI4NTliMGEtNGZkNi00Y2M5LThiMjEtOTJlNjg2ZDhmZDBmXkEyXkFqcGc@._V1_.jpg" alt="Asu">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="Leopard Do Not Bite (2015)_files/MV5BY2VlZTA3ZjMtNjUwMy00Mjc4LWFjOTEtM2NmYTI1NGU3ODM5XkEyXkFqcGc@._V1_.jpg" alt="Dadayakkaraya">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>   
+    </div>
+
+    <!-- Silhouettes -->
+    <div class="silhouettes-container">
+        <div class="silhouettes">
+            <br><br><br>
+            <img src="amare silhou.jpg" alt="W.D.Amaradeva" style="height:73px;width:73px">
+            <img src="joe silhou.jpg" alt="Joe Abeywickrama : Welikathara" style="height:73px;width:73px">
+            <img src="ChatGPT Image Apr 10, 2025, 03_11_55 PM.png" alt="Martin Wickramasinghe" style="height:73px;width:73px;">
+            <br><br>
+        </div>
+    </div>
+
+    <!-- Review Process -->
+    <div class="review-process">
+        <br>
+        <h6>Insight</h6>
+        <h1>Our Review Process</h1>
+        <p>Thorough evaluations by passionate experts.</p>
+    </div>
+
+    <!-- Courses/Info Cards -->
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+                    <div class="ag-courses-item_bg"></div>
+                    <div class="ag-courses-item_title">How We Evaluate Our Content</div>
+                </a>
+            </div>
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link" style="text-decoration:none;">
+                    <div class="ag-courses-item_bg"></div>
+                    <div class="ag-courses-item_title">Expert Reviewers At Work</div>
+                </a>
+            </div>
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link" style="text-decoration:none">
+                    <div class="ag-courses-item_bg"></div>
+                    <div class="ag-courses-item_title">Join Our Community Of Reviewers</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Banners -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <br><br>
+            <h1>Read the Best Reviews</h1>
+            <br>
+            <p>Green Grass delivers sharp, thoughtful reviews on films, books, music, and TV. Cut through the noise—find what’s worth your time.</p>
+            <br>
+            <a href="#" class="btn btn-outline-light">Visit Our Review Collages</a>
+        </div>
+    </section>
+
+    <section class="hero-banner2">
+        <div class="hero-content2">
+            <br><br>
+            <h1>Discover Your Next Favorite Entertainment Experience</h1>
+            <br>
+            <p>At Green Grass, we keep you at the forefront of upcoming releases. Be the first to discover in-depth reviews, exclusive insights, and early impressions on the most anticipated creations. Never miss a trend—stay tuned, stay excited!</p>
+            <br>
+            <a href="#" class="btn btn-outline-light">Subscribe</a>
+        </div>
+    </section>
+
+    <section class="hero-banner5">
+        <div class="hero-content5">
+            <br><br>
+            <h1>Rooted in Local Culture, Yet Open to Global Art</h1>
+            <br>
+            <p>While the site remains committed to reviewing and archiving Sri Lankan creative works across film, literature, music, and television, it also demonstrates a discerning engagement with global art</p>
+            <br>
+            <a href="The Other Of Green Grass.html" class="btn btn-outline-light">Visit Other Page</a>
+        </div>
+    </section>
+
+    <!-- Blog/Featured Perspectives -->
+    <section class="hero-banner3">
+        <div class="hero-content3">
+            <br><br>
+            <h5>Blog</h5>
+            <h1>Featured Perspectives</h1>
+            <p class="hero-description">Expert voices on what’s worth your time</p>
+            <div class="transparent-cards-container">
+                <div class="transparent-card">
+                    <h3>Three Revolutionary Films from the Darkest Era of Sri Lankan Cinema</h3>
+                    <br>
+                    <p>"Amidst a period widely regarded as the most challenging era for Sri Lankan cinema, a few groundbreaking films emerged that defied creative stagnation and redefined cinematic expression."</p>
+                </div>
+                <div class="transparent-card">
+                    <h3>Charitha Attalage and His Disruption of the Lumpen Mainstream</h3>
+                    <br>
+                    <p>"Charitha Attalage’s musical innovations disrupted the complacent rhythm of Sri Lanka’s mainstream music industry, especially among the lumpen cultural sphere."</p>
+                </div>
+                <div class="transparent-card">
+                    <h3>Critical Perspectives on the State Literary Awards</h3>
+                    <br>
+                    <p>"While the State Literary Awards have played a role in recognizing emerging literary voices, they have also faced criticism for a perceived lack of transparency and consistent evaluation standards. Some scholars argue that the selection process occasionally reflects institutional biases rather than purely literary merit, raising questions about the awards' long-term credibility."</p>
+                </div>
+            </div>
+            <a href="The Article Collage Of Green Grass.html" class="btn btn-outline-light">Visit Our Article Collage</a>
+        </div>
+    </section>
+
+    <!-- User Testimonials -->
+    <section class="user-voices-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1>The Reviewer's Cut</h1>
+                <p class="section-subtitle" style="font-size: smaller;">Unfiltered Insights Beyond Binary Judgments</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="user-meta">
+                        <img src="boopathy.png" alt="User avatar" class="user-avatar">
+                        <div class="user-info">
+                            <h4>Boopathy Nalin Wickramage</h4>
+                            <br>
+                            <p class="user-title">Film Critic</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="testimonial-content">
+                        <p>“This is the kind of platform that was missing for decades. Not only does it respect the craft of the reviewer—it treats the audience as intelligent, curious, and culturally grounded. It’s more than a site; it’s an ecosystem for serious cultural discourse.”</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="user-meta">
+                        <img src="Gamini Weragama.jpeg" alt="User avatar" class="user-avatar">
+                        <div class="user-info">
+                            <h4>Gamini Weragama</h4>
+                            <br>
+                            <p class="user-title">Film Critic</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="testimonial-content">
+                        <p>“I’m truly impressed by how this site gives room for longform criticism, intergenerational dialogue, and alternative readings—especially for films that were once dismissed or misunderstood. It gives our national cinema the dignity of reflection, which it has long deserved.”</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="user-meta">
+                        <img src="Baasi-Upul-Shantha-Sannasgala.jpg" alt="User avatar" class="user-avatar">
+                        <div class="user-info">
+                            <h4>Upul Sannasgala</h4>
+                            <br>
+                            <p class="user-title">Critic</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="testimonial-content">
+                        <p>It’s rare to find a Sri Lankan platform that not only reviews across forms—songs, books, teledramas—but also does so with such intellectual coherence. What impresses me most is how the site treats each medium with its own rhythm, without compromising depth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-container text-center">
+                <a href="#" class="btn btn-outline-light">Share Your Thoughts</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Configure the intersection observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    // Animation for hero banner (Blog section)
+    const heroBanner = document.querySelector('.hero-banner3');
+    const heroContent = document.querySelector('.hero-content3');
+    const transparentCards = document.querySelectorAll('.transparent-card');
+
+    const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0)';
+                
+                // Animate cards with staggered delay
+                transparentCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 200); // 200ms delay between each card
+                });
+            }
+        });
+    }, observerOptions);
+
+    if (heroBanner) {
+        // Set initial styles for animation
+        heroContent.style.opacity = '0';
+        heroContent.style.transform = 'translateY(20px)';
+        heroContent.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        
+        transparentCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        });
+        
+        heroObserver.observe(heroBanner);
+    }
+
+    // Animation for testimonials section
+    const testimonialsSection = document.querySelector('.user-voices-section');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+    const testimonialsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                testimonialCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 200); // Staggered animation
+                });
+            }
+        });
+    }, observerOptions);
+
+    if (testimonialsSection) {
+        // Set initial styles for animation
+        testimonialCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+        });
+        
+        testimonialsObserver.observe(testimonialsSection);
+    }
+
+    // Optional: Add animation for the section header
+    const sectionHeader = document.querySelector('.section-header');
+    if (sectionHeader) {
+        sectionHeader.style.opacity = '0';
+        sectionHeader.style.transform = 'translateY(20px)';
+        sectionHeader.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        
+        const headerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sectionHeader.style.opacity = '1';
+                    sectionHeader.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        headerObserver.observe(sectionHeader);
+    }
+});
+    </script>
+
+    <!-- Footer -->
+    <footer class="footerbg">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="output-onlinepngtools.png" height="30px" width="30px" alt="Green Grass Logo">
+                    <br><br>
+                    <p>&copy; 2024 GreenGrass. All rights reserved.</p>
+                    <br>
+                    <p>
+                        <a href="#">Privacy Policy</a> | 
+                        <a href="#">Terms of Service</a> | 
+                        <a href="#">Cookies Settings</a>
+                    </p>
+                    <br>
+                    <div class="social-media">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <br>
+                    <ul>
+                        <li><a href="The films of Green Grass.html">Film Reviews</a></li>
+                        <br>
+                        <li><a href="The Songs Of Green Grass.html">Song Reviews</a></li>
+                        <br>
+                        <li><a href="The Books Of Green Grass.html">Book Reviews</a></li>
+                        <br>
+                        <li><a href="The Tele Dramas Of Green Grass.html">TV Reviews</a></li>
+                        <br>
+                        <li><a href="The Other Of Green Grass.html">Other Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Follow Us</a></li>
+                        <br>
+                        <li><a href="#">Contact Us</a></li>
+                        <br>
+                        <li><a href="#">About Us</a></li>
+                        <br>
+                        <li><a href="#">Help Center</a></li>
+                        <br>
+                        <li><a href="The FAQ Of Green Grass.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <br>
+                    <ul>
+                        <li><a href="#">Sign Up</a></li>
+                        <br>
+                        <li><a href="#">Latest Updates</a></li>
+                        <br>
+                        <li><a href="#">Special Offers</a></li>
+                        <br>
+                        <li><a href="#">Join Us</a></li>
+                        <br>
+                        <li><a href="#">Get Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Subscribe</h4>
+                    <br>
+                    <p>Join our newsletter to stay updated on features, reviews, and releases.</p>
+                    <br>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your Email Here">
+                        <br><br>
+                        <a href="#" class="btn btn-success" style="font-size:small;">Subscribe</a>
+                    </div>
+                    <br>
+                    <p>By subscribing you agree to our Privacy Policy and consent to receive updates.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <!--<script src="/js/conditional-page-loader.js"></script>-->
+
+     <!-- Back to Top Button -->
+     <div class="back-to-top" id="backToTopBtn" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V3.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 3.707V11.5A.5.5 0 0 0 8 12z"/>
+        </svg>
+    </div>
+
+</body>
+</html>
